@@ -1,0 +1,3663 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head><script type="text/javascript" src="/CFIDE/scripts/cfform.js"></script>
+<script type="text/javascript" src="/CFIDE/scripts/masks.js"></script>
+
+<meta name="google-site-verification" content="Lnnhj1oGn3YTFmsoRXVWr5oIW5dKkSi_QWzBQY_hdfc" />
+<meta name="google-site-verification" content="Q9NMfq2Poz3L56F4hKr_5ckxmfSNr0KVKP25xS2_5ok" />
+<meta name="msvalidate.01" content="1A2ACC3FCB6A3EC78DAB7CAFF0E9ADD0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Knit Picks Knitting Yarn from KnitPicks.com</title>
+
+  <meta id="Title" name="Title" runat="server" content="All Knit Picks Yarn from KnitPicks.com" />
+
+  <meta id="MetaKeywords" name="Keywords" runat="server" content="All Knit Picks Yarn " />
+
+  <meta id="MetaDescription" name="Description" runat="server" content="" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="verify-v1" content="jgbZDek/2TdfG6gwDe0ONnonoqTBpT08JtgLYpSsE6E=" />
+<meta name="p:domain_verify" content="25c4b23c54009957148545a95701d0d8" />
+<meta name="ROBOTS" content="NOODP"/>
+<link href="/cfCSS/siteMaster.1434535514.css" rel="stylesheet" type="text/css" />
+
+
+<link href="/cfCSS/productDisplay.1426503511.css" rel="stylesheet" type="text/css" />
+<link href="/cfCSS/listPages.1426503511.css" rel="stylesheet" type="text/css" />
+<link href="/SpryAssets/SpryCollapsiblePanel.css?version=1" rel="stylesheet" type="text/css" />
+
+
+<link href="/cfCSS/safariChromeFixes.1381211462.css" rel="stylesheet" type="text/css" />
+
+<script src="/cfJScript/Header.1381211462.js" type="text/javascript"></script>
+<script src="/cfJScript/SiteSearch.1426503511.js" type="text/javascript"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript">
+
+  // http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
+  function validate_email(email)
+  {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+   
+  (function ($) {
+    var initialized = false;
+    
+    $.fn.cagHeaderTab = function(do_status)
+    {
+      // first run init
+      if (! initialized)
+      {
+        initialized = true;
+        // create modal layer which closes all open tabs when clicked
+        $('<div id="custInfoBoxBlockModal">').appendTo(document.body);
+        $('#custInfoBoxBlockModal').click(function() { $('.cag_header_tab').cagHeaderTab('close'); });
+        // close when escape key pressed
+        $(document).keyup(function(e) {
+          if (e.keyCode == 27)
+            $('.cag_header_tab').cagHeaderTab('close');
+        });
+      }
+    
+      return this.each(function() {
+        var trigger = $('a:first', this);
+        var content = $('div:first', this);
+        
+        if (content.length==0)
+          return;
+        
+        // initialize when no status
+        if (! do_status)
+        {
+          $(trigger).click(function(e) {
+            $(this).closest('div').cagHeaderTab('toggle');
+            return false;
+          });
+          $(this).addClass('cag_header_tab');
+        }
+        
+        // set appropriate status when toggling
+        if (do_status=='toggle')
+        {
+          do_status = $(content).is(':visible') ? 'close' : 'open';
+        }
+        
+        // show/hide
+        if (do_status=='open')
+        {
+          $('.cag_header_tab').cagHeaderTab('close');//close all other open tabs
+          $(content).show();
+          $('#custInfoBoxBlockModal').show();
+          $(trigger).addClass('custInfoBoxBlockActive');
+        }
+        else if (do_status=='close')
+        {
+          $(content).hide();
+          $('#custInfoBoxBlockModal').hide();
+          $(trigger).removeClass('custInfoBoxBlockActive');
+        }
+        
+      });
+    }
+  })(jQuery);
+  
+  $(function() {
+    $('.custInfoBoxBlock').cagHeaderTab();
+    
+    
+    
+    $('form#addToCartForm').submit(function() {
+      var pass = false;
+      $('input', this).each(function() {
+        if ($(this).attr('name').search(/^sku#/i)!=-1 && parseInt($.trim($(this).val()),10)>0)
+        {
+          pass = true;
+          return;
+        }
+      });
+      if (! pass)
+      {
+        alert('Please specify at least one item to add to your cart.');
+        return false;
+      }
+    });
+
+    $('#siteNav td>li').hover(
+      function() {
+        $('a:first', this).addClass('siteNavHover');
+        $('.dropDownNav', this).css({visibility:'visible'});
+      },
+      function() {
+        $('a:first', this).removeClass('siteNavHover');
+        $('.dropDownNav', this).css({visibility:'hidden'});
+      }
+    );
+
+    
+    $('#opener_new_post').click(function() {
+      $.post('/cfMisc/ProductReview.cfm', {
+        'id': "300198"
+      }, function(r) { $(document.body).append(r) }, 'html');
+    });
+    
+
+  });
+
+  function init_international_tooltips() {}
+
+</script>
+
+
+
+<script type="text/javascript">
+  function showDropDownNav(divID){
+    // document.getElementById(divID).style.visibility="visible";
+  }
+  function hideDropDownNav(divID){
+    // document.getElementById(divID).style.visibility="hidden";
+  }
+</script>
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "58f1a7dc-7ff1-4e54-8767-a0ed2d682a5e", onhover:false, doNotCopy:true, hashAddressBar:false}); </script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3368404-1']);
+  _gaq.push(['_setDomainName', 'knitpicks.com']);
+  _gaq.push(['_setCustomVar',1,'media90','WEB99999',2]); _gaq.push(['_setCustomVar',3,'sourcecode','NoSourceCode',2]); 
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+        
+<!--[if IE 9]>
+    <link href="/cfCSS/IE9Fixes.1381211462.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+        
+<!--[if IE 8]>
+    <link href="/cfCSS/IE8Fixes.1381211462.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+        
+<!--[if IE 7]>
+    <link href="/cfCSS/IE7Fixes.1381211462.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+        
+<!--[if IE 6]>
+    <link href="/cfCSS/IE6Fixes.1381211462.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+<style type="text/css">
+
+
+.low-stock-flag-26807
+,.low-stock-flag-26808
+,.low-stock-flag-26809
+,.low-stock-flag-26810
+,.low-stock-flag-26811
+,.low-stock-flag-26812
+,.low-stock-flag-26813
+,.low-stock-flag-26814
+,.low-stock-flag-26815
+,.low-stock-flag-26816
+,.low-stock-flag-26817
+,.low-stock-flag-26818
+,.low-stock-flag-26819
+,.low-stock-flag-26820
+,.low-stock-flag-26821
+,.low-stock-flag-26822
+,.low-stock-flag-26823
+,.low-stock-flag-26824
+,.low-stock-flag-26825
+,.low-stock-flag-26826
+,.low-stock-flag-26827
+,.low-stock-flag-26828
+,.low-stock-flag-26829
+,.low-stock-flag-26830
+,.low-stock-flag-26831
+,.low-stock-flag-26832
+,.low-stock-flag-26833
+,.low-stock-flag-26834
+,.low-stock-flag-26835
+,.low-stock-flag-26852
+ {
+  display:none !important;
+  visibility:hidden !important;
+}
+
+
+#cfhelp-post-title-10,
+#cfhelp-post-title-547,
+#cfhelp-post-title-616 {
+  display:none;
+}
+
+
+.categoryBannerGeneric {
+  width:625px;
+  margin:-6px auto 0 auto;
+  position:relative;
+}
+
+.categoryBannerGeneric h1 {
+  margin:0;
+  padding:0;
+  font-size:16px;
+  font-weight:bold;
+  display:block;
+  text-transform:uppercase;
+}
+.categoryBannerGeneric h2 {
+  padding:0;
+  width:610px;
+  font-size:13px;
+  margin:1px 0 0 0;
+  line-height:124%;
+  text-transform:none !important;
+}
+.categoryBannerGenericBG {
+  position:absolute;
+  height:2px;
+  left:0px;
+  right:0px;
+  background:transparent url(//d2q9kw5vp0we94.cloudfront.net/CategoryBanners/category-banner-dots-3.png) center center no-repeat;
+}
+</style>
+
+
+<script type="text/javascript">/* <![CDATA[ */
+	if (window.ColdFusion) ColdFusion.required['login_email']=true;
+/* ]]> */</script>
+
+<script type="text/javascript">/* <![CDATA[ */
+	if (window.ColdFusion) ColdFusion.required['login_pass']=true;
+/* ]]> */</script>
+<script type="text/javascript">
+<!--
+    _CF_checkecart_login_form1 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element login_email required check
+        if( _CF_hasValue(_CF_this['login_email'], "TEXT", true ) )
+        {
+            //form element login_email 'EMAIL' validation checks
+            if (!_CF_checkEmail(_CF_this['login_email'].value, true))
+            {
+                _CF_onError(_CF_this, "login_email", _CF_this['login_email'].value, "Your Email Address is required to log in.");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "login_email", _CF_this['login_email'].value, "Your Email Address is required to log in.");
+            _CF_error_exists = true;
+        }
+
+        //form element login_pass required check
+        if( !_CF_hasValue(_CF_this['login_pass'], "PASSWORD", true ) )
+        {
+            _CF_onError(_CF_this, "login_pass", _CF_this['login_pass'].value, "Your Password is required to log in.");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+
+<script type="text/javascript">/* <![CDATA[ */
+	if (window.ColdFusion) ColdFusion.required['create_email']=true;
+/* ]]> */</script>
+<script type="text/javascript">
+<!--
+    _CF_checkecart_login_form2 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element create_email required check
+        if( _CF_hasValue(_CF_this['create_email'], "TEXT", false ) )
+        {
+            //form element create_email 'EMAIL' validation checks
+            if (!_CF_checkEmail(_CF_this['create_email'].value, true))
+            {
+                _CF_onError(_CF_this, "create_email", _CF_this['create_email'].value, "Your Email Address is required to create a new account.");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "create_email", _CF_this['create_email'].value, "Your Email Address is required to create a new account.");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+<script type="text/javascript">
+<!--
+    _CF_checkSortOptions = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+</head>
+
+<body id="SiteBody" class="yarn " runat="server">
+
+<div id="mainContainer" class="clearfix">
+
+<div id="main" class="clearfix">
+
+  <div id="siteHeader" class="clearfix" style="position:relative;">
+
+        
+          <a href="/cfPromo/Monthly_Yarn_Sale.cfm?intmedid=SiteHeader--MonthlyYarnSale"><img src="//d2q9kw5vp0we94.cloudfront.net/structure/monthly-yarn-sale-25pct-01.png" style="position:absolute;top:45px;left:65px;z-index:1;" alt="Monthly Yarn Sale"></a>
+        
+        
+    
+        <div id="cartBlock" class="clearfix">
+          
+          
+          <div id="custInfoBox">        
+
+                
+                  <div class="custInfoBoxBlock freeShipMsgHeader">
+                    <a href="/cfhelp/Index.cfm?type=kp&CSCatID=9&CSItemID=547">FREE SHIPPING* ON ALL ORDERS OVER $50</a>
+                  </div>
+                
+                |
+                <div class="custInfoBoxBlock">
+                  <a href="/cfhelp/Index.cfm">HELP</a>
+                </div>
+                |
+                <div class="custInfoBoxBlock">
+                  <a href="http://blog.knitpicks.com/wpblog/">BLOG</a>
+                </div>
+              
+
+                <div style="float:right;">
+                                    
+                  
+                    <div class="custInfoBoxBlock">
+                      <a href="#" class="headerFlagIcon headerFlagIconUSD" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                      <div>
+                        <div class="headerLocaleSelector">
+                          <h1>Choose Display Currency</h1>
+                          <form method="GET" action="/cfCart/SetLocale.cfm">
+                          <label >
+                          <input type="radio" name="locale" value="USD" checked="checked">United States (USD) <img src="//d2q9kw5vp0we94.cloudfront.net/structure/icons/flags/png/us.png" valign="middle"> </label>
+                          <label>
+                          <input type="radio" name="locale" value="AUD" >Australia (AUD) <img src="//d2q9kw5vp0we94.cloudfront.net/structure/icons/flags/png/au.png" valign="middle"></label>
+                          <div class="headerLocaleSelectorSubmit">
+                            <button class="purpleBtn">Select Currency</button>
+                          </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                      |
+                    
+                      <div class="custInfoBoxBlock" id="quickLoginTab">
+                          <a id="loginHdrLink" href="https://www.knitpicks.com/cfCart/Account.cfm">MY ACCOUNT</a>
+                          <div style="right:none !important;">
+
+<div id="loginFormInlineContainer">
+  
+  <div style="float:left;border-right:1px dotted gray;">
+  <form name="ecart_login_form1" id="ecart_login_form1" action="https://www.knitpicks.com/cfCart/Login_inline_controller.cfm" method="post" onsubmit="return _CF_checkecart_login_form1(this)"> <input name="task" id="task"  type="hidden" value="login" />
+      
+      <div class="loginFormHdr">Returning Customers Log In</div>
+      <table border="0" cellpadding="5" cellspacing="0" class="loginFormTbl" width="265">
+        
+          <tr>
+              <th><label for="login_email" >Email Address:</label></th>
+              <td>
+                <input name="login_email" type="text" id="login_email"  /></td>
+          </tr>
+          <tr>
+              <th><label for="login_pass" >Password:</label></th>
+              <td>
+                <input name="login_pass" type="password" autocomplete="off"  id="login_pass"  /></td>
+          </tr>
+          <tr>
+              <td colspan="2" id="loginBtn">
+                <button type="submit" class="purpleBtn">Log In &raquo;</button>
+                <a href="/cfCart/ForgotPassword.cfm" id="forgotPW" title="Forgot my Password">
+                  <br><br>Forgot your password? Click here &raquo;
+                </a>
+              </td>
+          </tr>
+      </table>
+      <input name="returnURL" id="returnURL"  type="hidden" value="/cfCart/Account.cfm" /> </form>
+
+  </div>
+  <div style="float:right;">
+  <form name="ecart_login_form2" id="ecart_login_form2" action="https://www.knitpicks.com/cfCart/Login_inline_controller.cfm" method="post" onsubmit="return _CF_checkecart_login_form2(this)"><input name="task" id="task"  type="hidden" value="create" />
+      
+      <div class="loginFormHdr">Create New Member Account</div>
+      <table border="0" cellpadding="5" cellspacing="0" class="loginFormTbl" width="265">
+        
+          <tr>
+              <th><label for="login_email" >Email Address:</label></th>
+              <td>
+                <input name="create_email" type="text" id="create_email"  /></td>
+          </tr>
+          <tr>
+              <td colspan="2" id="loginBtn">
+                 <button type="submit" class="purpleBtn">Create Account &raquo;</button>
+              </td>
+          </tr>
+      </table>
+      <input name="returnURL" id="returnURL"  type="hidden" value="/cfYarns/Yarn_List.cfm?ID=300198&amp;showAll=yes" /> </form>
+
+  </div>
+  <br clear="all" />
+  <a href="#" onclick="$(this).closest('.cag_header_tab').cagHeaderTab('close');return false;" style="float:right;">(close this window)</a>
+  
+</div></div>
+                      </div>
+                  
+                  |
+                  <div class="custInfoBoxBlock">
+                    <a href="/cfCart/Account.cfm?task=create&email=Email Address">SIGN UP</a>
+                  </div>
+
+                  
+                    <div class="custInfoBoxBlock" id="cartQuickViewTab">
+                        <a href="http://www.knitpicks.com/cfCart/Cart.cfm" id="cartQuickViewBtn">SHOPPING CART (0)</a>
+                       <div> 
+
+<div id="cartQuickView">
+  <div id="itemsContainer">
+  
+  
+  
+  </div>
+  
+  
+  <div id="footerBar">
+    <a href="#" id="closeCartQuickView" style="display:inline-block;float:left;padding:4px 10px;" onclick="$(this).closest('.cag_header_tab').cagHeaderTab('close');return false;">(close this window)</a>
+    <a href="/cfCart/cart.cfm" class="buttonCartQuickView purpleBtn" style="float:right;padding:4px 10px;">View Cart &raquo;</a>
+	<div style="clear:both;"></div>
+  </div>
+
+  
+</div>
+
+</div>
+                    </div>
+                  
+
+                </div>
+          </div>
+
+          <div id="hdrSearchBox">
+            <form method="get" action="http://www.knitpicks.com/cfSearch/Search.cfm" onsubmit="_gaq.push(['_trackEvent', 'Search', 'Search-Spring']);" id="hdrSearch">
+              <input type="text" name="q" id="searchWords" class="searchspring-query" autocomplete="off" value="SEARCH SITE" onfocus="if ($.trim($(this).val())=='SEARCH SITE') $(this).val('');" onblur="if ($.trim($(this).val())=='') $(this).val('SEARCH SITE');" />
+              <button id="hdrSearchSubmit"><img src="//d2q9kw5vp0we94.cloudfront.net/structure/header-search-submit-1.gif"></button>
+            </form>
+          </div>
+
+          
+
+
+      
+          <br clear="all" />
+          <a href="http://www.knitpicks.com/">
+            <div id="logoHeader" title="Knit Picks Knitting Yarn from KnitPicks.com"></div>
+          </a>
+
+          
+          <div id="freeShippingMessage"><a href="/cfhelp/Index.cfm?type=kp&CSCatID=9&CSItemID=547">free shipping on orders over $50* - 100% satisfaction guarantee</a></div>
+        
+        
+    </div> 
+    
+    
+  </div>
+  
+  
+  
+      
+      
+      <div class="dashedHr"></div>
+    <div id="siteNav">
+        <ul id="siteNav" class="clearfix">
+          
+            <table border="0" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+            
+            <td><li onmouseover="showDropDownNav('yarnDropDownNav')" onmouseout="hideDropDownNav('yarnDropDownNav')">
+              <a href="http://www.knitpicks.com/yarns/knitting_yarns.html" id="yarn" class="main" title="Knitting Yarn and Knitting Kits">Yarn + Fiber</a>
+              
+                <div id="yarnDropDownNav" class="dropDownNav">
+                  
+                      <a href="http://www.knitpicks.com/yarns/Newest_Yarns__L300112.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Yarns', 'New Yarn Lines']);">New Yarn Lines</a>
+                    
+                      <a href="http://www.knitpicks.com/cfYarns/Yarn_Colors_List.cfm?ID=300132" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Yarns', 'New Colors']);">New Colors</a>
+                    
+                      <a href="http://www.knitpicks.com/yarns/All_Knit_Picks_Yarn__L300198.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Yarns', 'View All Yarn']);">View All Yarn</a>
+                    
+                      <a href="http://www.knitpicks.com/yarns/Lace_Weight_Yarn__L30010102.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Yarns', 'Lace']);">Lace</a>
+                    
+                      <a href="http://www.knitpicks.com/yarns/Fingering_Weight_Yarn__F30010103.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Yarns', 'Fingering']);">Fingering</a>
+                    
+                      <a href="http://www.knitpicks.com/yarns/Sport_Weight_Yarn__F30010104.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Yarns', 'Sport']);">Sport</a>
+                    
+                      <a href="http://www.knitpicks.com/yarns/DK_Weight_Yarn__F30010105.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Yarns', 'DK']);">DK</a>
+                    
+                      <a href="http://www.knitpicks.com/yarns/Worsted_Weight_Yarn_Heavy_Worsted_Weight_Yarn__L30010106.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Yarns', 'Worsted/Hvy Worsted']);">Worsted/Hvy Worsted</a>
+                    
+                      <a href="http://www.knitpicks.com/yarns/Bulky_Weight_Yarn__F30010107.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Yarns', 'Bulky']);">Bulky</a>
+                    
+                      <a href="http://www.knitpicks.com/yarns/knitting_yarns.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Yarns', 'See more…']);">See more…</a>
+                    
+                </div>
+              
+            </li></td>
+            
+            <td><li onmouseover="showDropDownNav('ndleDropDownNav')" onmouseout="hideDropDownNav('ndleDropDownNav')">
+              <a href="http://www.knitpicks.com/kits/kits_and_samplers.html" id="kits" class="main" title="Knitting Kits and Knitting Samplers">Kits + Samplers</a>
+              
+                <div id="ndleDropDownNav" class="dropDownNav">
+                  
+                      <a href="http://www.knitpicks.com/Kits/View_All_Kits__L300804.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Kits + Samplers', 'View All Pattern Kits']);">View All Pattern Kits</a>
+                    
+                      <a href="http://www.knitpicks.com/Kits/View_All_Project_Kits__L300815.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Kits + Samplers', 'View All Project Kits']);">View All Project Kits</a>
+                    
+                      <a href="http://www.knitpicks.com/Kits/View_All_Samplers__L300813.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Kits + Samplers', 'View All Samplers']);">View All Samplers</a>
+                    
+                </div>
+              
+            </li></td>
+            
+            <td><li onmouseover="showDropDownNav('ndleDropDownNav')" onmouseout="hideDropDownNav('ndleDropDownNav')">
+              <a href="http://www.knitpicks.com/needles/knitting_needles.html" id="needles" class="main" title="Knitting Needles and Crochet Hooks">Needles + Hooks</a>
+              
+                <div id="ndleDropDownNav" class="dropDownNav">
+                  
+                      <a href="http://www.knitpicks.com/needles/Knitting_Needle_Sets__L300301.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Needles', 'Needle Sets']);">Needle Sets</a>
+                    
+                      <a href="http://www.knitpicks.com/needles/All_Knit_Picks_Knitting_Needles__L300397.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Needles', 'View All Needles']);">View All Needles</a>
+                    
+                      <a href="http://www.knitpicks.com/Accessories/Knitting_Needle_Accessories__L300527.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Needles', 'Accessories']);">Accessories</a>
+                    
+                      <a href="http://www.knitpicks.com/crochet/Crochet_Hooks__L301201.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Needles', 'Crochet Hooks']);">Crochet Hooks</a>
+                    
+                </div>
+              
+            </li></td>
+            
+            <td><li onmouseover="showDropDownNav('patternsDropDownNav')" onmouseout="hideDropDownNav('patternsDropDownNav')">
+              <a href="http://www.knitpicks.com/patterns/knitting_patterns.html" id="patterns" class="main" title="Knitting Patterns and Crochet Patterns">Patterns</a>
+              
+                <div id="patternsDropDownNav" class="dropDownNav">
+                  
+                      <a href="http://www.knitpicks.com/patterns/Knitting_Patterns__L300220.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Patterns', 'New']);">New</a>
+                    
+                      <a href="http://www.knitpicks.com/patterns/Free_Knitting_Patterns__L300218.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Patterns', 'Free Knitting Patterns']);">Free Knitting Patterns</a>
+                    
+                      <a href="http://www.knitpicks.com/patterns/Knit_Picks_exclusive_patterns__L300226.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Patterns', 'Knit Picks Exclusives']);">Knit Picks Exclusives</a>
+                    
+                      <a href="http://www.knitpicks.com/Patterns/View_All__L30022908.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Patterns', 'Independent Designers']);">Independent Designers</a>
+                    
+                      <a href="http://www.knitpicks.com/cfPatterns/EBooks_List.cfm" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Patterns', 'eBooks']);">eBooks</a>
+                    
+                      <a href="http://www.knitpicks.com/patterns/knitting_patterns.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Patterns', 'See more…']);">See more…</a>
+                    
+                </div>
+              
+            </li></td>
+            
+            <td><li onmouseover="showDropDownNav('booksDropDownNav')" onmouseout="hideDropDownNav('booksDropDownNav')">
+              <a href="http://www.knitpicks.com/books/knitting_books.html" id="books" class="main" title="Knitting Books">Books</a>
+              
+                <div id="booksDropDownNav" class="dropDownNav">
+                  
+                      <a href="http://www.knitpicks.com/books/New_Books__L300401.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Books', 'New']);">New</a>
+                    
+                      <a href="http://www.knitpicks.com/books/Bestselling_Knitting_Books__L300403.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Books', 'Bestsellers']);">Bestsellers</a>
+                    
+                      <a href="http://www.knitpicks.com/books/Upcoming_Releases__L300402.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Books', 'Upcoming Releases']);">Upcoming Releases</a>
+                    
+                      <a href="http://www.knitpicks.com/books/Clearance_Books__L300407.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Books', 'Clearance']);">Clearance</a>
+                    
+                      <a href="http://www.knitpicks.com/books/knitting_books.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Books', 'See more…']);">See more…</a>
+                    
+                </div>
+              
+            </li></td>
+            
+            <td><li onmouseover="showDropDownNav('toolsDropDownNav')" onmouseout="hideDropDownNav('toolsDropDownNav')">
+              <a href="http://www.knitpicks.com/accessories/knitting_accessories.html" id="acc" class="main" title="Knitting Tools">Tools</a>
+              
+                <div id="toolsDropDownNav" class="dropDownNav">
+                  
+                      <a href="http://www.knitpicks.com/accessories/Knit_Picks_Exclusive_Tools_Accessories__L300519.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Tools', 'Knit Picks Exclusives']);">Knit Picks Exclusives</a>
+                    
+                      <a href="http://www.knitpicks.com/accessories/Miscellaneous_Tools_Accessories__L300514.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Tools', 'Miscellaneous']);">Miscellaneous</a>
+                    
+                      <a href="http://www.knitpicks.com/accessories/Storage_Travel__L30056211.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Tools', 'Storage & Travel']);">Storage & Travel</a>
+                    
+                      <a href="http://www.knitpicks.com/accessories/Clearance_Tools_Accessories__L300516.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Tools', 'Sale & Clearance']);">Sale & Clearance</a>
+                    
+                      <a href="http://www.knitpicks.com/accessories/Needle_Accessories__L30056206.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Tools', 'Needle Accessories']);">Needle Accessories</a>
+                    
+                      <a href="http://www.knitpicks.com/accessories/knitting_accessories.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Tools', 'See more…']);">See more…</a>
+                    
+                </div>
+              
+            </li></td>
+            
+            <td><li onmouseover="showDropDownNav('booksDropDownNav')" onmouseout="hideDropDownNav('booksDropDownNav')">
+              <a href="http://www.knitpicks.com/crochet/crochet.html" id="crochet" class="main" title="Crochet">Crochet</a>
+              
+                <div id="booksDropDownNav" class="dropDownNav">
+                  
+                      <a href="http://www.knitpicks.com/crochet/Crochet_Hooks__L301201.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Crochet', 'Hooks']);">Hooks</a>
+                    
+                      <a href="http://www.knitpicks.com/crochet/Crochet_Patterns__L301202.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Crochet', 'Patterns']);">Patterns</a>
+                    
+                      <a href="http://www.knitpicks.com/crochet/Crochet_Books__L301203.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Crochet', 'Books']);">Books</a>
+                    
+                      <a href="http://www.knitpicks.com/crochet/Accessories__L301204.html" title="" onclick="_gaq.push(['_trackEvent', 'Drop Down Nav', 'Crochet', 'Accessories']);">Accessories</a>
+                    
+                </div>
+              
+            </li></td>
+
+            
+            
+              <td><li><a href="http://www.knitpicks.com/clearance/knitting_clearance.html" id="clearance" class="main" title="Clearance Knitting Supplies">Clearance</a></li></td>
+            
+           
+
+            <td><li><a href="http://www.knitpicks.com/gifts/gifts_home.html" id="gifts" class="main" title="Gift Guides">Gifts</a></li></td>
+            
+            
+            <td><li><a href="http://tutorials.knitpicks.com/wptutorials/" id="tutorials" class="main" title="Knitting Tutorials">TUTORIALS</a></li></td>
+            </tr></table>
+          
+        </ul>
+        <div class="stretch"></div>
+  </div>
+  <div class="dashedHr"></div>
+  
+
+      <script language="javascript">
+        $(function() {
+          function setMsg(msg,color)
+          {
+            var $c = $('#PPemailAddressMsg');
+            $c.css('color',color);
+            if ($c.is('visible'))
+              $c.html(msg);
+            else
+              $c.html(msg).fadeIn('fast');
+          }
+          $('#PPemailAddress').val('');
+          $('#PPemailAddress').focus(function(e) {
+            $(this).css('background','#fff');
+          }).blur(function(e) {
+            if ($(this).val()=="")
+              $(this).css('background','none');
+          }).keydown(function(e) {
+            /*
+            var l = $(this).val().length;
+            if (e.which==8 && l==1)
+              $(this).css('background','none');
+            else
+              $(this).css('background','#fff');
+            */
+          });
+          $('#PPemailSubForm').submit(function() {
+            var email_address = $.trim($('#PPemailAddress').val());
+            if (email_address.length==0)
+            {
+              setMsg('Email address is required.','#fff');
+            }
+            else if (! validate_email(email_address))
+            {
+              setMsg('Email address does not appear to be valid.','#fff');
+            }
+            else
+            {
+              $('#PPemailAddress').css('background', '#fff url(//d2q9kw5vp0we94.cloudfront.net/structure/icons/ajax-loader-bar.gif) center right no-repeat');
+              $.post('/cfEmail/EmailSignup.cfm', { email_address:email_address, bd_month:'', from_popup:1 }, function(r) {
+                $('#PPemailSubForm').remove();
+                $('#PPemailSubImg').css('cursor','pointer').attr('src','//d2q9kw5vp0we94.cloudfront.net/structure/bem-signup-pp/bem-signup-pp-confirm-01.jpg').click(function () { $('#PPemailSubContainer').remove(); });
+                $('#PPemailSubClose').html('Close');
+                _gaq.push(['_trackPageview','/CurrentBEM_PP/Complete']);
+                try {
+                  $(document.body).append($.trim(r).split(',')[1]);
+                } catch (x) {}
+              }).fail(function() {            
+                  $('#PPemailSubForm').remove();
+                  $('#PPemailSubClose').html('Close');
+                  $('#PPemailSubImg').css('cursor','pointer').attr('src','//d2q9kw5vp0we94.cloudfront.net/structure/bem-signup-pp/bem-signup-pp-confirm-onlist-01.gif').click(function () { $('#PPemailSubContainer').remove(); });
+              });
+            }
+            return false;
+          });
+        });
+      </script>
+
+      <div id="PPemailSubContainer">
+        <div style="position:absolute;width:500px;height:520px;top:20%;left:50%;z-index:10001;margin-left:-270px;border: 5px solid #FFFFFF;background-color:#FFFFFF;padding:20px;text-align:center;cursor:default;">
+          <div style="background:#fff url(//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/smoothness/images/ui-icons_888888_256x240.png) -96px -128px no-repeat;width:16px;height:16px;position:absolute;top:10px;right:10px;z-index:10002;cursor:pointer;" onclick="$('#PPemailSubContainer').remove();">&nbsp;</div>
+            <div style="position:relative;">
+              <img id="PPemailSubImg" src="//d2q9kw5vp0we94.cloudfront.net/structure/bem-signup-pp/bem-signup-pp-02.jpg">
+              <form id="PPemailSubForm">
+                <div style="position:absolute;top:305px;left:100px;width:213px;height:38px;background:#fff url(//d2q9kw5vp0we94.cloudfront.net/structure/bem-signup-pp/bem-signup-pp-ph-01.jpg) top left no-repeat;text-align:center;">
+                  <input type="text" id="PPemailAddress" style="background:none;text-align:left;width:90%;height:100%;vertical-align:middle;padding:0;border:none;font-size:15px;font-family:arial,sans-serif;font-weight:lighter;outline: 0;" id="emailAddress" name="email_address">
+                </div>
+                <button style="position:absolute;top:305px;left:315px;width:96px;height:38px;background:#fff url(//d2q9kw5vp0we94.cloudfront.net/structure/bem-signup-pp/bem-signup-pp-ph-01.jpg) top right no-repeat;text-indent:-20000em;border:none;cursor:pointer;">Submit</button>
+                <div style="position:absolute;top:345px;left:100px;width:312px;text-align:left;">
+                  <span id="PPemailAddressMsg" style="font-weight:bold;color:#fff;"></span>
+                  <img style="display:block;margin:1em auto 0 auto;" src="//d2q9kw5vp0we94.cloudfront.net/structure/bem-signup-pp/pointies-01.jpg">
+                </div>
+              </form>
+            </div>
+            <a href="#" id="PPemailSubClose" onclick="$('#PPemailSubContainer').remove();return false;" style="display:inline-block;margin:0 auto 0 auto;position:relative;z-index:100001;padding:5px 8px;font-size:14px;font-weight:bold;">No, thanks!</a>
+        </div>
+        <div class="kpPpWindowBlock" style="position:fixed;top:0px;left:0px;right:0px;bottom:0px;z-index:10000;background-color:#000;opacity:0.5;filter:alpha(opacity=50);"></div>
+      </div>
+
+    
+
+
+
+<div id="mainContent">
+  <div id="lftCol">
+    
+      
+      <div id="categoryNav">
+        
+          <div class="categoryGroup">
+            <a href="/yarns/knitting_yarns.html">Yarn + Fiber</a>
+          </div>
+        
+        <div style="margin-top:-1.3em;margin-bottom:0.7em;display:none;">
+          <nobr>
+            <a href="/">Home</a>
+            
+              /
+              
+                <a href="/yarns/knitting_yarns.html">Yarn + Fiber</a>
+              
+                / 
+                    <strong>View All Yarn</strong>
+                  
+          </nobr>
+        </div>
+        
+            
+                
+                
+                <div id="CollapsiblePanel1" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/yarns/Newest_Yarns__L300112.html" title="Newest Yarns" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Newest Yarn Lines - 300112']);">
+                        <div class="CollapsiblePanelTab " tabindex="0" style="background:#fff;">
+                            Newest Yarn Lines
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300112">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel2" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/cfYarns/yarn_colors_list.cfm?ID=300132" title="Newest Yarn Colors" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'New Colors - 300132']);">
+                        <div class="CollapsiblePanelTab " tabindex="1" style="background:#fff;">
+                            New Colors
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300132">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel3" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/yarns/All_Knit_Picks_Yarn__L300198.html" title="All Knit Picks Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'View All Yarn - 300198']);">
+                        <div class="CollapsiblePanelTab mainCatLinkSelected" tabindex="2" style="background:#fff;">
+                            View All Yarn
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="" id="300198">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                    <div class="categoryGroupSeparator"></div>
+                    <div class="categoryGroup yarns4">
+                      filter by
+                    </div>
+                  
+                
+                
+                <div id="CollapsiblePanel4" class="CollapsiblePanel">
+                    
+                    
+                    <div class="CollapsiblePanelTab" tabindex="3" style="background:#fff url(//d2q9kw5vp0we94.cloudfront.net/structure/expanded.gif) no-repeat right;cursor:pointer;">
+                        Yarn Weight
+                  </div>
+                
+                <div class="CollapsiblePanelContent CollapsiblePanelContentFiltering" style="display:none;" id="300101">
+                    
+                    
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010102,300198" title="Lace Weight Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Lace - 30010102']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Lace</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010103,300198" title="Fingering Weight Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Fingering - 30010103']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Fingering</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010104,300198" title="Sport Weight Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Sport - 30010104']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Sport</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010105,300198" title="DK Weight Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'DK - 30010105']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">DK</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010106,300198" title="Worsted Weight Yarn & Heavy Worsted Weight Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Worsted/Hvy Worsted - 30010106']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Worsted/Hvy Worsted</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010107,300198" title="Bulky Weight Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Bulky - 30010107']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Bulky</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010108,300198" title="Super Bulky Weight Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Super Bulky - 30010108']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Super Bulky</span>
+                            </div>
+                          </a><br/>
+                        
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel5" class="CollapsiblePanel">
+                    
+                    
+                    <div class="CollapsiblePanelTab" tabindex="4" style="background:#fff url(//d2q9kw5vp0we94.cloudfront.net/structure/expanded.gif) no-repeat right;cursor:pointer;">
+                        Fiber Content
+                  </div>
+                
+                <div class="CollapsiblePanelContent CollapsiblePanelContentFiltering" style="display:none;" id="300102">
+                    
+                    
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010208,300198" title="Acrylic Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Acrylic - 30010208']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Acrylic</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010201,300198" title="Alpaca Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Alpaca - 30010201']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Alpaca</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010202,300198" title="Cashmere Yarn Blends" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Cashmere - 30010202']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Cashmere</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010204,300198" title="Cotton Yarn & Blends" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Cotton - 30010204']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Cotton</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010206,300198" title="Linen Yarn Blends" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Linen - 30010206']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Linen</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010205,300198" title="Mohair Yarn Blends" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Mohair - 30010205']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Mohair</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010211,300198" title="Natural Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Natural - 30010211']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Natural</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010209,300198" title="Silk Yarn Blends" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Silk - 30010209']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Silk</span>
+                            </div>
+                          </a><br/>
+                        
+                          <a class="" href="/cfYarns/Yarn_List_Filtered.cfm?categories=30010207,300198" title="Wool Yarn & Blends" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Wool - 30010207']);">
+                            <div class="subCatDiv">
+                              <span class="subCatSpan">Wool</span>
+                            </div>
+                          </a><br/>
+                        
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                    <div class="categoryGroupSeparator"></div>
+                    <div class="categoryGroup yarns13">
+                      browse by
+                    </div>
+                  
+                
+                
+                <div id="CollapsiblePanel6" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/yarns/Sock_Yarn__L300106.html" title="Sock Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Sock - 300106']);">
+                        <div class="CollapsiblePanelTab " tabindex="5" style="background:#fff;">
+                            Sock
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300106">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel7" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/Yarns/Superwash_Yarn_Washable_Yarn__L300164.html" title="Washable and Superwash Yarns" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Washable - 300164']);">
+                        <div class="CollapsiblePanelTab " tabindex="6" style="background:#fff;">
+                            Washable
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300164">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel8" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/Yarns/Value__L300163.html" title="Value Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Best Value - 300163']);">
+                        <div class="CollapsiblePanelTab " tabindex="7" style="background:#fff;">
+                            Best Value
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300163">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel9" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/Yarns/Lace_Yarn__L300166.html" title="Lace Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Lace - 300166']);">
+                        <div class="CollapsiblePanelTab " tabindex="8" style="background:#fff;">
+                            Lace
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300166">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel10" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/Yarns/Luxury__L300165.html" title="Luxury Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Luxury - 300165']);">
+                        <div class="CollapsiblePanelTab " tabindex="9" style="background:#fff;">
+                            Luxury
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300165">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel11" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/Yarns/Multi-colored_Yarn__L300115.html" title="Multi-colored Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Multi-Colored - 300115']);">
+                        <div class="CollapsiblePanelTab " tabindex="10" style="background:#fff;">
+                            Multi-Colored
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300115">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel12" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/yarns/Hand_Dyed_Yarn__L300105.html" title="Hand Dyed Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Hand Dyed - 300105']);">
+                        <div class="CollapsiblePanelTab " tabindex="11" style="background:#fff;">
+                            Hand Dyed
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300105">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel13" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/Yarns/Tweed_Knitting_Yarn__L300138.html" title="Tweed Yarn Blends" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Tweed Blends - 300138']);">
+                        <div class="CollapsiblePanelTab " tabindex="12" style="background:#fff;">
+                            Tweed Blends
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300138">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel14" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/yarns/Dye_Your_Own_Yarn__L300110.html" title="Dye Your Own Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Bare - Dye Your Own - 300110']);">
+                        <div class="CollapsiblePanelTab " tabindex="13" style="background:#fff;">
+                            Bare - Dye Your Own
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300110">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel15" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/yarns/Feltable_Yarn__L300107.html" title="Feltable Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Feltable - 300107']);">
+                        <div class="CollapsiblePanelTab " tabindex="14" style="background:#fff;">
+                            Feltable
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300107">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel16" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/Yarns/Unspun_Wool_Roving__L300129.html" title="Roving" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Roving - 300129']);">
+                        <div class="CollapsiblePanelTab " tabindex="15" style="background:#fff;">
+                            Roving
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300129">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                <div class="categoryGroupSeparator"></div>
+<div class="categoryGroup">
+  Browse By Color
+</div>
+<img src="//d2q9kw5vp0we94.cloudfront.net/structure/categorynav-yarn-colors-1.png" style="margin-bottom:8px;" usemap="#category-nav-yarn-colors">
+<map name="category-nav-yarn-colors">
+  <area shape="rect" coords="0,0,25,25" href="/yarns/Pink_Yarn__L30013008.html">
+  <area shape="rect" coords="31,-1,56,26" href="/yarns/Red_Yarn__L30013007.html">
+  <area shape="rect" coords="60,-1,87,26" href="/yarns/Orange_Yarn__L30013006.html">
+  <area shape="rect" coords="91,-2,119,26" href="/yarns/Yellow_Yarn__L30013005.html">
+  <area shape="rect" coords="-1,28,27,55" href="/yarns/Green_Yarn__L30013004.html">
+  <area shape="rect" coords="30,27,58,54" href="/yarns/Blue-Green_Yarn__L30013003.html">
+  <area shape="rect" coords="60,28,88,56" href="/yarns/Blue_Yarn__L30013002.html">
+  <area shape="rect" coords="91,28,120,55" href="/yarns/Violet_Yarn__L30013009.html">
+  <area shape="rect" coords="-3,57,27,85" href="/yarns/NaturalUndyed_Yarn__L30013013.html">
+  <area shape="rect" coords="30,56,58,86" href="/yarns/Brown_Yarn__L30013010.html">
+  <area shape="rect" coords="61,57,90,82" href="/yarns/Grey_and_Black_Yarn__L30013011.html">
+  <area shape="rect" coords="92,57,120,88" href="/yarns/Multi-Colored_Yarn__L30013001.html">
+</map> 
+                    <div class="categoryGroupSeparator"></div>
+                    <div class="categoryGroup yarns5">
+                      sale & discontinued
+                    </div>
+                  
+                
+                
+                <div id="CollapsiblePanel17" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/cfYarns/yarn_colors_list.cfm?id=300109" title="Sale Yarn" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Sale Yarn - 300109']);">
+                        <div class="CollapsiblePanelTab " tabindex="16" style="background:#fff;">
+                            Sale Yarn
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300109">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel18" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/accessories/Bare_Yarn_20_Packs__DBareYarnBulk.html" title="Bare Yarn Bulk Discount" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Bare Yarn Bulk Discount - 300170']);">
+                        <div class="CollapsiblePanelTab " tabindex="17" style="background:#fff;">
+                            Bare Yarn Bulk Discount
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300170">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel19" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/cfYarns/Yarn_Colors_List.cfm?id=300136" title="Discontinued Colors" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Discontinued Colors - 300136']);">
+                        <div class="CollapsiblePanelTab " tabindex="18" style="background:#fff;">
+                            Discontinued Colors
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300136">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                    <div class="categoryGroupSeparator"></div>
+                    <div class="categoryGroup yarns14">
+                      learn more
+                    </div>
+                  
+                
+                
+                <div id="CollapsiblePanel20" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/cfPromo/Knitting_Yarn_Care_Recommendations.cfm" title="Yarn Care Chart" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Yarn Care Chart - 300137']);">
+                        <div class="CollapsiblePanelTab " tabindex="19" style="background:#fff;">
+                            Yarn Care Chart
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300137">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+                
+                
+                <div id="CollapsiblePanel21" class="CollapsiblePanel">
+                    
+                    
+                      <a href="/cfPromo/Knitting_Yarn_Comparison_Chart.cfm" title="Yarn Comparison Chart" onclick="_gaq.push(['_trackEvent', 'Left Nav', 'Click', 'Yarn Comparison Chart - 300142']);">
+                        <div class="CollapsiblePanelTab " tabindex="20" style="background:#fff;">
+                            Yarn Comparison Chart
+                        </div>
+                      </a>
+                  
+                <div class="CollapsiblePanelContent " style="display:none;" id="300142">
+                    
+                    
+                    
+                </div>
+                </div>
+
+                
+                
+                
+        
+        
+        <br />	
+        <div id="catNavAds"> 
+          
+    <!-- content_block begin=/content_blocks/leftnavad/default.cfm -->
+    <div class="categoryGroupSeparator"></div>
+
+
+
+<div >
+	
+		<a href="/needles/knitting_needles.html?intmedid=LeftNav--NeedleSale" style="display:block;margin:10px 0 10px -5px;"><img src="//d2q9kw5vp0we94.cloudfront.net/promo/se15/Left Nav/leftnav_2015_needles.jpg"></a>
+	
+	<a href="/yarns/Mighty_Stitch_Yarn__D5420287.html?intmedid=LeftNav--TheMightyStitch" style="display:block;margin:10px 0 10px -5px;"><img src="//d2q9kw5vp0we94.cloudfront.net/promo/se15/Left Nav/leftnav_2015_mighty.jpg"></a>
+</div>
+
+    <!-- content_block end=/content_blocks/leftnavad/default.cfm -->
+  
+        </div>
+
+        
+        
+
+    </div>
+    
+	<script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $(".CollapsiblePanelTab").click(function(){
+                $(this).next(".CollapsiblePanelContent").toggle();
+            });
+        });
+    </script>
+    
+    </div>
+  <div id="IE6FixListPg2" class="rtCol">
+    
+    
+    <div style="margin-top:10px;">
+    <img src="//d2q9kw5vp0we94.cloudfront.net/CategoryBanners/yarn_categorybanner_allyarn.jpg" border="0" alt="All Knit Picks Yarn"/> 
+    </div>
+  
+        <div id="LiveTxtsortBar">
+          <div class="sortOptions"> <form name="SortOptions" id="SortOptions" action="/cfYarns/Yarn_List.cfm?ID=300198" method="post" onsubmit="return _CF_checkSortOptions(this)"> <select name="SortByYarn" id="SortByYarn">
+
+			              
+              <option value="Title ASC">Title: A-Z</option>
+              <option value="Title DESC">Title: Z-A</option>
+              <option value="PC1 ASC">Price: Low-High</option>
+              <option value="PC1 DESC">Price: High-Low</option> 
+              <option value="WeeklySales DESC" selected="selected">Bestselling</option>
+              <option value="Publish_Date DESC">Newest</option>
+			  </select>
+        <input type="hidden" name="wasSorted" value="true">
+        
+  <select name="categoryItemsPerPage">
+  
+    <option value="24" >24 Per Page</option>
+    
+    <option value="36" >36 Per Page</option>
+    
+    <option value="64" >64 Per Page</option>
+    
+    <option value="128" >128 Per Page</option>
+    
+  </select>
+<input name="submit" id="submit"  type="submit" value="Sort" /> </form>
+</div>
+          <h1 id="categoryTitle">
+            All Knit Picks Yarn 
+          </h1>
+          <br clear="all" />
+          
+        </div>
+		
+      <div id="pgLinksNav"> 
+        <span class="currentPg">1</span>
+      
+         | <a href="/yarns/All_Knit_Picks_Yarn__L300198.html?showAll=no" class="pageLinks">SHOW PAGES</a>
+      </div><br /> 
+  <div class="listItem book" id="5420204">
+    <br />
+    <a href="/yarns/Chroma_Worsted_Yarn__D5420204.html" class="itemImgLink" title="Chroma Worsted Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420204.jpg" alt="Chroma Worsted Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Chroma_Worsted_Yarn__D5420204.html" title="Chroma Worsted Yarn" style="margin-top:0px;">Chroma Worsted Yarn</a>
+    
+      <span style="display:block;margin-bottom:4px;">
+        
+        </span>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.99 - $9.99 / 100g ball</span>
+    
+      <span class="listItemStatusTags" style="margin-top:2px !important;">Sale</span>
+    
+    <span class="yarnWeight">70% Wool, 30% Nylon</span><br />
+    <span class="yarnWeight">Worsted</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420103">
+    <br />
+    <a href="/yarns/Wool_of_the_Andes_Worsted_Yarn__D5420103.html" class="itemImgLink" title="Wool of the Andes Worsted Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420103.jpg" alt="Wool of the Andes Worsted Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Wool_of_the_Andes_Worsted_Yarn__D5420103.html" title="Wool of the Andes Worsted Yarn" style="margin-top:0px;">Wool of the Andes Worsted Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.69 / 50g ball</span>
+    
+    <span class="yarnWeight">100% Peruvian Highland Wool</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420108">
+    <br />
+    <a href="/yarns/Alpaca_Cloud_Lace_Yarn__D5420108.html" class="itemImgLink" title="Alpaca Cloud Lace Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420108.jpg" alt="Alpaca Cloud Lace Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Alpaca_Cloud_Lace_Yarn__D5420108.html" title="Alpaca Cloud Lace Yarn" style="margin-top:0px;">Alpaca Cloud Lace Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.79 / 50g hank</span>
+    
+    <span class="yarnWeight">100% Baby Alpaca</span><br />
+    <span class="yarnWeight">Lace Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420203">
+    <br />
+    <a href="/yarns/Chroma_Fingering_Yarn__D5420203.html" class="itemImgLink" title="Chroma Fingering Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420203.jpg" alt="Chroma Fingering Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Chroma_Fingering_Yarn__D5420203.html" title="Chroma Fingering Yarn" style="margin-top:0px;">Chroma Fingering Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.99 - $9.99 / 100g ball</span>
+    
+    <span class="yarnWeight">70% Wool, 30% Nylon</span><br />
+    <span class="yarnWeight">Fingering</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420165">
+    <br />
+    <a href="/yarns/Felici_Sock_Special_Reserve_Yarn__D5420165.html" class="itemImgLink" title="Felici Sock Special Reserve  Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420165.jpg" alt="Felici Sock Special Reserve  Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Felici_Sock_Special_Reserve_Yarn__D5420165.html" title="Felici Sock Special Reserve  Yarn" style="margin-top:0px;">Felici Sock Special Reserve  Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $5.49 / 50g ball</span>
+    
+    <span class="yarnWeight">75% Superwash Merino Wool, 25% Nylon</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420132">
+    <br />
+    <a href="/yarns/Palette_Yarn__D5420132.html" class="itemImgLink" title="Palette Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420132.jpg" alt="Palette Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Palette_Yarn__D5420132.html" title="Palette Yarn" style="margin-top:0px;">Palette Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $3.49 / 50g ball</span>
+    
+    <span class="yarnWeight">100% Peruvian Highland Wool</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420153">
+    <br />
+    <a href="/yarns/Swish_Worsted_Yarn__D5420153.html" class="itemImgLink" title="Swish Worsted Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420153.jpg" alt="Swish Worsted Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Swish_Worsted_Yarn__D5420153.html" title="Swish Worsted Yarn" style="margin-top:0px;">Swish Worsted Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.69 / 50g ball</span>
+    
+    <span class="yarnWeight">100% Superwash Merino Wool</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420207">
+    <br />
+    <a href="/yarns/Dishie_Yarn__D5420207.html" class="itemImgLink" title="Dishie Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420207.jpg" alt="Dishie Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Dishie_Yarn__D5420207.html" title="Dishie Yarn" style="margin-top:0px;">Dishie Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $3.99 / 100g ball</span>
+    
+    <span class="yarnWeight"> 100% Cotton</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420171">
+    <br />
+    <a href="/yarns/Comfy_Worsted_Yarn__D5420171.html" class="itemImgLink" title="Comfy Worsted Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420171.jpg" alt="Comfy Worsted Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Comfy_Worsted_Yarn__D5420171.html" title="Comfy Worsted Yarn" style="margin-top:0px;">Comfy Worsted Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.99 / 50g ball</span>
+    
+    <span class="yarnWeight">75% Pima Cotton, 25% Acrylic</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420251">
+    <br />
+    <a href="/yarns/Hawthorne_Fingering_Multi_Yarn__D5420251.html" class="itemImgLink" title="Hawthorne Fingering Multi Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420251.jpg" alt="Hawthorne Fingering Multi Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Hawthorne_Fingering_Multi_Yarn__D5420251.html" title="Hawthorne Fingering Multi Yarn" style="margin-top:0px;">Hawthorne Fingering Multi Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $10.99 / 100g Hank</span>
+    
+    <span class="yarnWeight">80% Superwash Fine Highland Wool, 20% Polyamide (Nylon)</span><br />
+    <span class="yarnWeight">Fingering</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420168">
+    <br />
+    <a href="/yarns/Swish_DK_Yarn__D5420168.html" class="itemImgLink" title="Swish DK Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420168.jpg" alt="Swish DK Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Swish_DK_Yarn__D5420168.html" title="Swish DK Yarn" style="margin-top:0px;">Swish DK Yarn</a>
+    
+      <span style="display:block;margin-bottom:4px;">
+        
+        </span>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.69 / 50g ball</span>
+    
+      <span class="listItemStatusTags" style="margin-top:2px !important;">Sale</span>
+    
+    <span class="yarnWeight">100% Superwash Merino Wool</span><br />
+    <span class="yarnWeight">DK Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420134">
+    <br />
+    <a href="/yarns/Stroll_Tonal_Sock_Yarn__D5420134.html" class="itemImgLink" title="Stroll Tonal Sock Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420134.jpg" alt="Stroll Tonal Sock Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Stroll_Tonal_Sock_Yarn__D5420134.html" title="Stroll Tonal Sock Yarn" style="margin-top:0px;">Stroll Tonal Sock Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $10.99 / 100g hank</span>
+    
+    <span class="yarnWeight">75% Superwash Merino Wool, 25% Nylon</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420219">
+    <br />
+    <a href="/yarns/Brava_Worsted_Yarn__D5420219.html" class="itemImgLink" title="Brava Worsted Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420219.jpg" alt="Brava Worsted Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Brava_Worsted_Yarn__D5420219.html" title="Brava Worsted Yarn" style="margin-top:0px;">Brava Worsted Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.99 / 100g ball</span>
+    
+    <span class="yarnWeight">100% Premium Acrylic</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420133">
+    <br />
+    <a href="/yarns/Stroll_Sock_Yarn__D5420133.html" class="itemImgLink" title="Stroll Sock Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420133.jpg" alt="Stroll Sock Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Stroll_Sock_Yarn__D5420133.html" title="Stroll Sock Yarn" style="margin-top:0px;">Stroll Sock Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.69 / 50g ball</span>
+    
+    <span class="yarnWeight">75% Superwash Merino Wool, 25% Nylon</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420271">
+    <br />
+    <a href="/yarns/Hawthorne_Fingering_Kettle_Dye_Yarn__D5420271.html" class="itemImgLink" title="Hawthorne Fingering Kettle Dye Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420271.jpg" alt="Hawthorne Fingering Kettle Dye Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Hawthorne_Fingering_Kettle_Dye_Yarn__D5420271.html" title="Hawthorne Fingering Kettle Dye Yarn" style="margin-top:0px;">Hawthorne Fingering Kettle Dye Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $10.99 / 100g Hank</span>
+    
+    <span class="yarnWeight">80% Superwash Fine Highland Wool, 20% Polyamide (Nylon)</span><br />
+    <span class="yarnWeight">Fingering</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420275">
+    <br />
+    <a href="/yarns/Comfy_Worsted_Heather_Special_Reserve__D5420275.html" class="itemImgLink" title="Comfy Worsted Heather Special Reserve">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420275.jpg" alt="Comfy Worsted Heather Special Reserve" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Comfy_Worsted_Heather_Special_Reserve__D5420275.html" title="Comfy Worsted Heather Special Reserve" style="margin-top:0px;">Comfy Worsted Heather Special Reserve</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.99 / 50g Ball</span>
+    
+    <span class="yarnWeight">75% Pima Cotton, 25% Acrylic</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420218">
+    <br />
+    <a href="/yarns/Brava_Sport_Yarn__D5420218.html" class="itemImgLink" title="Brava Sport Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420218.jpg" alt="Brava Sport Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Brava_Sport_Yarn__D5420218.html" title="Brava Sport Yarn" style="margin-top:0px;">Brava Sport Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.99 / 100g ball</span>
+    
+    <span class="yarnWeight">100% Premium Acrylic</span><br />
+    <span class="yarnWeight">Sport Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420162">
+    <br />
+    <a href="/yarns/CotLin_DK_Yarn__D5420162.html" class="itemImgLink" title="CotLin DK Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420162.jpg" alt="CotLin DK Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/CotLin_DK_Yarn__D5420162.html" title="CotLin DK Yarn" style="margin-top:0px;">CotLin DK Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.99 / 50g ball</span>
+    
+    <span class="yarnWeight">70% Tanguis Cotton, 30% Linen</span><br />
+    <span class="yarnWeight">DK weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420256">
+    <br />
+    <a href="/yarns/Wool_of_the_Andes_Superwash_Bulky__D5420256.html" class="itemImgLink" title="Wool of the Andes Superwash Bulky">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420256.jpg" alt="Wool of the Andes Superwash Bulky" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Wool_of_the_Andes_Superwash_Bulky__D5420256.html" title="Wool of the Andes Superwash Bulky" style="margin-top:0px;">Wool of the Andes Superwash Bulky</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $7.39 / 100g Hank</span>
+    
+    <span class="yarnWeight">100% Superwash Wool</span><br />
+    <span class="yarnWeight">Bulky</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420110">
+    <br />
+    <a href="/yarns/Wool_of_the_Andes_Sport_Yarn__D5420110.html" class="itemImgLink" title="Wool of the Andes Sport Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420110.jpg" alt="Wool of the Andes Sport Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Wool_of_the_Andes_Sport_Yarn__D5420110.html" title="Wool of the Andes Sport Yarn" style="margin-top:0px;">Wool of the Andes Sport Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.69 / 50g ball</span>
+    
+    <span class="yarnWeight">100% Peruvian Highland Wool</span><br />
+    <span class="yarnWeight">Sport Weight </span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420210">
+    <br />
+    <a href="/yarns/Aloft_Super_Kid_Mohair_Yarn__D5420210.html" class="itemImgLink" title="Aloft Super Kid Mohair Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420210.jpg" alt="Aloft Super Kid Mohair Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Aloft_Super_Kid_Mohair_Yarn__D5420210.html" title="Aloft Super Kid Mohair Yarn" style="margin-top:0px;">Aloft Super Kid Mohair Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.99 / 25g ball</span>
+    
+    <span class="yarnWeight">75% Super Kid Mohair, 25% Silk</span><br />
+    <span class="yarnWeight">Lace Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420190">
+    <br />
+    <a href="/yarns/Gloss_DK_Yarn__D5420190.html" class="itemImgLink" title="Gloss DK Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420190.jpg" alt="Gloss DK Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Gloss_DK_Yarn__D5420190.html" title="Gloss DK Yarn" style="margin-top:0px;">Gloss DK Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.49 / 50g ball</span>
+    
+    <span class="yarnWeight">70% Merino wool, 30% Silk</span><br />
+    <span class="yarnWeight">DK Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420122">
+    <br />
+    <a href="/yarns/Shine_Sport_Yarn__D5420122.html" class="itemImgLink" title="Shine Sport Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420122.jpg" alt="Shine Sport Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Shine_Sport_Yarn__D5420122.html" title="Shine Sport Yarn" style="margin-top:0px;">Shine Sport Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.99 / 50g ball</span>
+    
+    <span class="yarnWeight">60% Pima Cotton, 40% Modal® natural beech wood fiber</span><br />
+    <span class="yarnWeight">Sport Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420220">
+    <br />
+    <a href="/yarns/Brava_Bulky_Yarn__D5420220.html" class="itemImgLink" title="Brava Bulky Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420220.jpg" alt="Brava Bulky Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Brava_Bulky_Yarn__D5420220.html" title="Brava Bulky Yarn" style="margin-top:0px;">Brava Bulky Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.99 / 100g ball</span>
+    
+    <span class="yarnWeight">100% Premium Acrylic</span><br />
+    <span class="yarnWeight">Bulky Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420184">
+    <br />
+    <a href="/yarns/City_Tweed_DK_Yarn__D5420184.html" class="itemImgLink" title="City Tweed DK Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420184.jpg" alt="City Tweed DK Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/City_Tweed_DK_Yarn__D5420184.html" title="City Tweed DK Yarn" style="margin-top:0px;">City Tweed DK Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.99 / 50g ball</span>
+    
+    <span class="yarnWeight">55% Merino wool, 25% Superfine alpaca, 20% Donegal tweed</span><br />
+    <span class="yarnWeight">DK Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420246">
+    <br />
+    <a href="/yarns/Wool_of_the_Andes_Superwash__D5420246.html" class="itemImgLink" title="Wool of the Andes Superwash">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420246.jpg" alt="Wool of the Andes Superwash" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Wool_of_the_Andes_Superwash__D5420246.html" title="Wool of the Andes Superwash" style="margin-top:0px;">Wool of the Andes Superwash</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $3.69 / 50g ball</span>
+    
+    <span class="yarnWeight">100% Superwash Wool</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420140">
+    <br />
+    <a href="/yarns/Shine_Worsted_Yarn__D5420140.html" class="itemImgLink" title="Shine Worsted Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420140.jpg" alt="Shine Worsted Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Shine_Worsted_Yarn__D5420140.html" title="Shine Worsted Yarn" style="margin-top:0px;">Shine Worsted Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.99 / 50g ball</span>
+    
+    <span class="yarnWeight">60% Pima Cotton, 40% Modal® natural beech wood fiber</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420145">
+    <br />
+    <a href="/yarns/Bare_Stroll_Fingering_Sock_Yarn__D5420145.html" class="itemImgLink" title="Bare Stroll Fingering Sock Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420145.jpg" alt="Bare Stroll Fingering Sock Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Stroll_Fingering_Sock_Yarn__D5420145.html" title="Bare Stroll Fingering Sock Yarn" style="margin-top:0px;">Bare Stroll Fingering Sock Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $7.59 / 100g hank</span>
+    
+    <span class="yarnWeight">75% Superwash Merino Wool, 25% Nylon</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420151">
+    <br />
+    <a href="/yarns/Gloss_Fingering_Yarn__D5420151.html" class="itemImgLink" title="Gloss Fingering Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420151.jpg" alt="Gloss Fingering Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Gloss_Fingering_Yarn__D5420151.html" title="Gloss Fingering Yarn" style="margin-top:0px;">Gloss Fingering Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.49 / 50g hank</span>
+    
+    <span class="yarnWeight">70% Merino Wool, 30% Silk</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420287">
+    <br />
+    <a href="/yarns/Mighty_Stitch_Yarn__D5420287.html" class="itemImgLink" title="Mighty Stitch Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420287.jpg" alt="Mighty Stitch Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Mighty_Stitch_Yarn__D5420287.html" title="Mighty Stitch Yarn" style="margin-top:0px;">Mighty Stitch Yarn</a>
+    
+      <span style="display:block;margin-bottom:4px;">
+        
+        </span>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $3.49 / 100g Ball</span>
+    
+      <span class="listItemStatusTags" style="margin-top:2px !important;">New</span>
+    
+    <span class="yarnWeight">80% Acrylic  20% Superwash Wool</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420245">
+    <br />
+    <a href="/yarns/Curio__D5420245.html" class="itemImgLink" title="Curio">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420245.jpg" alt="Curio" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Curio__D5420245.html" title="Curio" style="margin-top:0px;">Curio</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $3.99 / 100g ball</span>
+    
+    <span class="yarnWeight">100% Cotton</span><br />
+    <span class="yarnWeight">Lace</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420278">
+    <br />
+    <a href="/yarns/Preciosa_Tonal___D5420278.html" class="itemImgLink" title="Preciosa Tonal ">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420278.jpg" alt="Preciosa Tonal " class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Preciosa_Tonal___D5420278.html" title="Preciosa Tonal " style="margin-top:0px;">Preciosa Tonal </a>
+    
+      <span style="display:block;margin-bottom:4px;">
+        
+        </span>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $8.99 / 100g Hank</span>
+    
+      <span class="listItemStatusTags" style="margin-top:2px !important;">Sale</span>
+    
+    <span class="yarnWeight">100% Merino</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420217">
+    <br />
+    <a href="/yarns/Biggo_Yarn__D5420217.html" class="itemImgLink" title="Biggo Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420217.jpg" alt="Biggo Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Biggo_Yarn__D5420217.html" title="Biggo Yarn" style="margin-top:0px;">Biggo Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $8.49 / 100g Hank</span>
+    
+    <span class="yarnWeight">50% Superwash Merino Wool, 50% Nylon</span><br />
+    <span class="yarnWeight">Bulky Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420127">
+    <br />
+    <a href="/yarns/Shadow_Lace_Yarn__D5420127.html" class="itemImgLink" title="Shadow Lace Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420127.jpg" alt="Shadow Lace Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Shadow_Lace_Yarn__D5420127.html" title="Shadow Lace Yarn" style="margin-top:0px;">Shadow Lace Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.99 / 50g hank</span>
+    
+    <span class="yarnWeight">100% Merino Wool</span><br />
+    <span class="yarnWeight">Heathered Lace Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420197">
+    <br />
+    <a href="/yarns/Comfy_Fingering_Yarn__D5420197.html" class="itemImgLink" title="Comfy Fingering Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420197.jpg" alt="Comfy Fingering Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Comfy_Fingering_Yarn__D5420197.html" title="Comfy Fingering Yarn" style="margin-top:0px;">Comfy Fingering Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.99 / 50g ball</span>
+    
+    <span class="yarnWeight">75% Pima Cotton, 25% Acrylic</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420254">
+    <br />
+    <a href="/yarns/Lindy_Chain___D5420254.html" class="itemImgLink" title="Lindy Chain ">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420254.jpg" alt="Lindy Chain " class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Lindy_Chain___D5420254.html" title="Lindy Chain " style="margin-top:0px;">Lindy Chain </a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.49 / 50g Ball</span>
+    
+    <span class="yarnWeight">70% Linen, 30% Pima Cotton</span><br />
+    <span class="yarnWeight">Fingering</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420193">
+    <br />
+    <a href="/yarns/Stroll_Hand_Painted_Sock_Yarn__D5420193.html" class="itemImgLink" title="Stroll Hand Painted Sock Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420193.jpg" alt="Stroll Hand Painted Sock Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Stroll_Hand_Painted_Sock_Yarn__D5420193.html" title="Stroll Hand Painted Sock Yarn" style="margin-top:0px;">Stroll Hand Painted Sock Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $10.99 / 100g hank</span>
+    
+    <span class="yarnWeight">75% Superwash Merino Wool, 25% Nylon</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420279">
+    <br />
+    <a href="/yarns/Pima_Cotton_Special_Reserve___D5420279.html" class="itemImgLink" title="Pima Cotton Special Reserve ">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420279.jpg" alt="Pima Cotton Special Reserve " class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Pima_Cotton_Special_Reserve___D5420279.html" title="Pima Cotton Special Reserve " style="margin-top:0px;">Pima Cotton Special Reserve </a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.99 / 100g Hank</span>
+    
+    <span class="yarnWeight">100% Pima Cotton Flammé
+</span><br />
+    <span class="yarnWeight">Aran Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420172">
+    <br />
+    <a href="/yarns/Gloss_Lace_Yarn__D5420172.html" class="itemImgLink" title="Gloss Lace Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420172.jpg" alt="Gloss Lace Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Gloss_Lace_Yarn__D5420172.html" title="Gloss Lace Yarn" style="margin-top:0px;">Gloss Lace Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.49 / 50g hank</span>
+    
+    <span class="yarnWeight">70% Merino Wool, 30% Silk</span><br />
+    <span class="yarnWeight">Lace Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420283">
+    <br />
+    <a href="/yarns/Super_Fine_Alpaca_Special_Reserve__D5420283.html" class="itemImgLink" title="Super Fine Alpaca Special Reserve">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420283.jpg" alt="Super Fine Alpaca Special Reserve" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Super_Fine_Alpaca_Special_Reserve__D5420283.html" title="Super Fine Alpaca Special Reserve" style="margin-top:0px;">Super Fine Alpaca Special Reserve</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $7.49 / 100g Hank</span>
+    
+    <span class="yarnWeight">100% Superfine Alpaca
+</span><br />
+    <span class="yarnWeight">Bulky</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420109">
+    <br />
+    <a href="/yarns/Capra_DK_Yarn__D5420109.html" class="itemImgLink" title="Capra DK Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420109.jpg" alt="Capra DK Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Capra_DK_Yarn__D5420109.html" title="Capra DK Yarn" style="margin-top:0px;">Capra DK Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $7.99 / 50g Ball</span>
+    
+    <span class="yarnWeight">85% Merino Wool, 15% Cashmere </span><br />
+    <span class="yarnWeight">DK Weight </span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420164">
+    <br />
+    <a href="/yarns/Bare_Swish_DK_Yarn__D5420164.html" class="itemImgLink" title="Bare Swish DK Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420164.jpg" alt="Bare Swish DK Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Swish_DK_Yarn__D5420164.html" title="Bare Swish DK Yarn" style="margin-top:0px;">Bare Swish DK Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $7.59 / 100g hank</span>
+    
+    <span class="yarnWeight">100% Superwash Merino Wool</span><br />
+    <span class="yarnWeight">DK Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420270">
+    <br />
+    <a href="/yarns/Hawthorne_Sport_Multi_Yarn__D5420270.html" class="itemImgLink" title="Hawthorne Sport Multi Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420270.jpg" alt="Hawthorne Sport Multi Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Hawthorne_Sport_Multi_Yarn__D5420270.html" title="Hawthorne Sport Multi Yarn" style="margin-top:0px;">Hawthorne Sport Multi Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $10.99 / 100g Hank</span>
+    
+    <span class="yarnWeight">80% Superwash Fine Highland Wool, 20% Polyamide (Nylon)</span><br />
+    <span class="yarnWeight">Sport</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420150">
+    <br />
+    <a href="/yarns/Stroll_Tweed_Sock_Yarn__D5420150.html" class="itemImgLink" title="Stroll Tweed Sock Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420150.jpg" alt="Stroll Tweed Sock Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Stroll_Tweed_Sock_Yarn__D5420150.html" title="Stroll Tweed Sock Yarn" style="margin-top:0px;">Stroll Tweed Sock Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.79 / 50g ball</span>
+    
+    <span class="yarnWeight">65% Superwash Merino Wool, 25% Nylon, 10% Donegal</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420255">
+    <br />
+    <a href="/yarns/The_Big_Cozy__D5420255.html" class="itemImgLink" title="The Big Cozy">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420255.jpg" alt="The Big Cozy" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/The_Big_Cozy__D5420255.html" title="The Big Cozy" style="margin-top:0px;">The Big Cozy</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $9.99 / 100g ball</span>
+    
+    <span class="yarnWeight">55% superfine alpaca, 45% Peruvian highland wool
+</span><br />
+    <span class="yarnWeight">Super Bulky</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420179">
+    <br />
+    <a href="/yarns/Comfy_Sport_Yarn__D5420179.html" class="itemImgLink" title="Comfy Sport Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420179.jpg" alt="Comfy Sport Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Comfy_Sport_Yarn__D5420179.html" title="Comfy Sport Yarn" style="margin-top:0px;">Comfy Sport Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.99 / 50g ball</span>
+    
+    <span class="yarnWeight">75% Pima Cotton, 25% Acrylic</span><br />
+    <span class="yarnWeight">Sport Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420211">
+    <br />
+    <a href="/yarns/Wool_of_the_Andes_Tweed_Yarn__D5420211.html" class="itemImgLink" title="Wool of the Andes Tweed Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420211.jpg" alt="Wool of the Andes Tweed Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Wool_of_the_Andes_Tweed_Yarn__D5420211.html" title="Wool of the Andes Tweed Yarn" style="margin-top:0px;">Wool of the Andes Tweed Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $3.49 / 50g Ball</span>
+    
+    <span class="yarnWeight">80% Peruvian Highland Wool, 20% Donegal Tweed</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420257">
+    <br />
+    <a href="/yarns/Diadem_Solid_Fingering_Yarn__D5420257.html" class="itemImgLink" title="Diadem Solid Fingering Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420257.jpg" alt="Diadem Solid Fingering Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Diadem_Solid_Fingering_Yarn__D5420257.html" title="Diadem Solid Fingering Yarn" style="margin-top:0px;">Diadem Solid Fingering Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $17.99 / 100g Hank</span>
+    
+    <span class="yarnWeight">50% Baby Alpaca, 50% Mulberry Silk</span><br />
+    <span class="yarnWeight">Fingering</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420244">
+    <br />
+    <a href="/yarns/Billow___D5420244.html" class="itemImgLink" title="Billow ">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420244.jpg" alt="Billow " class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Billow___D5420244.html" title="Billow " style="margin-top:0px;">Billow </a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $5.99 / 100g hank</span>
+    
+    <span class="yarnWeight">100% Pima Cotton </span><br />
+    <span class="yarnWeight">Bulky Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420216">
+    <br />
+    <a href="/yarns/Capretta_Yarn__D5420216.html" class="itemImgLink" title="Capretta Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420216.jpg" alt="Capretta Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Capretta_Yarn__D5420216.html" title="Capretta Yarn" style="margin-top:0px;">Capretta Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $7.79 / 50g ball</span>
+    
+    <span class="yarnWeight">80% Fine Merino Wool, 10% Cashmere, 10% Nylon</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420268">
+    <br />
+    <a href="/yarns/Diadem_Solid_DK_Yarn__D5420268.html" class="itemImgLink" title="Diadem Solid DK Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420268.jpg" alt="Diadem Solid DK Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Diadem_Solid_DK_Yarn__D5420268.html" title="Diadem Solid DK Yarn" style="margin-top:0px;">Diadem Solid DK Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $17.99 / 100g Hank</span>
+    
+    <span class="yarnWeight">50% Baby Alpaca, 50% Mulberry Silk</span><br />
+    <span class="yarnWeight">DK</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420183">
+    <br />
+    <a href="/yarns/City_Tweed_AranHW_Yarn__D5420183.html" class="itemImgLink" title="City Tweed Aran/HW Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420183.jpg" alt="City Tweed Aran/HW Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/City_Tweed_AranHW_Yarn__D5420183.html" title="City Tweed Aran/HW Yarn" style="margin-top:0px;">City Tweed Aran/HW Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $9.99 / 100g ball</span>
+    
+    <span class="yarnWeight">55% Merino wool, 25% Superfine alpaca, 20% Donegal tweed</span><br />
+    <span class="yarnWeight">Aran / Heavy Worsted Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420214">
+    <br />
+    <a href="/yarns/Stroll_Glimmer_Yarn__D5420214.html" class="itemImgLink" title="Stroll Glimmer Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420214.jpg" alt="Stroll Glimmer Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Stroll_Glimmer_Yarn__D5420214.html" title="Stroll Glimmer Yarn" style="margin-top:0px;">Stroll Glimmer Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $5.89 / 50g Ball</span>
+    
+    <span class="yarnWeight">70% Fine Superwash Merino Wool, 25% Nylon, 5% Stellina</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420155">
+    <br />
+    <a href="/yarns/Wool_of_the_Andes_Bulky_Yarn__D5420155.html" class="itemImgLink" title="Wool of the Andes Bulky Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420155.jpg" alt="Wool of the Andes Bulky Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Wool_of_the_Andes_Bulky_Yarn__D5420155.html" title="Wool of the Andes Bulky Yarn" style="margin-top:0px;">Wool of the Andes Bulky Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.99 / 100g hank</span>
+    
+    <span class="yarnWeight">100% Peruvian Highland Wool</span><br />
+    <span class="yarnWeight">Bulky Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420252">
+    <br />
+    <a href="/yarns/Stroll_Brights__D5420252.html" class="itemImgLink" title="Stroll Brights">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420252.jpg" alt="Stroll Brights" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Stroll_Brights__D5420252.html" title="Stroll Brights" style="margin-top:0px;">Stroll Brights</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.69 / 50g ball</span>
+    
+    <span class="yarnWeight">75% Superwash Merino Wool, 25% Nylon</span><br />
+    <span class="yarnWeight">Fingering</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420229">
+    <br />
+    <a href="/yarns/Galileo_Yarn__D5420229.html" class="itemImgLink" title="Galileo Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420229.jpg" alt="Galileo Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Galileo_Yarn__D5420229.html" title="Galileo Yarn" style="margin-top:0px;">Galileo Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.99 / 50g ball</span>
+    
+    <span class="yarnWeight">50% Merino Wool, 50% Viscose from Bamboo</span><br />
+    <span class="yarnWeight">Sport</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420258">
+    <br />
+    <a href="/yarns/Bare_Capretta__D5420258.html" class="itemImgLink" title="Bare Capretta">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420258.jpg" alt="Bare Capretta" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Capretta__D5420258.html" title="Bare Capretta" style="margin-top:0px;">Bare Capretta</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $12.99 / 100g hank</span>
+    
+    <span class="yarnWeight">80% Fine Merino Wool, 10% Cashmere, 10% Nylon</span><br />
+    <span class="yarnWeight">Fingering</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420107">
+    <br />
+    <a href="/yarns/Andean_Treasure_Yarn__D5420107.html" class="itemImgLink" title="Andean Treasure Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420107.jpg" alt="Andean Treasure Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Andean_Treasure_Yarn__D5420107.html" title="Andean Treasure Yarn" style="margin-top:0px;">Andean Treasure Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.29 / 50g ball</span>
+    
+    <span class="yarnWeight">100% Baby Alpaca</span><br />
+    <span class="yarnWeight">Sport Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420174">
+    <br />
+    <a href="/yarns/Bare_Stroll_Fingering_Sock_Yarn_Dye_Blank__D5420174.html" class="itemImgLink" title="Bare Stroll Fingering Sock Yarn Dye Blank">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420174.jpg" alt="Bare Stroll Fingering Sock Yarn Dye Blank" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Stroll_Fingering_Sock_Yarn_Dye_Blank__D5420174.html" title="Bare Stroll Fingering Sock Yarn Dye Blank" style="margin-top:0px;">Bare Stroll Fingering Sock Yarn Dye Blank</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $19.99 / 100g sock blank</span>
+    
+    <span class="yarnWeight">75% Superwash Merino Wool, 25% Nylon</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420163">
+    <br />
+    <a href="/yarns/Bare_Gloss_Fingering_Sock_Yarn__D5420163.html" class="itemImgLink" title="Bare Gloss Fingering Sock Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420163.jpg" alt="Bare Gloss Fingering Sock Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Gloss_Fingering_Sock_Yarn__D5420163.html" title="Bare Gloss Fingering Sock Yarn" style="margin-top:0px;">Bare Gloss Fingering Sock Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $9.99 / 100g hank</span>
+    
+    <span class="yarnWeight">70% Merino Wool, 30% Silk</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420101">
+    <br />
+    <a href="/yarns/Bare_Wool_of_the_Andes_Worsted_Yarn__D5420101.html" class="itemImgLink" title="Bare Wool of the Andes Worsted Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420101.jpg" alt="Bare Wool of the Andes Worsted Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Wool_of_the_Andes_Worsted_Yarn__D5420101.html" title="Bare Wool of the Andes Worsted Yarn" style="margin-top:0px;">Bare Wool of the Andes Worsted Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.19 / 100g hank</span>
+    
+    <span class="yarnWeight">100% Peruvian Highland Wool</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420260">
+    <br />
+    <a href="/yarns/Bare_Hawthorne__D5420260.html" class="itemImgLink" title="Bare Hawthorne">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420260.jpg" alt="Bare Hawthorne" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Hawthorne__D5420260.html" title="Bare Hawthorne" style="margin-top:0px;">Bare Hawthorne</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $8.99 / 100g Hank</span>
+    
+    <span class="yarnWeight">80% Superwash Fine Highland Wool, 20% Polyamide (nylon)</span><br />
+    <span class="yarnWeight">Fingering  </span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420228">
+    <br />
+    <a href="/yarns/Reverie_Worsted__D5420228.html" class="itemImgLink" title="Reverie Worsted">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420228.jpg" alt="Reverie Worsted" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Reverie_Worsted__D5420228.html" title="Reverie Worsted" style="margin-top:0px;">Reverie Worsted</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $5.99 / 50g ball</span>
+    
+    <span class="yarnWeight">80% Baby Alpaca, 20% Acrylic
+</span><br />
+    <span class="yarnWeight">Worsted</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420274">
+    <br />
+    <a href="/yarns/Swish_Worsted_Brights__D5420274.html" class="itemImgLink" title="Swish Worsted Brights">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420274.jpg" alt="Swish Worsted Brights" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Swish_Worsted_Brights__D5420274.html" title="Swish Worsted Brights" style="margin-top:0px;">Swish Worsted Brights</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.69 / 50g Ball</span>
+    
+    <span class="yarnWeight">100% Superwash Merino Wool</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420223">
+    <br />
+    <a href="/yarns/Full_Circle_Roving__D5420223.html" class="itemImgLink" title="Full Circle Roving">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420223.jpg" alt="Full Circle Roving" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Full_Circle_Roving__D5420223.html" title="Full Circle Roving" style="margin-top:0px;">Full Circle Roving</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.49 / 100g 3.53 oz.</span>
+    
+    <span class="yarnWeight">100% Wool</span><br />
+    <span class="yarnWeight">Unspun Roving</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420149">
+    <br />
+    <a href="/yarns/Bare_Wool_of_the_Andes_Bulky_Yarn__D5420149.html" class="itemImgLink" title="Bare Wool of the Andes Bulky Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420149.jpg" alt="Bare Wool of the Andes Bulky Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Wool_of_the_Andes_Bulky_Yarn__D5420149.html" title="Bare Wool of the Andes Bulky Yarn" style="margin-top:0px;">Bare Wool of the Andes Bulky Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.19 / 100g hank</span>
+    
+    <span class="yarnWeight">100% Peruvian Highland Wool</span><br />
+    <span class="yarnWeight">Bulky Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420177">
+    <br />
+    <a href="/yarns/Bare_Swish_Bulky_Yarn__D5420177.html" class="itemImgLink" title="Bare Swish Bulky Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420177.jpg" alt="Bare Swish Bulky Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Swish_Bulky_Yarn__D5420177.html" title="Bare Swish Bulky Yarn" style="margin-top:0px;">Bare Swish Bulky Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $7.59 / 100g hank</span>
+    
+    <span class="yarnWeight">100% Superwash Merino Wool</span><br />
+    <span class="yarnWeight">Bulky Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420269">
+    <br />
+    <a href="/yarns/Bare_Shimmer_Yarn__D5420269.html" class="itemImgLink" title="Bare Shimmer Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420269.jpg" alt="Bare Shimmer Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Shimmer_Yarn__D5420269.html" title="Bare Shimmer Yarn" style="margin-top:0px;">Bare Shimmer Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $15.99 / 100g hank</span>
+    
+    <span class="yarnWeight">70% Baby Alpaca, 30% Silk</span><br />
+    <span class="yarnWeight">100g</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420139">
+    <br />
+    <a href="/yarns/Bare_Shadow_Lace_Yarn__D5420139.html" class="itemImgLink" title="Bare Shadow Lace Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420139.jpg" alt="Bare Shadow Lace Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Shadow_Lace_Yarn__D5420139.html" title="Bare Shadow Lace Yarn" style="margin-top:0px;">Bare Shadow Lace Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $8.39 / 100g hank</span>
+    
+    <span class="yarnWeight">100% Merino Wool</span><br />
+    <span class="yarnWeight">Lace Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420144">
+    <br />
+    <a href="/yarns/Bare_Palette_Fingering_Yarn__D5420144.html" class="itemImgLink" title="Bare Palette Fingering Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420144.jpg" alt="Bare Palette Fingering Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Palette_Fingering_Yarn__D5420144.html" title="Bare Palette Fingering Yarn" style="margin-top:0px;">Bare Palette Fingering Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $5.99 / 100g hank</span>
+    
+    <span class="yarnWeight">100% Peruvian Highland Wool</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420129">
+    <br />
+    <a href="/yarns/Bare_Cadena_Yarn__D5420129.html" class="itemImgLink" title="Bare Cadena Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420129.jpg" alt="Bare Cadena Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Cadena_Yarn__D5420129.html" title="Bare Cadena Yarn" style="margin-top:0px;">Bare Cadena Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.99 / 100g hank</span>
+    
+    <span class="yarnWeight">70% Peruvian Highland Wool, 30% Superfine Alpaca</span><br />
+    <span class="yarnWeight">Bulky Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420286">
+    <br />
+    <a href="/yarns/Bare_Preciosa___D5420286.html" class="itemImgLink" title="Bare Preciosa ">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420286.jpg" alt="Bare Preciosa " class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Preciosa___D5420286.html" title="Bare Preciosa " style="margin-top:0px;">Bare Preciosa </a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $9.99 / 100g Hank</span>
+    
+    <span class="yarnWeight">100% Merino</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420202">
+    <br />
+    <a href="/yarns/Bare_Stroll_Roving__D5420202.html" class="itemImgLink" title="Bare Stroll Roving">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420202.jpg" alt="Bare Stroll Roving" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Stroll_Roving__D5420202.html" title="Bare Stroll Roving" style="margin-top:0px;">Bare Stroll Roving</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $8.49 / 100g 3.53 oz</span>
+    
+    <span class="yarnWeight">Roving 75% Superwash Merino Roving Wool, 25% Nylon Top</span><br />
+    <span class="yarnWeight">Unspun Roving</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420186">
+    <br />
+    <a href="/yarns/Simply_Cotton_Organic_Worsted_Yarn__D5420186.html" class="itemImgLink" title="Simply Cotton Organic Worsted Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420186.jpg" alt="Simply Cotton Organic Worsted Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Simply_Cotton_Organic_Worsted_Yarn__D5420186.html" title="Simply Cotton Organic Worsted Yarn" style="margin-top:0px;">Simply Cotton Organic Worsted Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.99 / 100g ball</span>
+    
+    <span class="yarnWeight">100% organic cotton</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420264">
+    <br />
+    <a href="/yarns/Bare_Wool_of_the_Andes_Superwash_Bulky__D5420264.html" class="itemImgLink" title="Bare Wool of the Andes Superwash Bulky">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420264.jpg" alt="Bare Wool of the Andes Superwash Bulky" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Wool_of_the_Andes_Superwash_Bulky__D5420264.html" title="Bare Wool of the Andes Superwash Bulky" style="margin-top:0px;">Bare Wool of the Andes Superwash Bulky</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.19 / 100g Hank</span>
+    
+    <span class="yarnWeight">100% Superwash Wool</span><br />
+    <span class="yarnWeight">Bulky</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420262">
+    <br />
+    <a href="/yarns/Bare_Imagination__D5420262.html" class="itemImgLink" title="Bare Imagination">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420262.jpg" alt="Bare Imagination" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Imagination__D5420262.html" title="Bare Imagination" style="margin-top:0px;">Bare Imagination</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $11.29 / 100g Hank</span>
+    
+    <span class="yarnWeight">50% Merino Wool 25% Superfine Alpaca, 25% Nylon</span><br />
+    <span class="yarnWeight">Fingering</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420282">
+    <br />
+    <a href="/yarns/Highland_Wool_Special_Reserve__D5420282.html" class="itemImgLink" title="Highland Wool Special Reserve">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420282.jpg" alt="Highland Wool Special Reserve" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Highland_Wool_Special_Reserve__D5420282.html" title="Highland Wool Special Reserve" style="margin-top:0px;">Highland Wool Special Reserve</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $3.99 / 70g Ball</span>
+    
+    <span class="yarnWeight">100% Andean Highland Wool
+</span><br />
+    <span class="yarnWeight">Aran Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420189">
+    <br />
+    <a href="/yarns/Bare_Stroll_Sport_Yarn__D5420189.html" class="itemImgLink" title="Bare Stroll Sport Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420189.jpg" alt="Bare Stroll Sport Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Stroll_Sport_Yarn__D5420189.html" title="Bare Stroll Sport Yarn" style="margin-top:0px;">Bare Stroll Sport Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $7.59 / 100g hank</span>
+    
+    <span class="yarnWeight">75% Superwash Merino Wool, 25% Nylon</span><br />
+    <span class="yarnWeight">Sport Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420147">
+    <br />
+    <a href="/yarns/Bare_Merino_Style_DK_Yarn__D5420147.html" class="itemImgLink" title="Bare Merino Style DK Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420147.jpg" alt="Bare Merino Style DK Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Merino_Style_DK_Yarn__D5420147.html" title="Bare Merino Style DK Yarn" style="margin-top:0px;">Bare Merino Style DK Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $7.39 / 100g hank</span>
+    
+    <span class="yarnWeight">100% Merino Wool</span><br />
+    <span class="yarnWeight">DK Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420259">
+    <br />
+    <a href="/yarns/Bare_Andean_Treasure__D5420259.html" class="itemImgLink" title="Bare Andean Treasure">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420259.jpg" alt="Bare Andean Treasure" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Andean_Treasure__D5420259.html" title="Bare Andean Treasure" style="margin-top:0px;">Bare Andean Treasure</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $10.49 / 100g Hank</span>
+    
+    <span class="yarnWeight">100% Baby Alpaca </span><br />
+    <span class="yarnWeight">Sport</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420226">
+    <br />
+    <a href="/yarns/Bare_Hare_Yarn__D5420226.html" class="itemImgLink" title="Bare Hare Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420226.jpg" alt="Bare Hare Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Hare_Yarn__D5420226.html" title="Bare Hare Yarn" style="margin-top:0px;">Bare Hare Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.99 / 50g Hank</span>
+    
+    <span class="yarnWeight">80% Wool, 20% Angora</span><br />
+    <span class="yarnWeight">Fingering Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420185">
+    <br />
+    <a href="/yarns/Simply_Cotton_Organic_Sport_Yarn__D5420185.html" class="itemImgLink" title="Simply Cotton Organic Sport Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420185.jpg" alt="Simply Cotton Organic Sport Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Simply_Cotton_Organic_Sport_Yarn__D5420185.html" title="Simply Cotton Organic Sport Yarn" style="margin-top:0px;">Simply Cotton Organic Sport Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $2.49 / 50g ball</span>
+    
+    <span class="yarnWeight">100% organic cotton</span><br />
+    <span class="yarnWeight">Sport Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420225">
+    <br />
+    <a href="/yarns/Bare_Andes_del_Campo__D5420225.html" class="itemImgLink" title="Bare Andes del Campo">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420225.jpg" alt="Bare Andes del Campo" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Andes_del_Campo__D5420225.html" title="Bare Andes del Campo" style="margin-top:0px;">Bare Andes del Campo</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.39 / 100g ball</span>
+    
+    <span class="yarnWeight">100% Highland Wool 
+</span><br />
+    <span class="yarnWeight">Aran/Heavy Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420200">
+    <br />
+    <a href="/yarns/Bare_Wool_of_the_Andes_Roving__D5420200.html" class="itemImgLink" title="Bare Wool of the Andes Roving">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420200.jpg" alt="Bare Wool of the Andes Roving" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Wool_of_the_Andes_Roving__D5420200.html" title="Bare Wool of the Andes Roving" style="margin-top:0px;">Bare Wool of the Andes Roving</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $4.99 / 100g 3.53 oz</span>
+    
+    <span class="yarnWeight">Roving 100% Peruvian Wool Top</span><br />
+    <span class="yarnWeight">Unspun Roving</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420212">
+    <br />
+    <a href="/yarns/Wool_of_the_Andes_Roving__D5420212.html" class="itemImgLink" title="Wool of the Andes Roving">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420212.jpg" alt="Wool of the Andes Roving" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Wool_of_the_Andes_Roving__D5420212.html" title="Wool of the Andes Roving" style="margin-top:0px;">Wool of the Andes Roving</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $5.36 - $5.39 / 100g 3.53 oz.</span>
+    
+    <span class="yarnWeight">100% Peruvian Highland Wool</span><br />
+    <span class="yarnWeight">Unspun Roving</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420148">
+    <br />
+    <a href="/yarns/Bare_Swish_Worsted_Yarn__D5420148.html" class="itemImgLink" title="Bare Swish Worsted Yarn">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420148.jpg" alt="Bare Swish Worsted Yarn" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Swish_Worsted_Yarn__D5420148.html" title="Bare Swish Worsted Yarn" style="margin-top:0px;">Bare Swish Worsted Yarn</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $7.59 / 100g hank</span>
+    
+    <span class="yarnWeight">100% Superwash Merino Wool</span><br />
+    <span class="yarnWeight">Worsted Weight</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420201">
+    <br />
+    <a href="/yarns/Bare_Gloss_Roving__D5420201.html" class="itemImgLink" title="Bare Gloss Roving">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420201.jpg" alt="Bare Gloss Roving" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Gloss_Roving__D5420201.html" title="Bare Gloss Roving" style="margin-top:0px;">Bare Gloss Roving</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $10.99 / 100g 3.53 oz</span>
+    
+    <span class="yarnWeight">Roving 70% Merino Wool, 30% Tussah Silk Top</span><br />
+    <span class="yarnWeight">Unspun Roving</span><br />
+    </div>
+
+
+  <div class="listItem book" id="5420261">
+    <br />
+    <a href="/yarns/Bare_Stroll_Glimmer__D5420261.html" class="itemImgLink" title="Bare Stroll Glimmer">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420261.jpg" alt="Bare Stroll Glimmer" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Stroll_Glimmer__D5420261.html" title="Bare Stroll Glimmer" style="margin-top:0px;">Bare Stroll Glimmer</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $9.69 / 100g Hank</span>
+    
+    <span class="yarnWeight">70% Fine Superwash Merino Wool, 25% Nylon, 5% Stellina</span><br />
+    <span class="yarnWeight">Fingering</span><br />
+    </div>
+
+
+              <br clear="all"/>
+          
+  <div class="listItem book" id="5420263">
+    <br />
+    <a href="/yarns/Bare_Wool_of_the_Andes_Superwash_Worsted__D5420263.html" class="itemImgLink" title="Bare Wool of the Andes Superwash Worsted">
+      
+      <div class="listImgContainer">
+      
+        <img src="//d2q9kw5vp0we94.cloudfront.net/yarnlistthumb/5420263.jpg" alt="Bare Wool of the Andes Superwash Worsted" class="listImg"/>
+      
+    </a>
+    </div>
+    
+    <a class="titleSmall" href="/yarns/Bare_Wool_of_the_Andes_Superwash_Worsted__D5420263.html" title="Bare Wool of the Andes Superwash Worsted" style="margin-top:0px;">Bare Wool of the Andes Superwash Worsted</a>
+    
+    <span class="costSmall" style="display:block;margin-bottom:3px;">
+    $6.19 / 100g Hank</span>
+    
+    <span class="yarnWeight">100% Superwash Wool</span><br />
+    <span class="yarnWeight">Worsted</span><br />
+    </div>
+
+
+    <br clear="all" />
+    <div id="pgLinksNav"> 
+        <span class="currentPg">1</span>
+      
+         | <a href="/yarns/All_Knit_Picks_Yarn__L300198.html?showAll=no" class="pageLinks">SHOW PAGES</a>
+      </div><br />
+    </div>
+</div>
+
+
+
+<!-- Google Code for Yarn Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1071689941;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "OdpDCM3d9wEQ1eGC_wM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1071689941/?label=OdpDCM3d9wEQ1eGC_wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+
+
+
+
+<div id="footer" class="clearfix">
+
+    <div class="dashedHr" id="footerTopHr" style="margin-bottom:15px !important;"></div>
+
+    <div id="footerBar1">
+        <table border="0" cellspacing="0" cellspacing="0">
+            <tr>
+                <td valign="middle"><a href="/cfEmail/CurrentBEM.cfm"><img src="//d2q9kw5vp0we94.cloudfront.net/structure/current-bem-b-1.gif"></a></td>
+                <td valign="middle">
+                    <form method="POST" action="/cfEmail/EmailSignup.cfm" id="footerEmailSignup" target="emailsignup" onsubmit="if (! validate_email($('#footer_email_address').val())) { alert('Email address does not appear valid.'); return false; } else { window.open('#','emailsignup', 'width=500,height=500'); }">
+                        <input type="text" name="email_address" id="footer_email_address" value="ENTER EMAIL ADDRESS" autocomplete="off" onfocus="if ($.trim($(this).val())=='ENTER EMAIL ADDRESS') $(this).val('');" onblur="if ($.trim($(this).val())=='') $(this).val('ENTER EMAIL ADDRESS');">
+                        <input type="hidden" name="bd_month" value="">
+                        <button>&raquo;</button>            
+                    </form>
+                </td>
+                <td valign="middle"><a href="/cfCart/CatalogOnline.cfm"><img src="//d2q9kw5vp0we94.cloudfront.net/structure/online-catalog-b-1.gif" style="margin-left:0.5em;outline:0;"></a></td>
+                <td valign="middle"><img src="//d2q9kw5vp0we94.cloudfront.net/structure/socials-b-1.gif" usemap="#footer-socials">
+                    <map name="footer-socials">
+                        <area shape="rect" target="_blank" coords="12,8,35,32" href="http://www.facebook.com/knitpicks">
+                        <area shape="rect" target="_blank" coords="47,7,73,33" href="http://twitter.com/#!/KnitPicks">
+                        <area shape="rect" target="_blank" coords="83,7,112,35" href="https://plus.google.com/102148930734761083493/posts">
+                        <area shape="rect" target="_blank" coords="123,8,152,36" href="http://instagram.com/knit_picks#">
+                        <area shape="rect" target="_blank" coords="161,6,192,35" href="http://pinterest.com/knitpicks/">
+                        <area shape="rect" target="_blank" coords="200,6,232,36" href="http://www.youtube.com/user/knitpicks">
+                    </map>
+                </td>
+            </tr>
+        </table>
+    </div>
+   
+    <br clear="all" />
+    <br />
+    
+    
+    <div class="footerColBlock" style="width:auto !important;">
+        <h3>Customer Service</h3>
+        <div class="footerColCSLinks">
+            <a href="http://www.knitpicks.com/cfhelp/Index.cfm">Customer Service</a>
+            <a href="http://www.knitpicks.com/cfhelp/Index.cfm?type=kp&CSCatID=9&CSItemID=11">Contact Us</a>
+            <a href="http://www.knitpicks.com/cfhelp/Index.cfm?type=kp&CSCatID=5&CSItemID=6">FAQs</a>
+            <a href="http://www.knitpicks.com/cfhelp/Index.cfm?type=kp&CSCatID=45&CSItemID=35">Errata</a>
+        </div>
+        <div class="footerColCSLinks">
+                
+                <a href="http://www.knitpicks.com/cfhelp/Index.cfm?type=kp&CSCatID=25&CSItemID=162">Shipping Info</a>
+                    
+            <a href="http://www.knitpicks.com/cfCart/OrderStatusList.cfm">Order Tracking</a>
+            <a href="http://www.knitpicks.com/cfCart/Account.cfm">My Account</a>
+        </div>
+        <div class="borderRight"></div>
+    </div>
+
+    <div class="footerColBlock" style="width:auto !important;">
+        <h3>Company Info</h3>
+        <div class="footerColCSLinks">
+            <a href="http://www.knitpicks.com/cfhelp/Index.cfm?type=kp&CSCatID=9&CSItemID=10">About Us</a>
+            <a href="http://www.knitpicks.com/cfhelp/Index.cfm?type=kp&CSCatID=61&CSItemID=24">Return Policy</a>
+            <a href="http://www.knitpicks.com/cfhelp/Index.cfm?type=kp&CSCatID=5&CSItemID=726">Affiliate&nbsp;Program</a>
+            <a href="http://blog.knitpicks.com/wpblog/">Blog</a>
+        </div>
+        <div class="borderRight"></div>
+    </div>
+
+    <div class="footerColBlock" style="width:auto !important;">
+        <h3>Resources</h3>
+        <div class="footerColCSLinks footerColCSLinksWider">
+            <a href="http://www.knitpicks.com/cfCart/CatalogRequest.cfm">Request a Catalog</a>
+            <a href="http://www.knitpicks.com/Patterns/Free_Knitting_Patterns__L300218.html">Free Knit &amp; Crochet Patterns</a>
+            <a href="http://www.knitpicks.com/cfCart/GiftOrder.cfm">Gift Cards</a>
+            <a href="/cfhelp/Index.cfm?type=kp&CSCatID=5&CSItemID=516">Independent Designer Partnership</a>
+        </div>
+        <div class="borderRight"></div>
+    </div>
+    
+    <div class="footerColBlock" style="width:auto !important;">
+        <h3>We Would Love to<br />Chat With You</h3>
+        <div class="footerColCSLinks">
+            <span>
+                
+                1.800.574.1323
+            
+            </span>
+            <a href="/cfhelp/EmailForm.cfm">Email Us</a>
+        </div>
+    </div>
+
+    <br clear="all" />
+    <br />
+
+
+   
+    
+    <div class="footerSisterSites">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="170">
+                    <div id="secureServerSealxx">
+                        <script src="https://seal.websecurity.norton.com/getseal?host_name=www.knitpicks.com&amp;size=XS&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script>&nbsp;
+                        <script src="https://sealserver.trustkeeper.net/compliance/seal_js.php?code=4fdf570b023875ebce09fc813fec68cf"></script>
+                    </div>
+                </td>
+                <td>Visit our sister sites</td>
+                <td><a id="footerCTLink" href="http://www.connectingthreads.com/?media=CPKP2CT">Connecting Threads</a></td>
+                <td><a id="footerACLink" href="http://www.artistsclub.com/?media=CPKP2AC">Artist's Club</a></td>
+            </tr>
+        </table>
+    </div>
+
+    
+    <div id="TMCopyright">
+            &copy; 1999-2015 Knit Picks.
+            Knit Picks&reg; and KnitPicks.com are registered trademarks of Crafts Americana Group, Inc.
+            *Free Shipping to contiguous US only. Not applicable to e-goods.
+    </div>
+    
+    <br clear="all" />
+
+    
+
+</div>
+
+
+
+
+	<!-- Google Code for Return Customer -->
+	<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1071689941;
+	var google_conversion_label = "HUwlCLX3hQIQ1eGC_wM";
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1071689941/?value=1.00&amp;label=HUwlCLX3hQIQ1eGC_wM&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+
+
+  <script language="JavaScript" src="http://chanalytics.merchantadvantage.com/inChannel/maq.js" type="text/javascript"></script>
+
+
+</div>
+
+
+<script type="text/javascript">
+(function(){"use strict";var e=null,b="4.0.0",
+n="10606",
+additional="",
+t,r,i;try{t=top.document.referer!==""?encodeURIComponent(top.document.referrer.substring(0,2048)):""}catch(o){t=document.referrer!==null?document.referrer.toString().substring(0,2048):""}try{r=window&&window.top&&document.location&&window.top.location===document.location?document.location:window&&window.top&&window.top.location&&""!==window.top.location?window.top.location:document.location}catch(u){r=document.location}try{i=parent.location.href!==""?encodeURIComponent(parent.location.href.toString().substring(0,2048)):""}catch(a){try{i=r!==null?encodeURIComponent(r.toString().substring(0,2048)):""}catch(f){i=""}}var l,c=document.createElement("script"),h=null,p=document.getElementsByTagName("script"),d=Number(p.length)-1,v=document.getElementsByTagName("script")[d];if(typeof l==="undefined"){l=Math.floor(Math.random()*1e17)}h="dx.steelhousemedia.com/spx?"+"dxver="+b+"&shaid="+n+"&tdr="+t+"&plh="+i+"&cb="+l+additional;c.type="text/javascript";c.src=("https:"===document.location.protocol?"https://":"http://")+h;v.parentNode.insertBefore(c,v)})()
+</script>
+
+
+
+
+
+</body>
+</html>

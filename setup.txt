@@ -1,0 +1,14 @@
+MongoDB: yarn
+ - I just need a formatted json file
+
+Start with KnitPicks
+    Use Scrapy to scrape and output json.
+    I only need:
+        - yarn weight
+        - color
+        - fiber content
+        - image
+
+Build a basic front end.
+
+Show it off to some Ravelry users.
