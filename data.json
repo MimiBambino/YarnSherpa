@@ -23,7 +23,8 @@
         {
             "name": "Wildflower",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/regular/26555.jpg",
-            "color": "multi"
+            "color": "multi",
+            "awesome": true
         },
         {
             "name": "Brown",
@@ -33,7 +34,8 @@
         {
             "name": "Vermont",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/regular/26467.jpg",
-            "color": "multi"
+            "color": "multi",
+            "awesome": true
         },
         {
             "name": "Weather Vane",
@@ -242,7 +244,8 @@
                 {
             "name": "Claret Heather",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24071.jpg",
-            "color": "purple"
+            "color": "purple",
+            "awesome": true
         },
                 {
             "name": "Pampas Heather",
@@ -347,7 +350,8 @@
                         {
             "name": "Aurora Heather",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25065.jpg",
-            "color": "green"
+            "color": "green",
+            "awesome": true
         },
                         {
             "name": "Solstice Heather",
@@ -437,7 +441,8 @@
                 {
             "name": "Bouquet Heather",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25639.jpg",
-            "color": "purple"
+            "color": "purple",
+            "awesome": true
         },
                         {
             "name": "Midnight Heather",
@@ -632,7 +637,8 @@
         {
             "name": "Tide Pool Heather",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23502.jpg",
-            "color": "green"
+            "color": "green",
+            "awesome": true
         },
                 {
             "name": "Midnight Heather",
@@ -747,7 +753,8 @@
                         {
             "name": "Sybil",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26768.jpg",
-            "color": "green"
+            "color": "green",
+            "awesome": true
         },
                 {
             "name": "Bennett",
@@ -831,7 +838,7 @@
         },
                         {
             "name": "Marianne",
-            "image": "http://d2q9kw5vp0we94.cloudfront.net/regular/26785.jpg",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26785.jpg",
             "color": "blue"
         },
                         {
@@ -938,7 +945,7 @@
   },
   {
     "manufacturer": "Knit Picks",
-    "line": "Chroma Fingerling Yarn",
+    "line": "Chroma Fingering Yarn",
     "weight": "Fingering",
     "fiber": "70% Wool, 30% Nylon",
     "link": "http://www.knitpicks.com/yarns/Chroma_Fingering_Yarn__D5420203.html",
@@ -970,7 +977,8 @@
         },        {
             "name": "Sugar Cookie",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/regular/26480.jpg",
-            "color": "multi"
+            "color": "multi",
+            "awesome": true
         },        {
             "name": "Fog Bank",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/regular/26481.jpg",
@@ -982,7 +990,8 @@
         },        {
             "name": "Groovy",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/regular/26542.jpg",
-            "color": "multi"
+            "color": "multi",
+            "awesome": true
         },        {
             "name": "Hollyhock",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/regular/26543.jpg",
@@ -1044,7 +1053,8 @@
         },        {
             "name": "Gummy Bear",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26743.jpg",
-            "color": "multi"
+            "color": "multi",
+            "awesome": true
         },        {
             "name": "Glacier",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26744.jpg",
@@ -1140,7 +1150,8 @@
         },        {
             "name": "Verdant Heather",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24006.jpg",
-            "color": "green"
+            "color": "green",
+            "awesome": true
         },        {
             "name": "Tidepool Heather",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24007.jpg",
@@ -1148,7 +1159,8 @@
         },        {
             "name": "Rainforest Heather",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24008.jpg",
-            "color": "blue"
+            "color": "blue",
+            "awesome": true
         },        {
             "name": "Calypso Heather",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24009.jpg",
@@ -1168,7 +1180,8 @@
         },        {
             "name": "Clematis Heather",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24013.jpg",
-            "color": "purple"
+            "color": "purple",
+            "awesome": true
         },        {
             "name": "Merlot Heather",
             "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24014.jpg",
@@ -1684,9 +1697,167 @@
     "link": "http://www.knitpicks.com/yarns/Swish_Worsted_Yarn__D5420153.html",
         "colorways": [
         {
-            "name": "",
-            "image": "",
-            "color": ""
+            "name": "Black",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23876.jpg",
+            "color": "black"
+        },
+                {
+            "name": "Bordeaux",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23877.jpg",
+            "color": "purple"
+        },        {
+            "name": "Copper",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23882.jpg",
+            "color": "brown"
+        },        {
+            "name": "Dublin",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23884.jpg",
+            "color": "green"
+        },                {
+            "name": "Jade",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23887.jpg",
+            "color": "green"
+        },        {
+            "name": "Squirrel Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24090.jpg",
+            "color": "brown"
+        },        {
+            "name": "Merlot Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24092.jpg",
+            "color": "brown"
+        },                {
+            "name": "Lemongrass Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24093.jpg",
+            "color": "green"
+        },        {
+            "name": "Marine Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24094.jpg",
+            "color": "blue"
+        },        {
+            "name": "Delft Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24095.jpg",
+            "color": "blue"
+        },                {
+            "name": "Indigo Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24097.jpg",
+            "color": "purple"
+        },        {
+            "name": "Lava Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24295.jpg",
+            "color": "brown"
+        },        {
+            "name": "Allspice",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24297.jpg",
+            "color": "orange"
+        },                {
+            "name": "Cobbletone Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24661.jpg",
+            "color": "grey"
+        },        {
+            "name": "White",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24662.jpg",
+            "color": "white"
+        },        {
+            "name": "Serrano",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24663.jpg",
+            "color": "red"
+        },                {
+            "name": "Carnation",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24668.jpg",
+            "color": "pink"
+        },        {
+            "name": "Gulfstream",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25137.jpg",
+            "color": "blue"
+        },        {
+            "name": "Peapod",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25139.jpg",
+            "color": "green"
+        },                {
+            "name": "Sugar Plum",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25142.jpg",
+            "color": "purple"
+        },        {
+            "name": "Cornmeal",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25143.jpg",
+            "color": "yellow"
+        },        {
+            "name": "Twilight",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25144.jpg",
+            "color": "blue"
+        },                {
+            "name": "Lost Lake Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25146.jpg",
+            "color": "green"
+        },        {
+            "name": "Amethyst Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25147.jpg",
+            "color": "purple"
+        },        {
+            "name": "Hollyberry",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25148.jpg",
+            "color": "red"
+        },                {
+            "name": "Garnet Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25149.jpg",
+            "color": "red"
+        },        {
+            "name": "Dusk",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25150.jpg",
+            "color": "blue"
+        },        {
+            "name": "Eggplant",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25152.jpg",
+            "color": "purple"
+        },                {
+            "name": "Marble Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25153.jpg",
+            "color": "grey"
+        },        {
+            "name": "Orange",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25154.jpg",
+            "color": "orange"
+        },        {
+            "name": "Doe",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25155.jpg",
+            "color": "brown"
+        },                {
+            "name": "Bark",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25628.jpg",
+            "color": "brown"
+        },        {
+            "name": "Rainforest Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25630.jpg",
+            "color": "green",
+            "awesome": true
+        },        {
+            "name": "Dove Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25631.jpg",
+            "color": "grey"
+        },                {
+            "name": "Honey",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26066.jpg",
+            "color": "yellow"
+        },        {
+            "name": "Wonderland Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26067.jpg",
+            "color": "blue"
+        },        {
+            "name": "Conch",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26068.jpg",
+            "color": "pink"
+        },                {
+            "name": "Camel Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26069.jpg",
+            "color": "Brown"
+        },        {
+            "name": "Green Tea Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26070.jpg",
+            "color": "green"
+        },        {
+            "name": "Rouge",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26071.jpg",
+            "color": "pink"
         }
     ]
   },
@@ -1698,9 +1869,110 @@
     "link": "http://www.knitpicks.com/yarns/Dishie_Yarn__D5420207.html",
         "colorways": [
         {
-            "name": "",
-            "image": "",
-            "color": ""
+            "name": "Coffee",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25399.jpg",
+            "color": "brown"
+        },
+             {
+            "name": "Linen",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25400.jpg",
+            "color": "pink"
+        },
+             {
+            "name": "Pomegranate",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25402.jpg",
+            "color": "red"
+        },
+             {
+            "name": "Clementine",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25403.jpg",
+            "color": "orange"
+        },
+             {
+            "name": "Creme Brulee",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25404.jpg",
+            "color": "yellow"
+        },
+             {
+            "name": "Tranquil",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25405.jpg",
+            "color": "green"
+        },
+             {
+            "name": "Flamingo",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25407.jpg",
+            "color": "pink"
+        },
+             {
+            "name": "Swan",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25409.jpg",
+            "color": "white"
+        },
+             {
+            "name": "Honeydew",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25410.jpg",
+            "color": "green"
+        },
+             {
+            "name": "Conch",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25411.jpg",
+            "color": "pink"
+        },
+             {
+            "name": "Azure",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25412.jpg",
+            "color": "blue"
+        },
+                {
+            "name": "Mulberry",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25784.jpg",
+            "color": "purple"
+        },
+             {
+            "name": "Jalapeno",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25785.jpg",
+            "color": "green"
+        },
+             {
+            "name": "Fiesta Red",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25786.jpg",
+            "color": "red"
+        },
+             {
+            "name": "Blue",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25787.jpg",
+            "color": "blue"
+        },
+             {
+            "name": "Kenai",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25788.jpg",
+            "color": "green"
+        },
+             {
+            "name": "Silver",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25789.jpg",
+            "color": "grey"
+        },
+             {
+            "name": "Begonia",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25790.jpg",
+            "color": "pink",
+            "awesome": true
+        },
+             {
+            "name": "Blush",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26668.jpg",
+            "color": "pink"
+        },
+             {
+            "name": "Black",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26669.jpg",
+            "color": "black"
+        },
+             {
+            "name": "Navy",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26670.jpg",
+            "color": "blue"
         }
     ]
   }, {
@@ -1711,9 +1983,145 @@
     "link": "http://www.knitpicks.com/yarns/Comfy_Worsted_Yarn__D5420171.html",
         "colorways": [
         {
-            "name": "",
-            "image": "",
-            "color": ""
+            "name": "Honeydew",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24152.jpg",
+            "color": "green"
+        },
+             {
+            "name": "Sea Foam",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24153.jpg",
+            "color": "blue"
+        },
+        {
+            "name": "Flamingo",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24154.jpg",
+            "color": "pink"
+        },        {
+            "name": "Creme Brulee",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24155.jpg",
+            "color": "yellow"
+        },
+             {
+            "name": "Blackberry",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24157.jpg",
+            "color": "purple"
+        },
+        {
+            "name": "Planetarium",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24159.jpg",
+            "color": "blue"
+        },        {
+            "name": "Pomegranate",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24160.jpg",
+            "color": "red"
+        },
+             {
+            "name": "Ivory",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24162.jpg",
+            "color": "white"
+        },
+        {
+            "name": "Jalepeno",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24420.jpg",
+            "color": "green"
+        },        {
+            "name": "Marlin",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24422.jpg",
+            "color": "blue"
+        },
+             {
+            "name": "Peony",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24423.jpg",
+            "color": "pink"
+        },
+        {
+            "name": "Silver Sage",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24424.jpg",
+            "color": "blue"
+        },        {
+            "name": "Doe",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24797.jpg",
+            "color": "brown"
+        },
+             {
+            "name": "Lilac",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24798.jpg",
+            "color": "purple"
+        },
+        {
+            "name": "Whisker",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24800.jpg",
+            "color": "grey"
+        },        {
+            "name": "Peapod",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24801.jpg",
+            "color": "green"
+        },
+             {
+            "name": "Light Blue",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25311.jpg",
+            "color": "blue"
+        },
+        {
+            "name": "Hawk",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25312.jpg",
+            "color": "grey"
+        },        {
+            "name": "Fairy Tale",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25313.jpg",
+            "color": "purple"
+        },
+             {
+            "name": "Celestial",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25314.jpg",
+            "color": "blue"
+        },
+        {
+            "name": "White",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25315.jpg",
+            "color": "white"
+        },        {
+            "name": "Black",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25316.jpg",
+            "color": "black"
+        },
+             {
+            "name": "Seraphim>",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25317.jpg",
+            "color": "purple"
+        },
+        {
+            "name": "Vinca",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25320.jpg",
+            "color": "purple"
+        },        {
+            "name": "Lady Slipper",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25767.jpg",
+            "color": "purple"
+        },
+             {
+            "name": "Marina",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25768.jpg",
+            "color": "green"
+        },
+        {
+            "name": "Rosehip",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25769.jpg",
+            "color": "pink"
+        },        {
+            "name": "Zinnia",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25770.jpg",
+            "color": "pink"
+        },
+             {
+            "name": "Carrot",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25771.jpg",
+            "color": "orange"
+        },
+        {
+            "name": "Coffee",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26673.jpg",
+            "color": "brown"
         }
     ]
   },
@@ -1725,9 +2133,115 @@
     "link": "http://www.knitpicks.com/yarns/Hawthorne_Fingering_Multi_Yarn__D5420251.html",
         "colorways": [
         {
-            "name": "",
-            "image": "",
-            "color": ""
+            "name": "The Pearl",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26427.jpg",
+            "color": "multi"
+        },        {
+            "name": "Vancouver",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26428.jpg",
+            "color": "multi"
+        },        {
+            "name": "Alameda",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26429.jpg",
+            "color": "multi"
+        },        {
+            "name": "Goose Hollow",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26430.jpg",
+            "color": "multi"
+        },        {
+            "name": "St Johns",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26431.jpg",
+            "color": "multi"
+        },        {
+            "name": "Rose City",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26432.jpg",
+            "color": "multi"
+        },        {
+            "name": "Ladd's Addition",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26433.jpg",
+            "color": "multi",
+            "awesome": true
+        },        {
+            "name": "Forest Park",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26434.jpg",
+            "color": "multi",
+            "awesome": true
+        },        {
+            "name": "Nob Hill",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26435.jpg",
+            "color": "multi",
+            "awesome": true
+        },        {
+            "name": "Belmont",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26436.jpg",
+            "color": "multi",
+            "awesome": true
+        },        {
+            "name": "Eastbank",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26438.jpg",
+            "color": "multi"
+        },        {
+            "name": "Irvington",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26439.jpg",
+            "color": "blue"
+        },        {
+            "name": "Sauvie Island",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26440.jpg",
+            "color": "multi"
+        },
+        {
+            "name": "Happy Valley",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26441.jpg",
+            "color": "multi"
+        },        {
+            "name": "Concordia",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26442.jpg",
+            "color": "multi"
+        },        {
+            "name": "Montavilla",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26443.jpg",
+            "color": "multi"
+        },        {
+            "name": "Mt. Tabor",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26444.jpg",
+            "color": "multi"
+        },        {
+            "name": "Laurelhurst",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26445.jpg",
+            "color": "multi",
+            "awesome": true
+        },        {
+            "name": "Alberta Arts",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26446.jpg",
+            "color": "multi"
+        },        {
+            "name": "Parkrose",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26681.jpg",
+            "color": "pink"
+        },        {
+            "name": "Beaumont",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26682.jpg",
+            "color": "multi"
+        },        {
+            "name": "Buckman",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26683.jpg",
+            "color": "multi"
+        },        {
+            "name": "Fremont",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26684.jpg",
+            "color": "multi"
+        },        {
+            "name": "Arbor Lodge",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26685.jpg",
+            "color": "multi"
+        },        {
+            "name": "Hazelwood",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26686.jpg",
+            "color": "multi"
+        },        {
+            "name": "Sellwood",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26687.jpg",
+            "color": "multi"
         }
     ]
   },
@@ -2423,9 +2937,406 @@
     "link": "http://www.knitpicks.com/yarns/Bare_Wool_of_the_Andes_Worsted_Yarn__D5420101.html",
         "colorways": [
         {
-            "name": "",
-            "image": "",
-            "color": ""
+            "name": "Hollyberry",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23419.jpg",
+            "color": "red"
+        },        {
+            "name": "Coal",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23420.jpg",
+            "color": "black"
+        },        {
+            "name": "Spruce",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23421.jpg",
+            "color": "green"
+        },        {
+            "name": "Winter Night",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23422.jpg",
+            "color": "blue"
+        },        {
+            "name": "Chestnut",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23424.jpg",
+            "color": "brown"
+        },        {
+            "name": "Cranberry",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23425.jpg",
+            "color": "red"
+        },        {
+            "name": "Evergreen",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23427.jpg",
+            "color": "green"
+        },        {
+            "name": "Pumpkin",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23430.jpg",
+            "color": "orange"
+        },        {
+            "name": "Cloud",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23432.jpg",
+            "color": "white"
+        },        {
+            "name": "Fern",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23433.jpg",
+            "color": "green"
+        },        {
+            "name": "Mist",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23438.jpg",
+            "color": "blue"
+        },        {
+            "name": "Grass",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23439.jpg",
+            "color": "green"
+        },        {
+            "name": "Hyacinth",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23442.jpg",
+            "color": "blue"
+        },        {
+            "name": "Red",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23764.jpg",
+            "color": "red"
+        },        {
+            "name": "Avocado",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23766.jpg",
+            "color": "green"
+        },        {
+            "name": "Chocolate",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23774.jpg",
+            "color": "brown"
+        },        {
+            "name": "Amber Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23893.jpg",
+            "color": "brown"
+        },        {
+            "name": "Arctic Pool Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23894.jpg",
+            "color": "blue"
+        },        {
+            "name": "Firecracker Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23896.jpg",
+            "color": "red"
+        },        {
+            "name": "Forest Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23897.jpg",
+            "color": "green"
+        },        {
+            "name": "Lake Ice Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23898.jpg",
+            "color": "blue"
+        },        {
+            "name": "Sapphire Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23899.jpg",
+            "color": "blue"
+        },        {
+            "name": "Amethyst Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/23900.jpg",
+            "color": "purple"
+        },        {
+            "name": "White",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24065.jpg",
+            "color": "white"
+        },        {
+            "name": "Thyme",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24066.jpg",
+            "color": "green"
+        },        {
+            "name": "Claret Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24071.jpg",
+            "color": "purple"
+        },        {
+            "name": "Pampas Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24074.jpg",
+            "color": "green"
+        },        {
+            "name": "Camel Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24075.jpg",
+            "color": "brown"
+        },        {
+            "name": "Onyx Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24076.jpg",
+            "color": "grey"
+        },        {
+            "name": "Dove Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24077.jpg",
+            "color": "grey"
+        },        {
+            "name": "Jalepeno",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24272.jpg",
+            "color": "green"
+        },        {
+            "name": "Blackberry",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24273.jpg",
+            "color": "purple"
+        },        {
+            "name": "Lullaby",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24274.jpg",
+            "color": "purple"
+        },        {
+            "name": "Fairy Tale",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24275.jpg",
+            "color": "purple"
+        },        {
+            "name": "Fedora",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24277.jpg",
+            "color": "brown"
+        },        {
+            "name": "Mink Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24279.jpg",
+            "color": "brown"
+        },        {
+            "name": "Persimmon Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24280.jpg",
+            "color": "orange"
+        },        {
+            "name": "Cobbletone Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24283.jpg",
+            "color": "grey"
+        },        {
+            "name": "Currant",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24647.jpg",
+            "color": "red"
+        },        {
+            "name": "Green Tea Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24648.jpg",
+            "color": "green"
+        },        {
+            "name": "Oyster Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24649.jpg",
+            "color": "pink"
+        },        {
+            "name": "Caution",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24650.jpg",
+            "color": "orange"
+        },        {
+            "name": "Bittersweet Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24652.jpg",
+            "color": "brown"
+        },        {
+            "name": "Calypso Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24653.jpg",
+            "color": "blue"
+        },        {
+            "name": "Orange",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/24655.jpg",
+            "color": "orange"
+        },        {
+            "name": "Semolina",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25064.jpg",
+            "color": "yellow"
+        },        {
+            "name": "Aurora Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25065.jpg",
+            "color": "green"
+        },        {
+            "name": "Solstice Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25066.jpg",
+            "color": "blue"
+        },        {
+            "name": "Blossom Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25067.jpg",
+            "color": "pink"
+        },        {
+            "name": "Wonderland Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25068.jpg",
+            "color": "blue"
+        },        {
+            "name": "Indigo Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25069.jpg",
+            "color": "purple"
+        },        {
+            "name": "Cadet",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25070.jpg",
+            "color": "blue"
+        },        {
+            "name": "Papaya Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25071.jpg",
+            "color": "pink"
+        },        {
+            "name": "Almond",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25072.jpg",
+            "color": "brown"
+        },        {
+            "name": "Bramble Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25073.jpg",
+            "color": "brown"
+        },        {
+            "name": "Marina",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25074.jpg",
+            "color": "blue"
+        },        {
+            "name": "Rouge",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25075.jpg",
+            "color": "pink"
+        },        {
+            "name": "Clarity",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25632.jpg",
+            "color": "blue"
+        },        {
+            "name": "Garnet Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25633.jpg",
+            "color": "red"
+        },        {
+            "name": "Merlot Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25634.jpg",
+            "color": "brown"
+        },        {
+            "name": "Cilantro Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25635.jpg",
+            "color": "green"
+        },        {
+            "name": "Mineral Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25636.jpg",
+            "color": "purple"
+        },        {
+            "name": "Lava Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25637.jpg",
+            "color": "brown"
+        },        {
+            "name": "Brass Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25638.jpg",
+            "color": "orange"
+        },        {
+            "name": "Bouquet Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25639.jpg",
+            "color": "purple"
+        },        {
+            "name": "Midnight Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25640.jpg",
+            "color": "blue"
+        },        {
+            "name": "Grizzly Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25641.jpg",
+            "color": "brown"
+        },        {
+            "name": "Rooibos Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25642.jpg",
+            "color": "brown"
+        },        {
+            "name": "Everglade Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25643.jpg",
+            "color": "green"
+        },        {
+            "name": "Pink Posy",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25644.jpg",
+            "color": "pink"
+        },        {
+            "name": "Opal Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25645.jpg",
+            "color": "blue",
+            "awesome": true
+        },        {
+            "name": "Columbine",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25646.jpg",
+            "color": "purple"
+        },        {
+            "name": "Fjord Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25647.jpg",
+            "color": "blue"
+        },        {
+            "name": "Baltic Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25648.jpg",
+            "color": "blue"
+        },        {
+            "name": "Delft Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25649.jpg",
+            "color": "blue"
+        },        {
+            "name": "Turmeric",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25651.jpg",
+            "color": "orange"
+        },        {
+            "name": "Celestial",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25652.jpg",
+            "color": "blue"
+        },        {
+            "name": "Pumice Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25753.jpg",
+            "color": "brown"
+        },        {
+            "name": "Wheat",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25971.jpg",
+            "color": "orange"
+        },        {
+            "name": "Conch",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25973.jpg",
+            "color": "pink"
+        },        {
+            "name": "Seraphim",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25974.jpg",
+            "color": "purple"
+        },        {
+            "name": "Creme Brulee",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25975.jpg",
+            "color": "yellow"
+        },        {
+            "name": "Marble Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25976.jpg",
+            "color": "grey"
+        },        {
+            "name": "Silver",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25977.jpg",
+            "color": "grey"
+        },        {
+            "name": "Whirlpool",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25978.jpg",
+            "color": "blue"
+        },        {
+            "name": "Golden Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25979.jpg",
+            "color": "yellow"
+        },        {
+            "name": "Victorian",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25980.jpg",
+            "color": "red"
+        },        {
+            "name": "Tranquil",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25981.jpg",
+            "color": "green"
+        },        {
+            "name": "Briar Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25982.jpg",
+            "color": "brown"
+        },        {
+            "name": "Peapod",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25983.jpg",
+            "color": "green"
+        },        {
+            "name": "Ciel",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25984.jpg",
+            "color": "blue"
+        },        {
+            "name": "Brown Sugar",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25985.jpg",
+            "color": "brown"
+        },        {
+            "name": "Gosling",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25986.jpg",
+            "color": "grey"
+        },        {
+            "name": "Shire Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25988.jpg",
+            "color": "green"
+        },        {
+            "name": "Larch Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25989.jpg",
+            "color": "green"
+        },        {
+            "name": "Noble Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25990.jpg",
+            "color": "green"
+        },        {
+            "name": "Bamboo Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25991.jpg",
+            "color": "green"
+        },        {
+            "name": "Icicle Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/25992.jpg",
+            "color": "blue"
+        },        {
+            "name": "Haze Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26158.jpg",
+            "color": "purple"
+        },        {
+            "name": "Sprinkle Heather",
+            "image": "http://d2q9kw5vp0we94.cloudfront.net/Yarn_Color_Detail/26159.jpg",
+            "color": "purple"
         }
     ]
   },
