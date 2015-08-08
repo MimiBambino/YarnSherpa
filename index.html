@@ -24,16 +24,50 @@
             left: -20px;
             max-width: 160px;
           }
-          .navbar-inverse {
+          .navbar-inverse, footer {
             background-color: rgb(39, 20, 49);
           }
-          .shadow {
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          .navbar-right {
+                float: right!important;
+                margin-top: none;
+          }
+          .card {
+              position: relative;
+              overflow: hidden;
+              margin: 0.5rem 0 1rem 0;
+              background-color: #fff;
+              transition: box-shadow .25s;
+              border-radius: 2px;
+              box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          }
+          .card .card-image img {
+              border-radius: 2px 2px 0 0;
+              position: relative;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              width: 100%;
+          }
+          .card .card-content p {
+              margin: 0;
+              color: inherit;
           }
 
           body {
-  padding-top: 50px;
-}
+            padding-top: 50px;
+          }
+          footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+          }
+
+          footer ul {
+            position: absolute;
+            top: 0;
+          }
 
         </style>
     </head>
@@ -43,84 +77,71 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="#"><img class="logo" alt="Yarn Sherpa" src="img/PinkGreyerLogo150.png"></a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <!-- Single button -->
-          <div class="btn-group btn-group-lg">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Colors <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="#">Pink</a></li>
-              <li><a href="#">Red</a></li>
-              <li><a href="#">Orange</a></li>
-              <li><a href="#">Yellow</a></li>
-              <li><a href="#">Green</a></li>
-              <li><a href="#">Blue</a></li>
-              <li><a href="#">Purple</a></li>
-              <li><a href="#">Brown</a></li>
-              <li><a href="#">Black</a></li>
-              <li><a href="#">White</a></li>
-              <li><a href="#">Multi</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Clear Color Selection</a></li>
-            </ul>
-          </div>
-          <div class="btn-group btn-group-lg">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Weight <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="#">Lace</a></li>
-              <li><a href="#">Fingering</a></li>
-              <li><a href="#">Sport</a></li>
-              <li><a href="#">DK</a></li>
-              <li><a href="#">Worsted</a></li>
-              <li><a href="#">Bulky</a></li>
-              <li><a href="#">Super Bulky</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Clear Weight Selection</a></li>
-            </ul>
-          </div>
-          <div class="btn-group btn-group-lg">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Fiber <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="#">Acrylic</a></li>
-              <li><a href="#">Alpaca</a></li>
-              <li><a href="#">Cashmere</a></li>
-              <li><a href="#">Cotton</a></li>
-              <li><a href="#">Linen</a></li>
-              <li><a href="#">Mohair</a></li>
-              <li><a href="#">Silk</a></li>
-              <li><a href="#">Wool</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Clear Fiber Selection</a></li>
-            </ul>
-          </div>
-        </div><!--/.nav-collapse -->
+
+
+            <!-- Single button -->
+
+          <div class="navbar-right filter-btn-group">
+            <div class="btn-group btn-group-lg">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Colors <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Pink</a></li>
+                <li><a href="#">Red</a></li>
+                <li><a href="#">Orange</a></li>
+                <li><a href="#">Yellow</a></li>
+                <li><a href="#">Green</a></li>
+                <li><a href="#">Blue</a></li>
+                <li><a href="#">Purple</a></li>
+                <li><a href="#">Brown</a></li>
+                <li><a href="#">Black</a></li>
+                <li><a href="#">White</a></li>
+                <li><a href="#">Multi</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Clear Color Selection</a></li>
+              </ul>
+            </div>
+            <div class="btn-group btn-group-lg">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Weight <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Lace</a></li>
+                <li><a href="#">Fingering</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">DK</a></li>
+                <li><a href="#">Worsted</a></li>
+                <li><a href="#">Bulky</a></li>
+                <li><a href="#">Super Bulky</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Clear Weight Selection</a></li>
+              </ul>
+            </div>
+            <div class="btn-group btn-group-lg">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Fiber <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Acrylic</a></li>
+                <li><a href="#">Alpaca</a></li>
+                <li><a href="#">Cashmere</a></li>
+                <li><a href="#">Cotton</a></li>
+                <li><a href="#">Linen</a></li>
+                <li><a href="#">Mohair</a></li>
+                <li><a href="#">Silk</a></li>
+                <li><a href="#">Wool</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Clear Fiber Selection</a></li>
+              </ul>
+            </div>
+          </div><!--/.nav-collapse -->
+
       </div>
     </nav>
-
-
-
-
         <div class='container'>
             <div class='row'>
-
             </div>
         </div>
         <script>
@@ -151,10 +172,10 @@
                   yarn = yarns[j];
                   if (yarn.awesome) {
                         name = yarns[j].name;
-                        var str = "<div class='col-lg-3 col-md-4 col-sm-6 col-xs-12'>";
-                        str += "<img class= 'img-responsive img-rounded shadow' src='" + yarn.image + "'>";
+                        var str = "<div class='col-lg-3 col-md-4 col-sm-6 col-xs-12'><div class='card'><div class='card-image'>";
+                        str += "<img class= 'img-responsive img-rounded' src='" + yarn.image + "'><div class='card-content'>";
                         str += "<p>" + data[i].line;
-                        str += "</p>" + name + "</div>";
+                        str += "</p>" + name + "</div></div></div></div>";
                         $(".row").append(str);
                   }
                 }
@@ -179,6 +200,15 @@
             }
             display();
         </script>
-    <p>&copy;Yarn Sherpa 2015</p>
+    <footer class="footer">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
     </body>
 </html>
