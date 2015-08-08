@@ -1,4 +1,5 @@
-[ {
+var yarnData = [
+        {
     "manufacturer": "Knit Picks",
     "line": "Chroma Worsted Yarn",
     "weight": "Worsted",
@@ -3889,4 +3890,4 @@
         }
     ]
   }
-]
+];

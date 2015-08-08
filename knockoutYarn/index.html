@@ -7,8 +7,9 @@
         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 
         <script src='js/jQuery.js'></script>
-                <script src='js/bootstrap.min.js'></script>
-        <script src='js/main.js'></script>
+        <script src='js/bootstrap.min.js'></script>
+        <script src='js/knockout.js'></script>
+        <script src='js/app.js'></script>
         <link rel='shortcut icon' href='img/favicon.png'/>
         <style>
           .container {
@@ -16,7 +17,7 @@
               padding: 20px 0 10px 0;
           }
           .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-            padding: 5px;
+            padding: 8px;
           }
           .logo {
             position: relative;
@@ -55,11 +56,11 @@
           }
 
           body {
-            padding-top: 50px;
+            padding-top: 60px;
           }
           footer {
             position: fixed;
-            bottom: 0;
+            bottom: -2px;
             width: 100%;
             height: 50px;
           }
@@ -67,21 +68,21 @@
           footer ul {
             position: absolute;
             top: 0;
+            float: left;
           }
-
+          footer a {
+            color: #aaa;
+          }
         </style>
     </head>
     <body>
-
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#"><img class="logo" alt="Yarn Sherpa" src="img/PinkGreyerLogo150.png"></a>
+        </div>
 
-
-            <!-- Single button -->
-
+          <!-- Filter buttons -->
           <div class="navbar-right filter-btn-group">
             <div class="btn-group btn-group-lg">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -97,6 +98,7 @@
                 <li><a href="#">Purple</a></li>
                 <li><a href="#">Brown</a></li>
                 <li><a href="#">Black</a></li>
+                <li><a href="#">Grey</a></li>
                 <li><a href="#">White</a></li>
                 <li><a href="#">Multi</a></li>
                 <li role="separator" class="divider"></li>
@@ -108,15 +110,15 @@
                 Weight <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li><a href="#">Lace</a></li>
-                <li><a href="#">Fingering</a></li>
-                <li><a href="#">Sport</a></li>
-                <li><a href="#">DK</a></li>
-                <li><a href="#">Worsted</a></li>
-                <li><a href="#">Bulky</a></li>
-                <li><a href="#">Super Bulky</a></li>
+                <li id='lace'><a href="#">Lace</a></li>
+                <li id='fingering'><a href="#">Fingering</a></li>
+                <li id='sport'><a href="#">Sport</a></li>
+                <li id='dk'><a href="#">DK</a></li>
+                <li id='worsted'><a href="#">Worsted</a></li>
+                <li id='bulky'><a href="#">Bulky</a></li>
+                <li id='super_bulky'><a href="#">Super Bulky</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Clear Weight Selection</a></li>
+                <li id='clear_weight'><a href="#">Clear Weight Selection</a></li>
               </ul>
             </div>
             <div class="btn-group btn-group-lg">
@@ -130,78 +132,23 @@
                 <li><a href="#">Cotton</a></li>
                 <li><a href="#">Linen</a></li>
                 <li><a href="#">Mohair</a></li>
+                <li><a href="#">Nylon</a></li>
                 <li><a href="#">Silk</a></li>
                 <li><a href="#">Wool</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Clear Fiber Selection</a></li>
               </ul>
             </div>
-          </div><!--/.nav-collapse -->
+          </div><!-- Filter Buttons -->
 
       </div>
     </nav>
-        <div class='container'>
-            <div class='row'>
-            </div>
+      <div class='container'>
+        <div class='row'>
         </div>
-        <script>
-            var myDataRef = new Firebase('https://yarnsherpa.firebaseio-demo.com/');
-            var display = function(){
-                try {
-                var FB = new Firebase("https://yarnsherpa.firebaseio.com/");
-                FB.on('value', function(data) {
-                    firebaseData = data.val();
-                    //console.log(firebaseData);
-                    showAwesome(firebaseData);
-                    //showImages(firebaseData);
-                    });
-                }
-                catch(e) {
-                // Handle errors with backup copy of data if Firebase is unreachable
-                    console.log("Nope");
-                    $.getJSON("../data.json", function(json) {
-                        console.log("Backup method!");
-                        console.log(json);
-                    });
-                }
-            }
-            var showAwesome = function(data){
-              for (i = 0; i<data.length; i++) {
-                yarns = data[i].colorways;
-                for (j=0; j < yarns.length; j++) {
-                  yarn = yarns[j];
-                  if (yarn.awesome) {
-                        name = yarns[j].name;
-                        var str = "<div class='col-lg-3 col-md-4 col-sm-6 col-xs-12'><div class='card'><div class='card-image'>";
-                        str += "<img class= 'img-responsive img-rounded' src='" + yarn.image + "'><div class='card-content'>";
-                        str += "<p>" + data[i].line;
-                        str += "</p>" + name + "</div></div></div></div>";
-                        $(".row").append(str);
-                  }
-                }
-              }
-            }
-            var showImages = function(data) {
-                console.log(data.length);
-                for (i = 0; i < data.length; i++) {
-                    //console.log(data[i].colorways.length);
-                    yarns = data[i].colorways;
-                    for (j=0; j < yarns.length; j++) {
-                        //console.log(yarns[j]);
-                        yarn_image = yarns[j].image;
-                        name = yarns[j].name;
-                        var str = "<div class='col-lg-3 col-md-4 col-sm-6 col-xs-12'>";
-                        str += "<img class= 'img-responsive img-rounded shadow' src='" + yarn_image + "'>";
-                        str += "<p>" + data[i].line;
-                        str += "</p>" + name + "</div>";
-                        $(".row").append(str);
-                    }
-                }
-            }
-            display();
-        </script>
-    <footer class="footer">
-      <div class="container">
+      </div>
+    <footer>
+      <div class='container'>
         <ul class="nav navbar-nav">
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
