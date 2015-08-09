@@ -88,21 +88,21 @@
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Colors <span class="caret"></span>
               </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">Pink</a></li>
-                <li><a href="#">Red</a></li>
-                <li><a href="#">Orange</a></li>
-                <li><a href="#">Yellow</a></li>
-                <li><a href="#">Green</a></li>
-                <li><a href="#">Blue</a></li>
-                <li><a href="#">Purple</a></li>
-                <li><a href="#">Brown</a></li>
-                <li><a href="#">Black</a></li>
-                <li><a href="#">Grey</a></li>
-                <li><a href="#">White</a></li>
-                <li><a href="#">Multi</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Clear Color Selection</a></li>
+              <ul class="dropdown-menu" id="colorList" data-bind="foreach: colorList">
+                <li><a data-bind='click: toggleYarns.bind($data, "red")' href="#">Red</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "pink")' href="#">Pink</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "orange")' href="#">Orange</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "yellow")' href="#">Yellow</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "green")' href="#">Green</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "blue")' href="#">Blue</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "purple")' href="#">Purple</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "brown")' href="#">Brown</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "black")' href="#">Black</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "grey")' href="#">Grey</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "white")' href="#">White</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "multi")' href="#">Multi</a></li>
+                <!-- <li role="separator" class="divider"></li>
+                <li><a href="#">Clear Color Selection</a></li> -->
               </ul>
             </div>
             <div class="btn-group btn-group-lg">
@@ -110,13 +110,13 @@
                 Weight <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li id='lace'><a href="#">Lace</a></li>
-                <li id='fingering'><a href="#">Fingering</a></li>
-                <li id='sport'><a href="#">Sport</a></li>
-                <li id='dk'><a href="#">DK</a></li>
-                <li id='worsted'><a href="#">Worsted</a></li>
-                <li id='bulky'><a href="#">Bulky</a></li>
-                <li id='super_bulky'><a href="#">Super Bulky</a></li>
+                <li id='lace'><a data-bind='click: toggleYarns.bind($data, "lace")' href="#">Lace</a></li>
+                <li id='fingering'><a data-bind='click: toggleYarns.bind($data, "fingering")' href="#">Fingering</a></li>
+                <li id='sport'><a data-bind='click: toggleYarns.bind($data, "sport")' href="#">Sport</a></li>
+                <li id='dk'><a data-bind='click: toggleYarns.bind($data, "dk")' href="#">DK</a></li>
+                <li id='worsted'><a data-bind='click: toggleYarns.bind($data, "worsted")' href="#">Worsted</a></li>
+                <li id='bulky'><a data-bind='click: toggleYarns.bind($data, "bulky")' href="#">Bulky</a></li>
+                <li id='super_bulky'><a data-bind='click: toggleYarns.bind($data, "superBulky")' href="#">Super Bulky</a></li>
                 <li role="separator" class="divider"></li>
                 <li id='clear_weight'><a href="#">Clear Weight Selection</a></li>
               </ul>
@@ -126,15 +126,15 @@
                 Fiber <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li><a href="#">Acrylic</a></li>
-                <li><a href="#">Alpaca</a></li>
-                <li><a href="#">Cashmere</a></li>
-                <li><a href="#">Cotton</a></li>
-                <li><a href="#">Linen</a></li>
-                <li><a href="#">Mohair</a></li>
-                <li><a href="#">Nylon</a></li>
-                <li><a href="#">Silk</a></li>
-                <li><a href="#">Wool</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "acrylic")' href="#">Acrylic</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "alpaca")' href="#">Alpaca</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "cashmere")' href="#">Cashmere</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "cotton")' href="#">Cotton</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "linen")' href="#">Linen</a></li>
+                <li data-bind='click: toggleYarns.bind($data, "mohair")'><a href="#">Mohair</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "nylon")' href="#">Nylon</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "silk")' href="#">Silk</a></li>
+                <li><a data-bind='click: toggleYarns.bind($data, "wool")' href="#">Wool</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Clear Fiber Selection</a></li>
               </ul>
@@ -144,7 +144,7 @@
       </div>
     </nav>
       <div class='container'>
-        <div class='row'>
+        <div class='row' data-bind="html: displayList">
         </div>
       </div>
     <footer>
