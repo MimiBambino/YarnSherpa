@@ -1,7 +1,11 @@
+bs4: 
+  - findall(text = "something")
+  - does it also accept regexes?
+
 MongoDB: yarn
  - I just need a formatted json file
 
-Start with KnitPicks
+Start with KP
     Use Scrapy to scrape and output json.
     I only need:
         - yarn weight
@@ -11,4 +15,5 @@ Start with KnitPicks
 
 Build a basic front end.
 
-Show it off to some Ravelry users.
+Show it off to some Ravelry users
+
