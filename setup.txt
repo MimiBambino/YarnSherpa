@@ -1,6 +1,6 @@
 bs4: 
-  - findall(text = "something")
-  - does it also accept regexes?
+  - findAll(text = re.compile(...))
+  - findAll(lambda tag: len(tag.attrs) == 2)
 
 MongoDB: yarn
  - I just need a formatted json file
