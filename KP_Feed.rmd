@@ -1,0 +1,52 @@
+---
+title: "KP_Feed"
+author: "Cynthia O'Donnell"
+date: "08/31/2015"
+output: html_document
+---
+
+```{r Load_Feed_Data}
+kp = read.csv("~/Downloads/59159.txt", sep="|", stringsAsFactors = FALSE)
+
+# remove unnecessary data
+kp$X59159 = NULL
+kp$Knit.Picks = NULL
+kp$X = NULL
+kp$X.1 = NULL
+kp$X.25 = NULL
+kp$X.26 = NULL
+kp$X.27 = NULL
+kp$X.28 = NULL
+kp$X.29 = NULL
+kp$X.30 = NULL
+kp$X.31 = NULL
+kp$X.32 = NULL
+kp$X.33 = NULL
+kp$X.19 = NULL
+kp$X.20 = NULL
+kp$X.21 = NULL
+kp$X.22 = NULL
+kp$X.23 = NULL
+kp$X.24 = NULL
+kp$X0 = NULL
+kp$X.11 = NULL
+kp$X.12 = NULL
+kp$X.13 = NULL
+kp$X.14 = NULL
+kp$X.15 = NULL
+kp$X.16 = NULL
+kp$X.17 = NULL
+kp$X.18 = NULL
+kp$Entertainment = NULL
+kp$Crafts.Hobbies = NULL
+kp$X.2 = NULL
+kp$X.3 = NULL
+kp$X.4 = NULL
+kp$X.5 = NULL
+kp$X.6 = NULL
+kp$X.7 = NULL
+kp$X.8 = NULL
+kp$X.9 = NULL
+kp$X.10 = NULL
+```
+
