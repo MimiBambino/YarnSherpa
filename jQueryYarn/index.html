@@ -140,12 +140,36 @@ footer {
           }
 .x {
   position: absolute;
-  top: 20%;
-  left: 20%;
+    bottom: 10%;
+    left: 10%;
   color: gray;
 }
 .x:hover {
   color: black;
+}
+
+#filter-buttons {
+  float: right;
+  padding-right: 2%;
+}
+
+.dropdown-menu {
+  background-color: #26a69a;
+  font-size: 1.2em;
+}
+
+.dropdown-menu li {
+
+}
+nav ul li:hover, nav ul li.active {
+  background-color: rgb(39, 20, 49);
+}
+
+nav ul li {
+  height: 40px;
+  width:100%;
+  padding-left: 20px;
+  padding-bottom: 5px;
 }
 
     </style>
@@ -176,6 +200,7 @@ footer {
             <!-- <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Fiber<i class="material-icons right">arrow_drop_down</i></a></li>
           </ul>  -->
 <!--Bootstrap dropdown buttons-->
+<div id="filter-buttons">
 <div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Color <span class="caret"></span>
@@ -183,12 +208,16 @@ footer {
   <ul class="dropdown-menu" id="dropdown1">
 
   </ul>
+</div>
+<div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Weight <span class="caret"></span>
   </button>
     <ul class="dropdown-menu" id="dropdown2">
 
   </ul>
+</div>
+<div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Fiber <span class="caret"></span>
   </button>
@@ -196,7 +225,7 @@ footer {
 
   </ul>
 </div>
-
+</div>
 
         </div>
       </nav>
@@ -218,12 +247,12 @@ footer {
               <li><a class='grey-text text-lighten-3' href='#!'>Contact</a></li>
               <li><a class='grey-text text-lighten-3' href='#!'>About</a></li>
             </ul>
-            <ul class="side-nav" id="mobile-demo">
+<!--             <ul class="side-nav" id="mobile-demo">
               <li><a href="sass.html">Sass</a></li>
               <li><a href="badges.html">Components</a></li>
               <li><a href="collapsible.html">Javascript</a></li>
               <li><a href="mobile.html">Mobile</a></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </div>
@@ -309,9 +338,10 @@ var createBox = function(data, num) {
       num = length;
     }
     for (; i < num; i++) {
-    var YarnBox = "<a href='" + data[i].link + "' target='_blank'><div class='col l2 m4 s6'><div class='card hoverable'><div class='card-image'>";
-    YarnBox += "<img class='responsive-img' src=" + data[i].image + "></a><span class = 'card-title'><i class='x material-icons'>clear</i></span></div><div class='card-content'><p>";
-    YarnBox += "KnitPicks</p></div></div>";
+      var yarn = data[i];
+      var YarnBox = "<a href='" + yarn.link + "' target='_blank'><div class='col l2 m4 s6'><div class='card hoverable'><div class='card-image'>";
+    YarnBox += "<img class='responsive-img' src=" + yarn.image + "></a><span class = 'card-title'><i class='x material-icons'>clear</i></span></div><div class='card-content'><p>";
+    YarnBox += yarn.name + "</p><p>" + yarn.fiber + "</p><p>by: " + yarn.manufacturer + "</p></div></div>";
     $(".row").append(YarnBox);
     yarnCount++;
     }
@@ -331,34 +361,31 @@ var createBox = function(data, num) {
 var createDropdowns = function() {
     var colorList = ["red", "pink", "orange", "yellow", "green", "blue",
                     "purple", "brown", "black", "grey", "white", "multi"];
-    var weightList = ["Lace", "Fingering", "Sport", "DK", "Worsted",
-                     "Bulky", "Super Bulky"];
-    var fiberList = ["Acrylic", "Alpaca", "Cashmere", "Cotton", "Linen",
-                    "Mohair", "Silk", "Wool", "Nylon"];
+    var weightList = ["lace", "fingering", "sport", "dk", "worsted",
+                     "bulky", "super bulky"];
+    var fiberList = ["acrylic", "alpaca", "cashmere", "cotton", "linen",
+                    "mohair", "silk", "wool", "nylon"];
     var i = 0;
     var colors = "";
     var weights = "";
     var fibers = "";
     for (; i < colorList.length; i++){
-      colors += "<li id='" + colorList[i] + "'><a href='#!'>" + colorList[i] + "</a></li>";
+      colors += "<li id='" + colorList[i] + "'>" + colorList[i] + "</li>";
     }
     for (var i=0; i < weightList.length; i++){
-      weights += "<li id='" + weightList[i] + "'><a href='#!'>" + weightList[i] + "</a></li>";
+      weights += "<li id='" + weightList[i] + "'>" + weightList[i] + "</li>";
     }
     for (var i=0; i < fiberList.length; i++){
-      fibers += "<li id='" + fiberList[i] + "'><a href='#!'>" + fiberList[i] + "</a></li>";
+      fibers += "<li id='" + fiberList[i] + "'>" + fiberList[i] + "</li>";
     }
-    $("#dropdown1").append(colors);
-    $("#dropdown2").append(weights);
-    $("#dropdown3").append(fibers);
-    $("#dropdown1").click(function(event){
-      console.log(event.target.id + "clicked");
+    $("#dropdown1").append(colors).click(function(event){
+      console.log(event.target.id);
     });
-        $("#dropdown2").click(function(event){
-      console.log(event.target.id + "clicked");
+    $("#dropdown2").append(weights).click(function(event){
+      console.log(event.target.id);
     });
-            $("#dropdown3").click(function(event){
-      console.log(event.target.id + "clicked");
+    $("#dropdown3").append(fibers).click(function(event){
+      console.log(event.target.id);
     });
 
     // for (; i < colorList.length; i++) {
