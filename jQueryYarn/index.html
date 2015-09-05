@@ -10,9 +10,9 @@
     <link rel='stylesheet' href='css/bootstrap.min.css'>
     <script type="text/javascript" src='js/bootstrap.min.js'></script>
     <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/materialize.css">
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+  <script src="js/materialize.min.js"></script>
 <!-- Remove if I don't use more icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -172,33 +172,29 @@ nav ul li {
   padding-bottom: 5px;
 }
 
+.yarn-card {
+  height: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  .yarn-card {
+    height: 400px; }
+  }
+
     </style>
   </head>
   <body>
     <header>
-      <!-- <ul id="dropdown1" class="dropdown-content">
-      </ul>
-      <ul id="dropdown2" class="dropdown-content">
-      </ul>
-      <ul id="dropdown3" class="dropdown-content">
-      </ul> -->
       <nav>
         <div class="nav-wrapper">
-          <a href='#' class='col l2 brand-logo'>
+          <div class='col l2 brand-logo'>
             <div class='logo2'>
               <div class='Yarn2'>Yarn
               </div>
               <div class='Sherpa2'>Sherpa
               </div>
             </div>
-          </a>
-          <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="filter right hide-on-med-and-down">
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Color<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Weight<i class="material-icons right">arrow_drop_down</i></a></li>-->
-            <!-- Dropdown Trigger -->
-            <!-- <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Fiber<i class="material-icons right">arrow_drop_down</i></a></li>
-          </ul>  -->
+          </div>
 <!--Bootstrap dropdown buttons-->
 <div id="filter-buttons">
 <div class="btn-group">
@@ -247,29 +243,28 @@ nav ul li {
               <li><a class='grey-text text-lighten-3' href='#!'>Contact</a></li>
               <li><a class='grey-text text-lighten-3' href='#!'>About</a></li>
             </ul>
-<!--             <ul class="side-nav" id="mobile-demo">
-              <li><a href="sass.html">Sass</a></li>
-              <li><a href="badges.html">Components</a></li>
-              <li><a href="collapsible.html">Javascript</a></li>
-              <li><a href="mobile.html">Mobile</a></li>
-            </ul> -->
           </div>
         </div>
       </div>
     </footer>
 <script>
-// Hold state of call to action page
+// Hold state of call to action page.
+
 var findYarnsClicked = false;
 
 // Keep track of how many yarns are displayed.
 var yarnCount = 0;
 
+// Keep track of active filter properties.
+var properties = {};
+
 // Fetch Firebase data
 var myYarns = new Firebase('https://yarnsherpa.firebaseio.com/yarns');
 myYarns.on('value', function(data) {
     YarnList = data.val();
+    filterYarnList();
+    gotData(YarnList.length);
     // add more yarns to screen if data is here
-    //gotData(YarnList.length);
 }, function (e) {
   console.log("The read failed: " + e.code);
 });
@@ -287,7 +282,7 @@ $(document).ready(function() {
 
 // Transitions to main app
 var loadYarns = function() {
-    $(".callToAction").hide();
+    $(".callToAction").remove();
     findYarnsClicked = true;
     $("body").removeClass("tinted-image").addClass("YarnPage brown lighten-4");
     $(".logo").fadeOut();
@@ -298,50 +293,43 @@ var loadYarns = function() {
 var gotData = function(i) {
     if (i > 100) {
       if (findYarnsClicked) {
-        createBox(YarnList.slice(1,100, 5));
+        createBox(YarnList, 20);
       };
       return true;
     } else {
-      return false;
+      setTimeout(createBox(YarnList, 20), 2000);
     };
 };
-
-// Filter yarns on given criteria
-// var subsetData = function(data, condition1, condition2) {
-//     var i = 0;
-//     var length = data.length;
-//     var subset = []
-//     for (; i < length; i++) {
-//       if (data[i][condition1] === condition2) {
-//         subset.append[i];
-//       }
-//     };
-// };
-
-// if (gotData){
-//     var blueYarn = subsetData(YarnList, "color", "blue");
-//     console.log(blueYarn);
-//   }
 
 var mainPage = function(){
   $("header").fadeIn("slow");
   $("footer").fadeIn("slow");
   createDropdowns();
   createBox(YarnList, 30);
-}
+};
 
 var createBox = function(data, num) {
 // Create Yarn Container
+    var j = 0;
+    var length = YarnList.length;
+    var awesomeYarns = [];
+    for (; j < length; j++) {
+      if (YarnList[j].hasOwnProperty("awesome")) {
+        console.log(j);
+        awesomeYarns.push(YarnList[j]);
+      }
+    }
+    console.log(awesomeYarns);
     var i = 0;
-    var length = data.length
+    var length = awesomeYarns.length
     if (length < num) {
       num = length;
     }
     for (; i < num; i++) {
-      var yarn = data[i];
+      var yarn = awesomeYarns[i];
       var YarnBox = "<a href='" + yarn.link + "' target='_blank'><div class='col l2 m4 s6'><div class='card hoverable'><div class='card-image'>";
     YarnBox += "<img class='responsive-img' src=" + yarn.image + "></a><span class = 'card-title'><i class='x material-icons'>clear</i></span></div><div class='card-content'><p>";
-    YarnBox += yarn.name + "</p><p>" + yarn.fiber + "</p><p>by: " + yarn.manufacturer + "</p></div></div>";
+    YarnBox += yarn.name  + "</p><p>" + yarn.fiber + "</p><p>by: " + yarn.manufacturer + "</p></div></div>";
     $(".row").append(YarnBox);
     yarnCount++;
     }
@@ -351,12 +339,8 @@ var createBox = function(data, num) {
       $(this).remove();
       yarnCount--;
       console.log(yarnCount);
-  });
+    });
 };
-
-// var myalert = function(i){
-//       alert(i);
-// };
 
 var createDropdowns = function() {
     var colorList = ["red", "pink", "orange", "yellow", "green", "blue",
@@ -379,26 +363,142 @@ var createDropdowns = function() {
       fibers += "<li id='" + fiberList[i] + "'>" + fiberList[i] + "</li>";
     }
     $("#dropdown1").append(colors).click(function(event){
-      console.log(event.target.id);
+      var val = event.target.id;
+      console.log(val);
+      if (properties.color == val) {
+        delete properties.color;
+      } else {
+        properties.color = val;
+      }
+      updateBox(properties);
     });
     $("#dropdown2").append(weights).click(function(event){
-      console.log(event.target.id);
+      var val = event.target.id;
+      console.log(val);
+      if (properties.weight == val) {
+        delete properties.weight;
+      } else {
+        properties.weight = val;
+      }
+      updateBox(properties);
     });
     $("#dropdown3").append(fibers).click(function(event){
-      console.log(event.target.id);
+      var val = event.target.id;
+      console.log(val);
+      if (properties.fiber == val) {
+        delete properties.fiber;
+      } else {
+        properties.fiber = val;
+      }
+      updateBox(properties);
     });
+};
 
-    // for (; i < colorList.length; i++) {
-    //   $("li#" + colorList[i]).click(function(){
-    //     console.log(colorList[i]);
-    // });
-//}
+var updateBox = function() {
+  console.log("write updateBox function");
 };
 
 var showFooter = function() {
     $("footer").fadeIn("slow");
 };
 
+var filterYarnList = function() {
+  redYarns = YarnList.filter(function(val){
+    return (val.color === 'red');
+  });
+  pinkYarns = YarnList.filter(function(val){
+    return (val.color === 'pink');
+  });
+  orangeYarns = YarnList.filter(function(val){
+    return (val.color === 'orange');
+  });
+  yellowYarns = YarnList.filter(function(val){
+    return (val.color === 'yellow');
+  });
+  greenYarns = YarnList.filter(function(val){
+    return (val.color === 'green');
+  });
+  blueYarns = YarnList.filter(function(val){
+    return (val.color === 'blue');
+  });
+  purpleYarns = YarnList.filter(function(val){
+    return (val.color === 'purple');
+  });
+  brownYarns = YarnList.filter(function(val){
+    return (val.color === 'brown');
+  });
+  blackYarns = YarnList.filter(function(val){
+    return (val.color === 'black');
+  });
+  greyYarns = YarnList.filter(function(val){
+    return (val.color === 'grey');
+  });
+  whiteYarns = YarnList.filter(function(val){
+    return (val.color === 'white');
+  });
+  multiYarns = YarnList.filter(function(val){
+    return (val.color === 'multi');
+  });
+
+  laceYarns = YarnList.filter(function(val){
+    return (val.weight === 'lace');
+  });
+  fingeringYarns = YarnList.filter(function(val){
+    return (val.weight === 'fingering');
+  });
+  sportYarns = YarnList.filter(function(val){
+    return (val.weight === 'sport');
+  });
+  dkYarns = YarnList.filter(function(val){
+    return (val.weight === 'dk');
+  });
+  worstedYarns = YarnList.filter(function(val){
+    return (val.weight === 'worsted');
+  });
+  bulkyYarns = YarnList.filter(function(val){
+    return (val.weight === 'bulky');
+  });
+  superBulkyYarns = YarnList.filter(function(val){
+    return (val.weight === 'super bulky');
+  });
+
+  acrylicYarns = YarnList.filter(function(val){
+    return (val.fiber === 'acrylic');
+  });
+  alpacaYarns = YarnList.filter(function(val){
+    return (val.fiber === 'alpaca');
+  });
+  cashmereYarns = YarnList.filter(function(val){
+    return (val.fiber === 'cashmere');
+  });
+  cottonYarns = YarnList.filter(function(val){
+    return (val.fiber === 'cotton');
+  });
+  linenYarns = YarnList.filter(function(val){
+    return (val.fiber === 'linen');
+  });
+  mohairYarns = YarnList.filter(function(val){
+    return (val.fiber === 'mohair');
+  });
+  silkYarns = YarnList.filter(function(val){
+    return (val.fiber === 'silk');
+  });
+  woolYarns = YarnList.filter(function(val){
+    return (val.fiber === 'wool');
+  });
+  nylonYarns = YarnList.filter(function(val){
+    return (val.fiber === 'nylon');
+  });
+};
+
+var redYarns, pinkYarns, orangeYarns, yellowYarns, greenYarns, blueYarns,
+    purpleYarns, brownYarns, blackYarns, greyYarns, whiteYarns, multiYarns;
+
+var laceYarns, fingeringYarns, sportYarns, dkYarns, worstedYarns, bulkyYarns,
+    superBulkyYarns;
+
+var acrylicYarns, alpacaYarns, cashmereYarns, cottonYarns, linenYarns,
+    mohairYarns, silkYarns, woolYarns, nylonYarns;
 //var YarnList = JSON.parse("~/yarnsherpa-yarns-export.json");
     </script>;
   </body>
