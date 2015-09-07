@@ -6,4 +6,10 @@
     "**/.*",
     "**/node_modules/**"
   ]
+}, {
+    "source": "img/yarn.jpg",
+    "headers": [ {
+        "key": "Cache-Control",
+        "value": "max-age=7776000"
+            }]
 }

@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello React!</title>
-    <link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300|Sacramento|Cinzel+Decorative:700' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Cinzel+Decorative:700&text=Sherpa' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Sacramento&text=Yarn' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <script>
+      WebFontConfig = {
+        google: {
+          families: ['Sacremento', 'Cinzel Decorative']
+        }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
+        wf.type = 'text/javascript';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script type="text/javascript" src="yarnsherpa-yarns-export.js"></script>
@@ -30,6 +49,20 @@
         background-size: cover;
     }
 
+#CTA-wrapper {
+  position: relative;
+  height: 300px;
+  width: 400px;
+  left: calc(50% - 200px);
+}
+.describe {
+  position: absolute;
+  font-size: 1.8em;
+  color: #ddd;
+  bottom: 90px;
+  right: 0;
+}
+
     .findYarnNow {
         background-color: #F01D8A;
         height: 100px;
@@ -40,7 +73,7 @@
         border-color: white;
     }
 
-    .callToAction {
+.callToAction {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 33px;
     font-weight: 300;
@@ -48,9 +81,9 @@
     color: white;
     height: 70px;
     line-height: 70px;
-    position: fixed;
-    top: calc(50% - 35px);
-    right: calc(50% - 95px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .logo {
@@ -258,6 +291,8 @@ var yarnCount = 0;
 // Keep track of active filter properties.
 var properties = {};
 
+var activeList = [];
+
 // Fetch Firebase data
 var myYarns = new Firebase('https://yarnsherpa.firebaseio.com/yarns');
 myYarns.on('value', function(data) {
@@ -273,7 +308,7 @@ $(document).ready(function() {
 // Create Landing Page
     $("header").hide();
     $("footer").hide();
-    $("body").addClass("tinted-image").append("<div class='logo'><div class='Yarn'>Yarn</div><div class='Sherpa'>Sherpa</div></div><a class='callToAction pink waves-effect waves-light btn'>Find Yarns Now!</a>");
+    $("body").addClass("tinted-image").append("<div class='logo'><div class='Yarn'>Yarn</div><div class='Sherpa'>Sherpa</div></div><div id='CTA-wrapper'><div class='describe'>Search all the yarns online.</div><a class='callToAction pink waves-effect waves-light btn'>Find Yarns Now!</a></div></div>");
     // After call to action clicked, show the main app
     $(".callToAction").click(loadYarns);
     $(".dropdown-button").dropdown( { hover: true });
@@ -285,7 +320,9 @@ var loadYarns = function() {
     $(".callToAction").remove();
     findYarnsClicked = true;
     $("body").removeClass("tinted-image").addClass("YarnPage brown lighten-4");
+    $("#home-wrapper").empty();
     $(".logo").fadeOut();
+    $(".describe").remove();
     mainPage();
 };
 
@@ -305,41 +342,7 @@ var mainPage = function(){
   $("header").fadeIn("slow");
   $("footer").fadeIn("slow");
   createDropdowns();
-  createBox(YarnList, 30);
-};
-
-var createBox = function(data, num) {
-// Create Yarn Container
-    var j = 0;
-    var length = YarnList.length;
-    var awesomeYarns = [];
-    for (; j < length; j++) {
-      if (YarnList[j].hasOwnProperty("awesome")) {
-        console.log(j);
-        awesomeYarns.push(YarnList[j]);
-      }
-    }
-    console.log(awesomeYarns);
-    var i = 0;
-    var length = awesomeYarns.length
-    if (length < num) {
-      num = length;
-    }
-    for (; i < num; i++) {
-      var yarn = awesomeYarns[i];
-      var YarnBox = "<a href='" + yarn.link + "' target='_blank'><div class='col l2 m4 s6'><div class='card hoverable'><div class='card-image'>";
-    YarnBox += "<img class='responsive-img' src=" + yarn.image + "></a><span class = 'card-title'><i class='x material-icons'>clear</i></span></div><div class='card-content'><p>";
-    YarnBox += yarn.name  + "</p><p>" + yarn.fiber + "</p><p>by: " + yarn.manufacturer + "</p></div></div>";
-    $(".row").append(YarnBox);
-    yarnCount++;
-    }
-    // Attach click handler to images
-    $(".x").click(function() {
-      $(this).closest("div.card").fadeOut("slow");
-      $(this).remove();
-      yarnCount--;
-      console.log(yarnCount);
-    });
+  filterByAwesome();
 };
 
 var createDropdowns = function() {
@@ -370,7 +373,9 @@ var createDropdowns = function() {
       } else {
         properties.color = val;
       }
-      updateBox(properties);
+      $(".row").empty();
+      filterByColor(properties.color);
+      localStorage.setItem('color', val);
     });
     $("#dropdown2").append(weights).click(function(event){
       var val = event.target.id;
@@ -380,7 +385,10 @@ var createDropdowns = function() {
       } else {
         properties.weight = val;
       }
-      updateBox(properties);
+      $(".row").empty();
+      console.log(properties.weight);
+      filterByWeight(properties.weight);
+      localStorage.setItem('weight', val);
     });
     $("#dropdown3").append(fibers).click(function(event){
       var val = event.target.id;
@@ -390,12 +398,169 @@ var createDropdowns = function() {
       } else {
         properties.fiber = val;
       }
-      updateBox(properties);
+      $(".row").empty();
+      filterByFiber(properties.fiber);
+      localStorage.setItem('fiber', val);
     });
 };
 
-var updateBox = function() {
-  console.log("write updateBox function");
+var filterByAwesome = function() {
+    var j = 0;
+    var length = YarnList.length;
+    var awesomeYarns = [];
+    for (; j < length; j++) {
+      if (YarnList[j].hasOwnProperty("awesome")) {
+        awesomeYarns.push(YarnList[j]);
+      }
+    }
+    createBox(awesomeYarns, 20);
+}
+
+var createBox = function(data, num) {
+// Create Yarn Container
+    var i = 0;
+    var length = data.length
+    if (length < num) {
+      num = length;
+    }
+
+    for (; i < num; i++) {
+      var yarn = data[Math.floor(Math.random()*length)];
+      //var yarn = awesomeYarns[i];
+      var YarnBox = "<a href='" + yarn.link + "' target='_blank'><div class='col l2 m4 s6'><div class='card hoverable'><div class='card-image'>";
+    YarnBox += "<img class='responsive-img' src=" + yarn.image + "></a><span class = 'card-title'><i class='x material-icons'>clear</i></span></div><div class='card-content'><p>";
+    YarnBox += yarn.name  + "</p><p>" + yarn.fiber + "</p><p>by: " + yarn.manufacturer + "</p></div></div>";
+    $(".row").append(YarnBox);
+    yarnCount++;
+    }
+    // Attach click handler to images
+    $(".x").click(function() {
+      $(this).closest("div.card").fadeOut("slow");
+      //$(this).remove();
+      yarnCount--;
+      console.log(yarnCount);
+    });
+};
+
+var filterByColor = function(val) {
+  var newYarnList = [];
+  if (!properties.hasOwnProperty("color")){
+    newYarnList = allColorYarns;
+  }
+  switch (val) {
+    case "red":
+      newYarnList = newYarnList.concat(redYarns);
+      break;
+    case "pink":
+      newYarnList = newYarnList.concat(pinkYarns);
+      break;
+    case "orange":
+      newYarnList = newYarnList.concat(orangeYarns);
+      break;
+    case "yellow":
+      newYarnList = newYarnList.concat(yellowYarns);
+      break;
+    case "green":
+      newYarnList = newYarnList.concat(greenYarns);
+      break;
+    case "blue":
+      newYarnList = newYarnList.concat(blueYarns);
+      break;
+    case "purple":
+      newYarnList = newYarnList.concat(purpleYarns);
+      break;
+    case "brown":
+      newYarnList = newYarnList.concat(brownYarns);
+      break;
+    case "black":
+      newYarnList = newYarnList.concat(blackYarns);
+      break;
+    case "grey":
+      newYarnList = newYarnList.concat(greyYarns);
+      break;
+    case "white":
+      newYarnList = newYarnList.concat(whiteYarns);
+      break;
+    case "multi":
+      newYarnList = newYarnList.concat(multiYarns);
+      break;
+  }
+  // if (properties.hasOwnProperty('weight')) {
+  //   filterByWeight()
+  // }
+  createBox(newYarnList, 20);
+//  return newYarnList;
+};
+
+var filterByWeight = function(val) {
+  console.log(val);
+  console.log(laceYarns.length);
+  var newYarnList = [];
+  if (!properties.hasOwnProperty("weight")){
+    newYarnList = allWeightYarns;
+  }
+  switch (val) {
+    case "lace":
+      newYarnList = newYarnList.concat(laceYarns);
+      break;
+    case "fingering":
+      newYarnList = newYarnList.concat(fingeringYarns);
+      break;
+    case "sport":
+      newYarnList = newYarnList.concat(sportYarns);
+      break;
+    case "dk":
+      newYarnList = newYarnList.concat(dkYarns);
+      break;
+    case "worsted":
+      newYarnList = newYarnList.concat(worstedYarns);
+      break;
+    case "bulky":
+      newYarnList = newYarnList.concat(bulkyYarns);
+      break;
+    case "super bulky":
+      newYarnList = newYarnList.concat(superBulkyYarns);
+      break;
+  }
+  createBox(newYarnList, 20);
+  console.log(newYarnList.length);
+}
+
+var filterByFiber = function(val) {
+  var newYarnList = [];
+  if (!properties.hasOwnProperty("fiber")){
+    newYarnList = allFiberYarns;
+  }
+  switch (val) {
+    case "acrylic":
+      newYarnList = newYarnList.concat(acrylicYarns);
+      break;
+    case "alpaca":
+      newYarnList = newYarnList.concat(alpacaYarns);
+      break;
+    case "cashmere":
+      newYarnList = newYarnList.concat(cashmereYarns);
+      break;
+    case "cotton":
+      newYarnList = newYarnList.concat(cottonYarns);
+      break;
+    case "linen":
+      newYarnList = newYarnList.concat(linenYarns);
+      break;
+    case "mohair":
+      newYarnList = newYarnList.concat(mohairYarns);
+      break;
+    case "silk":
+      newYarnList = newYarnList.concat(silkYarns);
+      break;
+    case "wool":
+      newYarnList = newYarnList.concat(woolYarns);
+      break;
+    case "nylon":
+      newYarnList = newYarnList.concat(nylonYarns);
+      break;
+  }
+  createBox(newYarnList, 20);
 };
 
 var showFooter = function() {
@@ -439,66 +604,83 @@ var filterYarnList = function() {
   multiYarns = YarnList.filter(function(val){
     return (val.color === 'multi');
   });
-
   laceYarns = YarnList.filter(function(val){
-    return (val.weight === 'lace');
+    return (val.weight === 'Lace');
   });
   fingeringYarns = YarnList.filter(function(val){
-    return (val.weight === 'fingering');
+    return (val.weight === 'Fingering');
   });
   sportYarns = YarnList.filter(function(val){
-    return (val.weight === 'sport');
+    return (val.weight === 'Sport');
   });
   dkYarns = YarnList.filter(function(val){
-    return (val.weight === 'dk');
+    return (val.weight === 'DK');
   });
   worstedYarns = YarnList.filter(function(val){
-    return (val.weight === 'worsted');
+    return (val.weight === 'Worsted');
   });
   bulkyYarns = YarnList.filter(function(val){
-    return (val.weight === 'bulky');
+    return (val.weight === 'Bulky');
   });
   superBulkyYarns = YarnList.filter(function(val){
-    return (val.weight === 'super bulky');
+    return (val.weight === 'Super Bulky');
   });
-
   acrylicYarns = YarnList.filter(function(val){
-    return (val.fiber === 'acrylic');
+    var str = val.fiber.toLowerCase();
+    return (str.indexOf('acrylic') > -1);
   });
   alpacaYarns = YarnList.filter(function(val){
-    return (val.fiber === 'alpaca');
+    var str = val.fiber.toLowerCase();
+    return (str.indexOf('alpaca') > -1);
   });
   cashmereYarns = YarnList.filter(function(val){
-    return (val.fiber === 'cashmere');
+    var str = val.fiber.toLowerCase();
+    return (str.indexOf('cashmere') > -1);
   });
   cottonYarns = YarnList.filter(function(val){
-    return (val.fiber === 'cotton');
+    var str = val.fiber.toLowerCase();
+    return (str.indexOf('cotton') > -1);
   });
   linenYarns = YarnList.filter(function(val){
-    return (val.fiber === 'linen');
+    var str = val.fiber.toLowerCase();
+    return (str.indexOf('linen') > -1);
   });
   mohairYarns = YarnList.filter(function(val){
-    return (val.fiber === 'mohair');
+    var str = val.fiber.toLowerCase();
+    return (str.indexOf('mohair') > -1);
   });
   silkYarns = YarnList.filter(function(val){
-    return (val.fiber === 'silk');
+    var str = val.fiber.toLowerCase();
+    return (str.indexOf('silk') > -1);
   });
   woolYarns = YarnList.filter(function(val){
-    return (val.fiber === 'wool');
+    var str = val.fiber.toLowerCase();
+    return (str.indexOf('wool') > -1);
   });
   nylonYarns = YarnList.filter(function(val){
-    return (val.fiber === 'nylon');
+    var str = val.fiber.toLowerCase();
+    return (str.indexOf('nylon') > -1)
   });
+
+  allColorYarns = allColorYarns.concat(redYarns, pinkYarns, orangeYarns, yellowYarns, greenYarns, blueYarns, purpleYarns, brownYarns, blackYarns, greyYarns, whiteYarns, multiYarns);
+  allWeightYarns = allWeightYarns.concat(laceYarns, fingeringYarns, sportYarns, dkYarns, worstedYarns, bulkyYarns, superBulkyYarns);
+  allFiberYarns = allFiberYarns.concat(acrylicYarns, alpacaYarns, cashmereYarns, cottonYarns, linenYarns, mohairYarns, silkYarns, woolYarns, nylonYarns);
 };
 
 var redYarns, pinkYarns, orangeYarns, yellowYarns, greenYarns, blueYarns,
     purpleYarns, brownYarns, blackYarns, greyYarns, whiteYarns, multiYarns;
 
+var allColorYarns = [];
+
 var laceYarns, fingeringYarns, sportYarns, dkYarns, worstedYarns, bulkyYarns,
     superBulkyYarns;
 
+var allWeightYarns = [];
+
 var acrylicYarns, alpacaYarns, cashmereYarns, cottonYarns, linenYarns,
     mohairYarns, silkYarns, woolYarns, nylonYarns;
+
+var allFiberYarns = [];
 //var YarnList = JSON.parse("~/yarnsherpa-yarns-export.json");
     </script>;
   </body>
