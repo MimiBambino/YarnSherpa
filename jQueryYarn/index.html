@@ -25,15 +25,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-    <script type="text/javascript" src="yarnsherpa-yarns-export.js"></script>
+    <!--<script type="text/javascript" src="yarnsherpa-yarns-export.js"></script>-->
     <link rel='stylesheet' href='css/bootstrap.min.css'>
     <script type="text/javascript" src='js/bootstrap.min.js'></script>
     <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="css/materialize.css">
   <!-- Compiled and minified JavaScript -->
   <script src="js/materialize.min.js"></script>
-<!-- Remove if I don't use more icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style>
     .tinted-image {
@@ -172,10 +170,10 @@ footer {
             color: #aaa;
           }
 .x {
-  position: absolute;
+    position: absolute;
     bottom: 10%;
     left: 10%;
-  color: gray;
+    color: gray;
 }
 .x:hover {
   color: black;
@@ -433,7 +431,7 @@ var createBox = function(data, num) {
       var yarn = data[Math.floor(Math.random()*length)];
       //var yarn = awesomeYarns[i];
       var YarnBox = "<a href='" + yarn.link + "' target='_blank'><div class='col l2 m4 s6'><div class='card hoverable'><div class='card-image'>";
-    YarnBox += "<img class='responsive-img' src='small/" + yarn.jpg + "'></a><span class = 'card-title'><i class='x material-icons'>clear</i></span></div><div class='card-content'><p>";
+    YarnBox += "<img class='responsive-img' src='small/" + yarn.jpg + "'></a><span class = 'card-title'><img src='img/close.png' class='x'></span></div><div class='card-content'><p>";
     YarnBox += yarn.name  + "</p><p>" + yarn.fiber + "</p><p>by: " + yarn.manufacturer + "</p></div></div>";
     $(".row").append(YarnBox);
     yarnCount++;
