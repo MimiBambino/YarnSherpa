@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello React!</title>
+    <title>Yarn Sherpa</title>
     <!-- <link href='https://fonts.googleapis.com/css?family=Cinzel+Decorative:700&text=Sherpa' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Sacramento&text=Yarn' rel='stylesheet' type='text/css'> -->
     <link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
@@ -297,7 +297,7 @@ var activeList = [];
 var myYarns = new Firebase('https://yarnsherpa.firebaseio.com/yarns');
 myYarns.on('value', function(data) {
     YarnList = data.val();
-    filterYarnList();
+    //filterYarnList();
     gotData(YarnList.length);
     // add more yarns to screen if data is here
 }, function (e) {
@@ -360,13 +360,14 @@ var createDropdowns = function() {
       colors += "<li id='" + colorList[i] + "'>" + colorList[i] + "</li>";
     }
     for (var i=0; i < weightList.length; i++){
-      weights += "<li id='" + weightList[i] + "'>" + weightList[i] + "</li>";
+      weights += "<li id='" + weightList[i].toLowerCase() + "'>" + weightList[i] + "</li>";
     }
     for (var i=0; i < fiberList.length; i++){
-      fibers += "<li id='" + fiberList[i] + "'>" + fiberList[i] + "</li>";
+      fibers += "<li id='" + fiberList[i].toLowerCase() + "'>" + fiberList[i] + "</li>";
     }
     $("#dropdown1").append(colors).click(function(event){
       var val = event.target.id;
+      val = val.toLowerCase();
       console.log(val);
       if (properties.color == val) {
         delete properties.color;
@@ -374,11 +375,13 @@ var createDropdowns = function() {
         properties.color = val;
       }
       $(".row").empty();
-      filterByColor(properties.color);
+      var data = filterYarns();
+      createBox(data, 20);
       localStorage.setItem('color', val);
     });
     $("#dropdown2").append(weights).click(function(event){
       var val = event.target.id;
+      val = val.toLowerCase();
       console.log(val);
       if (properties.weight == val) {
         delete properties.weight;
@@ -386,12 +389,13 @@ var createDropdowns = function() {
         properties.weight = val;
       }
       $(".row").empty();
-      console.log(properties.weight);
-      filterByWeight(properties.weight);
+      var data = filterYarns();
+      createBox(data, 20);
       localStorage.setItem('weight', val);
     });
     $("#dropdown3").append(fibers).click(function(event){
       var val = event.target.id;
+      val = val.toLowerCase();
       console.log(val);
       if (properties.fiber == val) {
         delete properties.fiber;
@@ -399,7 +403,8 @@ var createDropdowns = function() {
         properties.fiber = val;
       }
       $(".row").empty();
-      filterByFiber(properties.fiber);
+      var data = filterYarns();
+      createBox(data, 20);
       localStorage.setItem('fiber', val);
     });
 };
@@ -428,7 +433,7 @@ var createBox = function(data, num) {
       var yarn = data[Math.floor(Math.random()*length)];
       //var yarn = awesomeYarns[i];
       var YarnBox = "<a href='" + yarn.link + "' target='_blank'><div class='col l2 m4 s6'><div class='card hoverable'><div class='card-image'>";
-    YarnBox += "<img class='responsive-img' src=" + yarn.image + "></a><span class = 'card-title'><i class='x material-icons'>clear</i></span></div><div class='card-content'><p>";
+    YarnBox += "<img class='responsive-img' src='small/" + yarn.jpg + "'></a><span class = 'card-title'><i class='x material-icons'>clear</i></span></div><div class='card-content'><p>";
     YarnBox += yarn.name  + "</p><p>" + yarn.fiber + "</p><p>by: " + yarn.manufacturer + "</p></div></div>";
     $(".row").append(YarnBox);
     yarnCount++;
@@ -442,246 +447,65 @@ var createBox = function(data, num) {
     });
 };
 
-var filterByColor = function(val) {
-  var newYarnList = [];
-  if (!properties.hasOwnProperty("color")){
-    newYarnList = allColorYarns;
-  }
-  switch (val) {
-    case "red":
-      newYarnList = newYarnList.concat(redYarns);
-      break;
-    case "pink":
-      newYarnList = newYarnList.concat(pinkYarns);
-      break;
-    case "orange":
-      newYarnList = newYarnList.concat(orangeYarns);
-      break;
-    case "yellow":
-      newYarnList = newYarnList.concat(yellowYarns);
-      break;
-    case "green":
-      newYarnList = newYarnList.concat(greenYarns);
-      break;
-    case "blue":
-      newYarnList = newYarnList.concat(blueYarns);
-      break;
-    case "purple":
-      newYarnList = newYarnList.concat(purpleYarns);
-      break;
-    case "brown":
-      newYarnList = newYarnList.concat(brownYarns);
-      break;
-    case "black":
-      newYarnList = newYarnList.concat(blackYarns);
-      break;
-    case "grey":
-      newYarnList = newYarnList.concat(greyYarns);
-      break;
-    case "white":
-      newYarnList = newYarnList.concat(whiteYarns);
-      break;
-    case "multi":
-      newYarnList = newYarnList.concat(multiYarns);
-      break;
-  }
-  // if (properties.hasOwnProperty('weight')) {
-  //   filterByWeight()
-  // }
-  createBox(newYarnList, 20);
-//  return newYarnList;
-};
-
-var filterByWeight = function(val) {
-  console.log(val);
-  console.log(laceYarns.length);
-  var newYarnList = [];
-  if (!properties.hasOwnProperty("weight")){
-    newYarnList = allWeightYarns;
-  }
-  switch (val) {
-    case "lace":
-      newYarnList = newYarnList.concat(laceYarns);
-      break;
-    case "fingering":
-      newYarnList = newYarnList.concat(fingeringYarns);
-      break;
-    case "sport":
-      newYarnList = newYarnList.concat(sportYarns);
-      break;
-    case "dk":
-      newYarnList = newYarnList.concat(dkYarns);
-      break;
-    case "worsted":
-      newYarnList = newYarnList.concat(worstedYarns);
-      break;
-    case "bulky":
-      newYarnList = newYarnList.concat(bulkyYarns);
-      break;
-    case "super bulky":
-      newYarnList = newYarnList.concat(superBulkyYarns);
-      break;
-  }
-  createBox(newYarnList, 20);
-  console.log(newYarnList.length);
-}
-
-var filterByFiber = function(val) {
-  var newYarnList = [];
-  if (!properties.hasOwnProperty("fiber")){
-    newYarnList = allFiberYarns;
-  }
-  switch (val) {
-    case "acrylic":
-      newYarnList = newYarnList.concat(acrylicYarns);
-      break;
-    case "alpaca":
-      newYarnList = newYarnList.concat(alpacaYarns);
-      break;
-    case "cashmere":
-      newYarnList = newYarnList.concat(cashmereYarns);
-      break;
-    case "cotton":
-      newYarnList = newYarnList.concat(cottonYarns);
-      break;
-    case "linen":
-      newYarnList = newYarnList.concat(linenYarns);
-      break;
-    case "mohair":
-      newYarnList = newYarnList.concat(mohairYarns);
-      break;
-    case "silk":
-      newYarnList = newYarnList.concat(silkYarns);
-      break;
-    case "wool":
-      newYarnList = newYarnList.concat(woolYarns);
-      break;
-    case "nylon":
-      newYarnList = newYarnList.concat(nylonYarns);
-      break;
-  }
-  createBox(newYarnList, 20);
-};
-
 var showFooter = function() {
     $("footer").fadeIn("slow");
 };
 
-var filterYarnList = function() {
-  redYarns = YarnList.filter(function(val){
-    return (val.color === 'red');
-  });
-  pinkYarns = YarnList.filter(function(val){
-    return (val.color === 'pink');
-  });
-  orangeYarns = YarnList.filter(function(val){
-    return (val.color === 'orange');
-  });
-  yellowYarns = YarnList.filter(function(val){
-    return (val.color === 'yellow');
-  });
-  greenYarns = YarnList.filter(function(val){
-    return (val.color === 'green');
-  });
-  blueYarns = YarnList.filter(function(val){
-    return (val.color === 'blue');
-  });
-  purpleYarns = YarnList.filter(function(val){
-    return (val.color === 'purple');
-  });
-  brownYarns = YarnList.filter(function(val){
-    return (val.color === 'brown');
-  });
-  blackYarns = YarnList.filter(function(val){
-    return (val.color === 'black');
-  });
-  greyYarns = YarnList.filter(function(val){
-    return (val.color === 'grey');
-  });
-  whiteYarns = YarnList.filter(function(val){
-    return (val.color === 'white');
-  });
-  multiYarns = YarnList.filter(function(val){
-    return (val.color === 'multi');
-  });
-  laceYarns = YarnList.filter(function(val){
-    return (val.weight === 'Lace');
-  });
-  fingeringYarns = YarnList.filter(function(val){
-    return (val.weight === 'Fingering');
-  });
-  sportYarns = YarnList.filter(function(val){
-    return (val.weight === 'Sport');
-  });
-  dkYarns = YarnList.filter(function(val){
-    return (val.weight === 'DK');
-  });
-  worstedYarns = YarnList.filter(function(val){
-    return (val.weight === 'Worsted');
-  });
-  bulkyYarns = YarnList.filter(function(val){
-    return (val.weight === 'Bulky');
-  });
-  superBulkyYarns = YarnList.filter(function(val){
-    return (val.weight === 'Super Bulky');
-  });
-  acrylicYarns = YarnList.filter(function(val){
-    var str = val.fiber.toLowerCase();
-    return (str.indexOf('acrylic') > -1);
-  });
-  alpacaYarns = YarnList.filter(function(val){
-    var str = val.fiber.toLowerCase();
-    return (str.indexOf('alpaca') > -1);
-  });
-  cashmereYarns = YarnList.filter(function(val){
-    var str = val.fiber.toLowerCase();
-    return (str.indexOf('cashmere') > -1);
-  });
-  cottonYarns = YarnList.filter(function(val){
-    var str = val.fiber.toLowerCase();
-    return (str.indexOf('cotton') > -1);
-  });
-  linenYarns = YarnList.filter(function(val){
-    var str = val.fiber.toLowerCase();
-    return (str.indexOf('linen') > -1);
-  });
-  mohairYarns = YarnList.filter(function(val){
-    var str = val.fiber.toLowerCase();
-    return (str.indexOf('mohair') > -1);
-  });
-  silkYarns = YarnList.filter(function(val){
-    var str = val.fiber.toLowerCase();
-    return (str.indexOf('silk') > -1);
-  });
-  woolYarns = YarnList.filter(function(val){
-    var str = val.fiber.toLowerCase();
-    return (str.indexOf('wool') > -1);
-  });
-  nylonYarns = YarnList.filter(function(val){
-    var str = val.fiber.toLowerCase();
-    return (str.indexOf('nylon') > -1)
-  });
-
-  allColorYarns = allColorYarns.concat(redYarns, pinkYarns, orangeYarns, yellowYarns, greenYarns, blueYarns, purpleYarns, brownYarns, blackYarns, greyYarns, whiteYarns, multiYarns);
-  allWeightYarns = allWeightYarns.concat(laceYarns, fingeringYarns, sportYarns, dkYarns, worstedYarns, bulkyYarns, superBulkyYarns);
-  allFiberYarns = allFiberYarns.concat(acrylicYarns, alpacaYarns, cashmereYarns, cottonYarns, linenYarns, mohairYarns, silkYarns, woolYarns, nylonYarns);
+var filterYarns = function() {
+  if (properties.hasOwnProperty('color')) {
+    if (properties.hasOwnProperty('fiber')) {
+      if (properties.hasOwnProperty('weight')) {
+          console.log("all 3");
+          var filteredYarns = YarnList.filter(function(val) {
+            var str = val.fiber.toLowerCase();
+            return (val.color == properties.color &&
+                    str.indexOf(properties.fiber.toLowerCase()) > -1 &&
+                    val.weight.toLowerCase() == properties.weight.toLowerCase());
+          });
+        } else {
+          console.log("color and fiber");
+          var filteredYarns = YarnList.filter(function(val) {
+            var str = val.fiber.toLowerCase();
+            return ( val.color == properties.color &&
+                     str.indexOf(properties.fiber.toLowerCase()) > -1 );
+          });
+        }
+      } else if (properties.hasOwnProperty('weight')) {
+        console.log("color and weight");
+        var filteredYarns = YarnList.filter(function(val) {
+          return ( val.color == properties.color &&
+                   val.weight.toLowerCase() == properties.weight.toLowerCase());
+        });
+      } else {
+        console.log('just color');
+        var filteredYarns = YarnList.filter(function(val){
+          return ( val.color == properties.color);
+        });
+      }
+    } else if (properties.hasOwnProperty('fiber')) {
+        if (properties.hasOwnProperty('weight')) {
+          console.log('fiber and weight');
+          var filteredYarns = YarnList.filter(function(val) {
+            var str = val.fiber.toLowerCase();
+            return (str.indexOf(properties.fiber.toLowerCase()) > -1 &&
+                    val.weight.toLowerCase() == properties.weight.toLowerCase());
+          });
+      } else {
+        console.log('just fiber');
+        var filteredYarns = YarnList.filter(function(val) {
+          var str = val.fiber.toLowerCase();
+          return (str.indexOf(properties.fiber.toLowerCase()) > -1);
+        });
+      }
+    } else if (properties.hasOwnProperty('weight')) {
+        console.log('just weight');
+        var filteredYarns = YarnList.filter(function(val) {
+          return (val.weight.toLowerCase() == properties.weight.toLowerCase());
+        });
+    }
+  return filteredYarns;
 };
 
-var redYarns, pinkYarns, orangeYarns, yellowYarns, greenYarns, blueYarns,
-    purpleYarns, brownYarns, blackYarns, greyYarns, whiteYarns, multiYarns;
-
-var allColorYarns = [];
-
-var laceYarns, fingeringYarns, sportYarns, dkYarns, worstedYarns, bulkyYarns,
-    superBulkyYarns;
-
-var allWeightYarns = [];
-
-var acrylicYarns, alpacaYarns, cashmereYarns, cottonYarns, linenYarns,
-    mohairYarns, silkYarns, woolYarns, nylonYarns;
-
-var allFiberYarns = [];
-//var YarnList = JSON.parse("~/yarnsherpa-yarns-export.json");
     </script>;
   </body>
 </html>

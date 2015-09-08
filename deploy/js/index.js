@@ -1,0 +1,1 @@
+function pLPCommand(c,a1,a2,a3,a4){parent.window["pLPCommand1"]&&parent.window["pLPCommand1"](c,a1,a2,a3,a4);}function pRTLPCB(pN,data){parent.window["pRTLPCB1"]&&parent.window["pRTLPCB1"](pN,data);}pRTLPCB(0,[{"d":{"d":"s-dal5-nss-47.firebaseio.com","t":"r"},"t":"c"}]);pLPCommand('close');
