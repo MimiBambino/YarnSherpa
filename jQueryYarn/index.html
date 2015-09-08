@@ -26,7 +26,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <!--<script type="text/javascript" src="yarnsherpa-yarns-export.js"></script>-->
-    <link rel='stylesheet' href='css/bootstrap.min.css'>
+
     <script type="text/javascript" src='js/bootstrap.min.js'></script>
     <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="css/materialize.css">
@@ -34,18 +34,26 @@
   <script src="js/materialize.min.js"></script>
 
   <style>
-    .tinted-image {
-        background:
-            linear-gradient(
-                rgba(90, 0, 150, 0.75),
-                rgba(90, 0, 150, 0.75)
-                ),
-            url(img/yarn.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
+html {
+  height: 100%;
+}
+body {
+  height:100%;
+}
+.tinted-image {
+  background:
+    linear-gradient(
+      rgba(90, 0, 150, 0.75),
+      rgba(90, 0, 150, 0.75)
+      ),
+      url(img/yarn.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  width:100%;
+}
 
 #CTA-wrapper {
   position: relative;
@@ -61,167 +69,72 @@
   right: 0;
 }
 
-    .findYarnNow {
-        background-color: #F01D8A;
-        height: 100px;
-        border-radius: 10px;
-        font-size: 26px;
-        width: 200px;
-        color: white;
-        border-color: white;
-    }
+.findYarnNow {
+  background-color: #F01D8A;
+  height: 100px;
+  border-radius: 10px;
+  font-size: 26px;
+  width: 200px;
+  color: white;
+  border-color: white;
+}
 
 .callToAction {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 33px;
-    font-weight: 300;
-    text-transform: none;
-    color: white;
-    height: 70px;
-    line-height: 70px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 33px;
+  font-weight: 300;
+  text-transform: none;
+  color: white;
+  height: 70px;
+  line-height: 70px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .logo {
-    position: relative;
-    height: 105px;
-    width: 195px;
-    left: calc(3% - 20px);
-    top: -20px;
+  position: relative;
+  height: 105px;
+  width: 195px;
+  left: calc(4% - 10px);
+  top: 0;
 }
-.logo2 {
-    position: relative;
-    height: 60px;
-    width: 130px;
-    left: 5px;
-    top: 5px;
-}
-
-.Yarn2 {
-    font-family: 'Sacramento', cursive;
-    color: #e91e63;
-    position: relative;
-    height: 60px;
-    width: 130px;
-    left: 5px;
-    top: -15px;
-}
-.Sherpa2 {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 20px;
-    font-weight: 700;
-    color: #D1D5D3;
-    position: absolute;
-    right: 9px;
-    bottom: -12px;
-}
-
-.hoverable:hover {
-    transition: box-shadow .25s;
-    /*box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);*/
-    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-  }
 
 .Yarn {
-    font-family: 'Sacramento', cursive;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #e91e63;
-    font-size: 60px;
-}
-.Sherpa {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 32px;
-    font-weight: 700;
-    color: #D1D5D3;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-.container {
-    width: 98%;
-    padding-top: 60px;
-}
-
-header, nav, footer.page-footer {
-    background-color: rgb(39, 20, 49);
-    height: 60px;
-        position: fixed;
-    z-index: 100;
-}
-
-footer {
-  position: fixed;
-            bottom: -2px;
-            width: 100%;
-            height: 50px;
-            z-index: 15;
-          }
-          footer ul {
-            position: absolute;
-            top: 0;
-            float: left;
-          }
-          footer a {
-            color: #aaa;
-          }
-.x {
-  color: #6F6969;
-  font-size: 26px;
+  font-family: 'Sacramento', cursive;
   position: absolute;
-  left: 20%;
-  bottom: -10px;
-}
-.x:hover {
-  color: black;
-}
-
-.card-title {
-  padding: 1px;
-  padding-left: 8px;
+  top: 0;
+  left: 0;
+  color: #e91e63;
+  font-size: 60px;
 }
 
-#filter-buttons {
-  float: right;
-  padding-right: 2%;
+.Sherpa {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: #D1D5D3;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
-
-.dropdown-menu {
-  background-color: #26a69a;
-  font-size: 1.2em;
-}
-
-.dropdown-menu li {
-
-}
-nav ul li:hover, nav ul li.active {
-  background-color: rgb(39, 20, 49);
-}
-
-nav ul li {
-  height: 40px;
-  width:100%;
-  padding-left: 20px;
-  padding-bottom: 5px;
-}
-
-.yarn-card {
-  height: 300px;
-}
-
-@media only screen and (max-width : 992px) {
-  .yarn-card {
-    height: 400px; }
-  }
 
     </style>
   </head>
   <body>
-    <header>
+    <div class="tinted-image">
+      <div class='logo'>
+        <div class='Yarn'>Yarn</div>
+        <div class='Sherpa'>Sherpa</div>
+      </div>
+      <div id='CTA-wrapper'>
+        <div class='describe'>Search all the yarns online.</div>
+        <a class='callToAction pink waves-effect waves-light btn'>Find Yarns Now!</a>
+      </div>
+    </div>
+
+
+<!--<header>
       <nav>
         <div class="nav-wrapper">
           <div class='col l2 brand-logo'>
@@ -231,9 +144,9 @@ nav ul li {
               <div class='Sherpa2'>Sherpa
               </div>
             </div>
-          </div>
+          </div>-->
 <!--Bootstrap dropdown buttons-->
-<div id="filter-buttons">
+<!--<div id="filter-buttons">
 <div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Color <span class="caret"></span>
@@ -283,7 +196,7 @@ nav ul li {
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
 <script>
 // Hold state of call to action page.
 
@@ -301,7 +214,6 @@ var activeList = [];
 var myYarns = new Firebase('https://yarnsherpa.firebaseio.com/yarns');
 myYarns.on('value', function(data) {
     YarnList = data.val();
-    //filterYarnList();
     gotData(YarnList.length);
     // add more yarns to screen if data is here
 }, function (e) {
@@ -312,10 +224,9 @@ $(document).ready(function() {
 // Create Landing Page
     $("header").hide();
     $("footer").hide();
-    $("body").addClass("tinted-image").append("<div class='logo'><div class='Yarn'>Yarn</div><div class='Sherpa'>Sherpa</div></div><div id='CTA-wrapper'><div class='describe'>Search all the yarns online.</div><a class='callToAction pink waves-effect waves-light btn'>Find Yarns Now!</a></div></div>");
     // After call to action clicked, show the main app
     $(".callToAction").click(loadYarns);
-    $(".dropdown-button").dropdown( { hover: true });
+    $(".dropdown-button").dropdown( { hover: true } );
     $(".button-collapse").sideNav();
 });
 
@@ -510,6 +421,8 @@ var filterYarns = function() {
   return filteredYarns;
 };
 
-    </script>;
+    </script>
+    <!-- <link rel='stylesheet' href='css/bootstrap.min.css'> -->
+    <link rel='stylesheet' href='css/style.css'>
   </body>
 </html>

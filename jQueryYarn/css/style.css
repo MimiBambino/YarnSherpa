@@ -1,0 +1,108 @@
+.container {
+  width: 98%;
+  padding-top: 60px;
+}
+
+.logo2 {
+  position: relative;
+  height: 60px;
+  width: 130px;
+  left: 5px;
+  top: 5px;
+}
+
+.Yarn2 {
+  font-family: 'Sacramento', cursive;
+  color: #e91e63;
+  position: relative;
+  height: 60px;
+  width: 130px;
+  left: 5px;
+  top: -15px;
+}
+.Sherpa2 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 20px;
+  font-weight: 700;
+  color: #D1D5D3;
+  position: absolute;
+  right: 9px;
+  bottom: -12px;
+}
+
+.hoverable:hover {
+  transition: box-shadow .25s;
+  /*box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);*/
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+
+header, nav, footer.page-footer {
+  background-color: rgb(39, 20, 49);
+  height: 60px;
+  position: fixed;
+  z-index: 100;
+}
+
+footer {
+  position: fixed;
+  bottom: -2px;
+  width: 100%;
+  height: 50px;
+  z-index: 15;
+}
+footer ul {
+  position: absolute;
+  top: 0;
+  float: left;
+}
+footer a {
+  color: #aaa;
+}
+.x {
+  color: #6F6969;
+  font-size: 26px;
+  position: absolute;
+  left: 20%;
+  bottom: -10px;
+}
+.x:hover {
+  color: black;
+}
+
+.card-title {
+  padding: 1px;
+  padding-left: 8px;
+}
+
+#filter-buttons {
+  float: right;
+  padding-right: 2%;
+}
+
+.dropdown-menu {
+  background-color: #26a69a;
+  font-size: 1.2em;
+}
+
+.dropdown-menu li {
+
+}
+nav ul li:hover, nav ul li.active {
+  background-color: rgb(39, 20, 49);
+}
+
+nav ul li {
+  height: 40px;
+  width:100%;
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+
+.yarn-card {
+  height: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  .yarn-card {
+    height: 400px; }
+}
