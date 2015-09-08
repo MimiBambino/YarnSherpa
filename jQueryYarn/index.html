@@ -9,7 +9,7 @@
     <script>
       WebFontConfig = {
         google: {
-          families: ['Sacremento', 'Cinzel Decorative']
+          families: ['Sacremento', 'Cinzel Decorative', 'Open Sans Condensed']
         }
       };
       (function() {
@@ -29,17 +29,19 @@
 
     <script type="text/javascript" src='js/bootstrap.min.js'></script>
     <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="css/materialize.css">
+  <!-- <link rel="stylesheet" href="css/materialize.css"> -->
   <!-- Compiled and minified JavaScript -->
   <script src="js/materialize.min.js"></script>
+    <!-- <link rel='stylesheet' href='css/style.css'> -->
+  <link rel='stylesheet' href='css/bootstrap.css'>
+
 
   <style>
-html {
+html, body {
+  width: 100%;
   height: 100%;
 }
-body {
-  height:100%;
-}
+
 .tinted-image {
   background:
     linear-gradient(
@@ -85,11 +87,15 @@ body {
   font-weight: 300;
   text-transform: none;
   color: white;
-  height: 70px;
-  line-height: 70px;
+  height: 50px;
+  line-height: 50px;
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.callToAction:hover {
+
 }
 
 .logo {
@@ -119,6 +125,81 @@ body {
   bottom: 0;
 }
 
+.Yarn2 {
+  font-family: 'Sacramento', cursive;
+  color: #e91e63;
+  font-size: 40px;
+}
+.Sherpa2 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 25px;
+  font-weight: 700;
+  color: #D1D5D3;
+  padding-left: 40px;
+  padding-top: 5px;
+}
+.navbar-default {
+  backgroud-color: rgb(39, 20, 49);
+}
+
+.logo2 {
+  padding-top: 5px;
+}
+
+html {
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.87);
+    position: relative;
+    min-height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.pink {
+  background-color: #e91e63; }
+}
+
+.btn, .btn-large {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    outline: 0;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+  }
+.btn,.btn-large {
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    transition: .2s ease-out;
+    cursor: pointer;
+    position: absolute;
+}
+.btn:hover {
+  color: black;
+  background: #FF387D;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+@media only screen and (min-width: 0)
+html {
+    font-size: 14px;
+}
+
     </style>
   </head>
   <body>
@@ -129,77 +210,11 @@ body {
       </div>
       <div id='CTA-wrapper'>
         <div class='describe'>Search all the yarns online.</div>
-        <a class='callToAction pink waves-effect waves-light btn'>Find Yarns Now!</a>
+        <a class='callToAction pink btn'>Find Yarns Now!</a>
       </div>
     </div>
-
-
-<!--<header>
-      <nav>
-        <div class="nav-wrapper">
-          <div class='col l2 brand-logo'>
-            <div class='logo2'>
-              <div class='Yarn2'>Yarn
-              </div>
-              <div class='Sherpa2'>Sherpa
-              </div>
-            </div>
-          </div>-->
-<!--Bootstrap dropdown buttons-->
-<!--<div id="filter-buttons">
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Color <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" id="dropdown1">
-
-  </ul>
-</div>
-<div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Weight <span class="caret"></span>
-  </button>
-    <ul class="dropdown-menu" id="dropdown2">
-
-  </ul>
-</div>
-<div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Fiber <span class="caret"></span>
-  </button>
-    <ul class="dropdown-menu" id="dropdown3">
-
-  </ul>
-</div>
-</div>
-
-        </div>
-      </nav>
-    </header>
-
-
-    <div class='container'><div class='row'></div></div>
-
-    <footer class='page-footer'>
-      <div class='container'>
-        <div class='row'>
-          <div class='col l6 s12'>
-            <h5 class='white-text'>Footer Content</h5>
-            <p class='grey-text text-lighten-4'>You can use rows and columns here to organize your footer content.</p>
-          </div>
-          <div class='col l4 offset-l2 s12'>
-            <ul>
-              <li><a class='grey-text text-lighten-3' href='#!'>Home</a></li>
-              <li><a class='grey-text text-lighten-3' href='#!'>Contact</a></li>
-              <li><a class='grey-text text-lighten-3' href='#!'>About</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer> -->
 <script>
 // Hold state of call to action page.
-
 var findYarnsClicked = false;
 
 // Keep track of how many yarns are displayed.
@@ -207,8 +222,6 @@ var yarnCount = 0;
 
 // Keep track of active filter properties.
 var properties = {};
-
-var activeList = [];
 
 // Fetch Firebase data
 var myYarns = new Firebase('https://yarnsherpa.firebaseio.com/yarns');
@@ -222,22 +235,19 @@ myYarns.on('value', function(data) {
 
 $(document).ready(function() {
 // Create Landing Page
-    $("header").hide();
-    $("footer").hide();
+    // $("header").hide();
+    // $("footer").hide();
     // After call to action clicked, show the main app
     $(".callToAction").click(loadYarns);
-    $(".dropdown-button").dropdown( { hover: true } );
-    $(".button-collapse").sideNav();
+    // $(".dropdown-button").dropdown( { hover: true } );
+    // $(".button-collapse").sideNav();
 });
 
 // Transitions to main app
 var loadYarns = function() {
-    $(".callToAction").remove();
+    $("body").empty();
     findYarnsClicked = true;
-    $("body").removeClass("tinted-image").addClass("YarnPage brown lighten-4");
-    $("#home-wrapper").empty();
-    $(".logo").fadeOut();
-    $(".describe").remove();
+    $("body").addClass("YarnPage brown lighten-4");
     mainPage();
 };
 
@@ -254,8 +264,13 @@ var gotData = function(i) {
 };
 
 var mainPage = function(){
-  $("header").fadeIn("slow");
-  $("footer").fadeIn("slow");
+
+  var header = "<nav class='navbar navbar-default navbar-fixed-top'><div class='container'><div class='navbar-header' style='width: 100%;'><a class='navbar-brand' href='#'><div class='logo2'><div class='Yarn2'>Yarn</div><div class='Sherpa2'>Sherpa</div></div></a><div id='navbar' class='filter-buttons collapse navbar-collapse navbar-right'><div class='nav navbar-nav'><ul class='nav navbar-nav'><li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Color <span class='caret'></span></a><ul id='dropdown1' class='dropdown-menu'></ul></li><li class='dropdown' id='dropdown1'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Weight <span class='caret'></span></a><ul id='dropdown2' class='dropdown-menu'></ul></li><li class='dropdown' id='dropdown1'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Fiber <span class='caret'></span></a><ul id='dropdown3' class='dropdown-menu'></ul></li></ul></div></div></div></div></nav>";
+  var middle = "<div class='container'><div class='row'></div></div>";
+  var footer = "<footer class='footer'><div class='container'><p class='text-muted'><a href='#'>Home</a><a href='#'>Contact</a><a href='#'>About</a></p></div></footer>";
+  $("body").append(header + middle + footer);
+  // $("header").fadeIn("slow");
+  // $("footer").fadeIn("slow");
   createDropdowns();
   filterByAwesome();
 };
@@ -272,13 +287,13 @@ var createDropdowns = function() {
     var weights = "";
     var fibers = "";
     for (; i < colorList.length; i++){
-      colors += "<li id='" + colorList[i] + "'>" + colorList[i] + "</li>";
+      colors += "<li id='" + colorList[i] + "'><a href='#'>" + colorList[i] + "</a></li>";
     }
     for (var i=0; i < weightList.length; i++){
-      weights += "<li id='" + weightList[i].toLowerCase() + "'>" + weightList[i] + "</li>";
+      weights += "<li id='" + weightList[i].toLowerCase() + "'><a href='#'>" + weightList[i] + "</a></li>";
     }
     for (var i=0; i < fiberList.length; i++){
-      fibers += "<li id='" + fiberList[i].toLowerCase() + "'>" + fiberList[i] + "</li>";
+      fibers += "<li id='" + fiberList[i].toLowerCase() + "'><a href='#'>" + fiberList[i] + "</a></li>";
     }
     $("#dropdown1").append(colors).click(function(event){
       var val = event.target.id;
@@ -422,7 +437,5 @@ var filterYarns = function() {
 };
 
     </script>
-    <!-- <link rel='stylesheet' href='css/bootstrap.min.css'> -->
-    <link rel='stylesheet' href='css/style.css'>
   </body>
 </html>
