@@ -170,13 +170,19 @@ footer {
             color: #aaa;
           }
 .x {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    color: gray;
+  color: #6F6969;
+  font-size: 26px;
+  position: absolute;
+  left: 20%;
+  bottom: -10px;
 }
 .x:hover {
   color: black;
+}
+
+.card-title {
+  padding: 1px;
+  padding-left: 8px;
 }
 
 #filter-buttons {
@@ -431,7 +437,7 @@ var createBox = function(data, num) {
       var yarn = data[Math.floor(Math.random()*length)];
       //var yarn = awesomeYarns[i];
       var YarnBox = "<a href='" + yarn.link + "' target='_blank'><div class='col l2 m4 s6'><div class='card hoverable'><div class='card-image'>";
-    YarnBox += "<img class='responsive-img' src='small/" + yarn.jpg + "'></a><span class = 'card-title'><img src='img/close.png' class='x'></span></div><div class='card-content'><p>";
+    YarnBox += "<img class='responsive-img' src='small/" + yarn.jpg + "'></a><span class ='card-title'><p class='x'>x</p></span></div><div class='card-content'><p>";
     YarnBox += yarn.name  + "</p><p>" + yarn.fiber + "</p><p>by: " + yarn.manufacturer + "</p></div></div>";
     $(".row").append(YarnBox);
     yarnCount++;
