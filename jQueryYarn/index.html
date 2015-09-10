@@ -3,13 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>Yarn Sherpa</title>
-    <!-- <link href='https://fonts.googleapis.com/css?family=Cinzel+Decorative:700&text=Sherpa' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Sacramento&text=Yarn' rel='stylesheet' type='text/css'> -->
     <link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <script>
       WebFontConfig = {
         google: {
-          families: ['Sacremento', 'Cinzel Decorative', 'Open Sans Condensed']
+          families: ['Sacremento', 'Cinzel Decorative']
         }
       };
       (function() {
@@ -25,11 +23,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-    <!--<script type="text/javascript" src="yarnsherpa-yarns-export.js"></script>-->
+    <script type="text/javascript" src="yarnsherpa-yarns-export.js"></script>
 
     <script type="text/javascript" src='js/bootstrap.min.js'></script>
     <!-- Compiled and minified CSS -->
-  <!-- <link rel="stylesheet" href="css/materialize.css"> -->
+  <link rel="stylesheet" href="css/materialize.css">
   <!-- Compiled and minified JavaScript -->
   <script src="js/materialize.min.js"></script>
     <!-- <link rel='stylesheet' href='css/style.css'> -->
@@ -94,10 +92,6 @@ html, body {
   right: 0;
 }
 
-.callToAction:hover {
-
-}
-
 .logo {
   position: relative;
   height: 105px;
@@ -159,6 +153,8 @@ html {
     box-sizing: inherit;
 }
 
+.card { height: 400px;}
+
 .pink {
   background-color: #e91e63; }
 }
@@ -195,9 +191,76 @@ html {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-@media only screen and (min-width: 0)
+.container {
+  margin-top: 10px;
+}
+.row {
+  margin-top: 100px;
+}
+
+/*@media only screen and (min-width: 0)
 html {
     font-size: 14px;
+}*/
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    height: 370px;
+  }
+  .filter-buttons {
+    padding-right:0;
+  }
+  #navbar {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .card {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .card {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .card {
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    height: 580px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .card {
+    height: 540px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .card {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card {
+    height: 470px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .card {
+    height: 440px;
+  }
 }
 
     </style>
@@ -223,24 +286,18 @@ var yarnCount = 0;
 // Keep track of active filter properties.
 var properties = {};
 
+var YarnList = myData;
+
 // Fetch Firebase data
 var myYarns = new Firebase('https://yarnsherpa.firebaseio.com/yarns');
 myYarns.on('value', function(data) {
-    YarnList = data.val();
-    gotData(YarnList.length);
-    // add more yarns to screen if data is here
+    YarnList.concat(data.val());
 }, function (e) {
   console.log("The read failed: " + e.code);
 });
 
 $(document).ready(function() {
-// Create Landing Page
-    // $("header").hide();
-    // $("footer").hide();
-    // After call to action clicked, show the main app
     $(".callToAction").click(loadYarns);
-    // $(".dropdown-button").dropdown( { hover: true } );
-    // $(".button-collapse").sideNav();
 });
 
 // Transitions to main app
@@ -264,13 +321,10 @@ var gotData = function(i) {
 };
 
 var mainPage = function(){
-
-  var header = "<nav class='navbar navbar-default navbar-fixed-top'><div class='container'><div class='navbar-header' style='width: 100%;'><a class='navbar-brand' href='#'><div class='logo2'><div class='Yarn2'>Yarn</div><div class='Sherpa2'>Sherpa</div></div></a><div id='navbar' class='filter-buttons collapse navbar-collapse navbar-right'><div class='nav navbar-nav'><ul class='nav navbar-nav'><li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Color <span class='caret'></span></a><ul id='dropdown1' class='dropdown-menu'></ul></li><li class='dropdown' id='dropdown1'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Weight <span class='caret'></span></a><ul id='dropdown2' class='dropdown-menu'></ul></li><li class='dropdown' id='dropdown1'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Fiber <span class='caret'></span></a><ul id='dropdown3' class='dropdown-menu'></ul></li></ul></div></div></div></div></nav>";
+  var header = "<nav class='navbar navbar-default navbar-fixed-top' style= 'height: 80px;'><div class='container'><div class='navbar-header' style='width: 100%;'><a class='navbar-brand' href='#'><div class='logo2'><div class='Yarn2'>Yarn</div><div class='Sherpa2'>Sherpa</div></div></a><div id='navbar' class='filter-buttons collapse navbar-collapse navbar-right'><div class='nav navbar-nav'><ul class='nav navbar-nav'><li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Color <span class='caret'></span></a><ul id='dropdown1' class='dropdown-menu'></ul></li><li class='dropdown' id='dropdown1'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Weight <span class='caret'></span></a><ul id='dropdown2' class='dropdown-menu'></ul></li><li class='dropdown' id='dropdown1'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Fiber <span class='caret'></span></a><ul id='dropdown3' class='dropdown-menu'></ul></li></ul></div></div></div></div></nav>";
   var middle = "<div class='container'><div class='row'></div></div>";
   var footer = "<footer class='footer'><div class='container'><p class='text-muted'><a href='#'>Home</a><a href='#'>Contact</a><a href='#'>About</a></p></div></footer>";
   $("body").append(header + middle + footer);
-  // $("header").fadeIn("slow");
-  // $("footer").fadeIn("slow");
   createDropdowns();
   filterByAwesome();
 };
@@ -306,7 +360,7 @@ var createDropdowns = function() {
       }
       $(".row").empty();
       var data = filterYarns();
-      createBox(data, 20);
+      createBox(data, 100);
       localStorage.setItem('color', val);
     });
     $("#dropdown2").append(weights).click(function(event){
@@ -320,7 +374,7 @@ var createDropdowns = function() {
       }
       $(".row").empty();
       var data = filterYarns();
-      createBox(data, 20);
+      createBox(data, 100);
       localStorage.setItem('weight', val);
     });
     $("#dropdown3").append(fibers).click(function(event){
@@ -334,7 +388,7 @@ var createDropdowns = function() {
       }
       $(".row").empty();
       var data = filterYarns();
-      createBox(data, 20);
+      createBox(data, 100);
       localStorage.setItem('fiber', val);
     });
 };
@@ -361,9 +415,8 @@ var createBox = function(data, num) {
 
     for (; i < num; i++) {
       var yarn = data[Math.floor(Math.random()*length)];
-      //var yarn = awesomeYarns[i];
-      var YarnBox = "<a href='" + yarn.link + "' target='_blank'><div class='col l2 m4 s6'><div class='card hoverable'><div class='card-image'>";
-    YarnBox += "<img class='responsive-img' src='small/" + yarn.jpg + "'></a><span class ='card-title'><p class='x'>x</p></span></div><div class='card-content'><p>";
+      var YarnBox = "<a href='" + yarn.link + "' target='_blank'><div class='col l3 m4 s12'><div class='card hoverable'><div class='card-image'>";
+    YarnBox += "<img class='responsive-img' src='small300/" + yarn.jpg + "'></a><span class ='card-title'><p class='x'>x</p></span></div><div class='card-content'><p>";
     YarnBox += yarn.name  + "</p><p>" + yarn.fiber + "</p><p>by: " + yarn.manufacturer + "</p></div></div>";
     $(".row").append(YarnBox);
     yarnCount++;
@@ -373,12 +426,7 @@ var createBox = function(data, num) {
       $(this).closest("div.card").fadeOut("slow");
       //$(this).remove();
       yarnCount--;
-      console.log(yarnCount);
     });
-};
-
-var showFooter = function() {
-    $("footer").fadeIn("slow");
 };
 
 var filterYarns = function() {
