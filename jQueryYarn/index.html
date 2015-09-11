@@ -198,6 +198,10 @@ html {
   margin-top: 100px;
 }
 
+.placeholder{color: grey;}
+select option:first-child{color: grey; display: none;}
+select option{color: #555;}
+
 /*@media only screen and (min-width: 0)
 html {
     font-size: 14px;
@@ -321,7 +325,7 @@ var gotData = function(i) {
 };
 
 var mainPage = function(){
-  var header = "<nav class='navbar navbar-default navbar-fixed-top' style= 'height: 80px;'><div class='container'><div class='navbar-header' style='width: 100%;'><a class='navbar-brand' href='#'><div class='logo2'><div class='Yarn2'>Yarn</div><div class='Sherpa2'>Sherpa</div></div></a><div id='navbar' class='filter-buttons collapse navbar-collapse navbar-right'><div class='nav navbar-nav'><ul class='nav navbar-nav'><li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Color <span class='caret'></span></a><ul id='dropdown1' class='dropdown-menu'></ul></li><li class='dropdown' id='dropdown1'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Weight <span class='caret'></span></a><ul id='dropdown2' class='dropdown-menu'></ul></li><li class='dropdown' id='dropdown1'><a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Fiber <span class='caret'></span></a><ul id='dropdown3' class='dropdown-menu'></ul></li></ul></div></div></div></div></nav>";
+  var header = "<nav class='navbar navbar-default navbar-fixed-top' style= 'height: 80px;'><div class='container'><div class='navbar-header' style='width: 100%;'><a class='navbar-brand' href='#'><div class='logo2'><div class='Yarn2'>Yarn</div><div class='Sherpa2'>Sherpa</div></div></a><div id='navbar' class='filter-buttons navbar-right form-inline'><div class='nav input-group navbar-nav'><select id='dropdown1' class='form-control placeholder'><option>Color</option></select><select id='dropdown2' class='form-control placeholder'><option value=''>Weight</option></select><select id='dropdown3' class='form-control placeholder'><option value=''>Fiber</option></select></div></div></div></nav>";
   var middle = "<div class='container'><div class='row'></div></div>";
   var footer = "<footer class='footer'><div class='container'><p class='text-muted'><a href='#'>Home</a><a href='#'>Contact</a><a href='#'>About</a></p></div></footer>";
   $("body").append(header + middle + footer);
@@ -341,17 +345,16 @@ var createDropdowns = function() {
     var weights = "";
     var fibers = "";
     for (; i < colorList.length; i++){
-      colors += "<li id='" + colorList[i] + "'><a href='#'>" + colorList[i] + "</a></li>";
+      colors += "<option>" + colorList[i] + "</option>";
     }
     for (var i=0; i < weightList.length; i++){
-      weights += "<li id='" + weightList[i].toLowerCase() + "'><a href='#'>" + weightList[i] + "</a></li>";
+      weights += "<option>" + weightList[i] + "</option>";
     }
     for (var i=0; i < fiberList.length; i++){
-      fibers += "<li id='" + fiberList[i].toLowerCase() + "'><a href='#'>" + fiberList[i] + "</a></li>";
+      fibers += "<option>" + fiberList[i] + "</option>"
     }
     $("#dropdown1").append(colors).click(function(event){
-      var val = event.target.id;
-      val = val.toLowerCase();
+      var val = $("#dropdown1").val();
       console.log(val);
       if (properties.color == val) {
         delete properties.color;
@@ -364,9 +367,7 @@ var createDropdowns = function() {
       localStorage.setItem('color', val);
     });
     $("#dropdown2").append(weights).click(function(event){
-      var val = event.target.id;
-      val = val.toLowerCase();
-      console.log(val);
+      var val = $("#dropdown2").val();
       if (properties.weight == val) {
         delete properties.weight;
       } else {
@@ -378,9 +379,7 @@ var createDropdowns = function() {
       localStorage.setItem('weight', val);
     });
     $("#dropdown3").append(fibers).click(function(event){
-      var val = event.target.id;
-      val = val.toLowerCase();
-      console.log(val);
+      var val = $("#dropdown3").val();
       if (properties.fiber == val) {
         delete properties.fiber;
       } else {
